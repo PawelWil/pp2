@@ -19,7 +19,7 @@
 #totalYears = 4 # zmienna o nazwie totalYears
 
 
-# 2. Dynamiczne typowanie
+# 2. Dynamiczne typowanie -- jak się to stsosuje to poprzednia wartość po prostu jest zastąpiona tą ostatnią, czyli w poniższym przypadku ostatnią wartością, któa się wyswietli to kokarda
 
 # jak widać dodaliśmy do zmiennej a liczbę(int) + słowo(string) i to działa, i wyswietlają się zaróno 4, jak i kokarda
 #a = 4
