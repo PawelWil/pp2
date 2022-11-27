@@ -21,7 +21,7 @@
 
 # 2. Dynamiczne typowanie -- jak się to stsosuje to poprzednia wartość po prostu jest zastąpiona tą ostatnią, czyli w poniższym przypadku ostatnią wartością, któa się wyswietli to kokarda
 
-# jak widać dodaliśmy do zmiennej a liczbę(int) + słowo(string) i to działa, i wyswietlają się zaróno 4, jak i kokarda
+# jak widać dodaliśmy do zmiennej a liczbę(int) + słowo(string) i powinna się wyświtlić kokarda, bo nadpisała 4
 #a = 4
 #print(a)
 #a ="kokarda"
