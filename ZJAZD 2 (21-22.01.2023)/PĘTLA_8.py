@@ -1,8 +1,18 @@
+#      -----PĘTLA WHILE:
+
+# ----za pomocą inkrementacji:
 # i = 1 #ta zmienna jest tworzona na zewnątrz, ale tyczy się całego skryptu, a nie tylko tej poniższej pętli
 # pętla while - w tej pętli korzystamt ze zmiennej globalnej
-# while i < 10: # instrukcja petli while. Tu warunkiem jest i <10, jeśli jest mniejsze to się wykona, jeśli będzie większa nie wykona. Będzie się wykonywac do momentu, gdy ten warunek pętli będzie spełniony, jak już nie, to jest stop pętli
+# while i < 10: # instrukcja petli while. Tu warunkiem jest i <10, wszystko co jest mniejsze to się wykona, jeśli będzie już większe to się nie wykona. Będzie się wykonywac do momentu, gdy ten warunek pętli będzie spełniony, jak już nie, to jest stop pętli
 #     print(i, end=" ")
-#     i += 1 # operator incrementacji
+  # i += 1 # operator incrementacji, żeby mi to zwiększało, ale również może być coś zmniejszającego, ktore dobije do tej liczby koncowej zawartej w zakresie (u nas 9 oparacji)
+
+# ----za pomocą dekrementacji:
+# i=10 # startuje od 10 -- tu muszę zacząc od jakiejs wiekszej liczby, żeby byo z czegos odejmowac, oraz podać do kiedy ma to byc zmniiejszane- Tu mam start od 10, zmiejszam o -1, i zatrzymuje się na 2, bo 2 jest większe od 1
+# while i >1:
+#     print(i, end=" ")
+#     i-= 1
+
 
 # pętla for - - w tej pętli nie korzystamy ze zmiennej globalnej, która została zdefiniowana powyżej
 # for i in range (0,10): # range od 0 do 10, znaczy że będe mial takie wartośc, czyli 10 wartości, ale od 0 do 9. sprawdzamy warunek, czu i jest mniejsze od 10. Jak będzie równe lub większe od 10 to pętla się nie wykona
@@ -92,17 +102,17 @@
 
 
 # GRA-------------
-import random
-
-counter = 1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
-number = random.randint(1,10)
-guess = int(input("Zgadnij jaką liczbę mam na mysli (1-10): ")) # pobieranie liczby od użytkownika, poprzez zgadywanie jaką liczbę mamy na myśli, oczywiście w tym przypadku od 1 do 10
-
-while number != guess:
-    guess = int(input("Nie, to nie ta. Spróbuj jeszcze raz: "))
-    counter +=1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
-
-print ("brawo udało Ci się  za: " + str(counter) + "razem" )
+# import random
+#
+# counter = 1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
+# number = random.randint(1,10)
+# guess = int(input("Zgadnij jaką liczbę mam na mysli (1-10): ")) # pobieranie liczby od użytkownika, poprzez zgadywanie jaką liczbę mamy na myśli, oczywiście w tym przypadku od 1 do 10
+#
+# while number != guess:
+#     guess = int(input("Nie, to nie ta. Spróbuj jeszcze raz: "))
+#     counter +=1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
+#
+# print ("brawo udało Ci się  za: " + str(counter) + "razem" )
 
 
 
