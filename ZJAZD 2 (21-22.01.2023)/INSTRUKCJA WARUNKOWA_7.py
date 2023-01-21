@@ -99,7 +99,6 @@ else:
 
 
 
-
 #  Priorytety operatorów -------
 # Podstawy programowania w języku Python - Instrukcja warunkowa 3
 # Priorytet Operator
