@@ -6,3 +6,5 @@ for i in range(10): # tu mamy wylosowac 10 cyfr
     numbers.append(number)
 
 print(numbers)
+
+#test
