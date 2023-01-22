@@ -53,4 +53,65 @@
 #     else:
 #         print(i)
 
-# --PRZYKŁAD 4
+
+
+# --------------------------OPERATORY  BITOWE -----------------------
+a = 5 # 5 i 3, to są wartości dziesiętne
+b = 3
+
+# 1. Koniukncja Bitowa (czyli 'i' - widok operatora &)
+# print (a, "&", b, "=", a & b)
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("{:08b}".format(b))
+# print("-" * 8)
+# print("{:08b}".format(a & b)) # wynikiem jest 00000001, bo pierwsze 1 mamy w pierwszej linii (a=5) i drugiej linii (b=3) i 1 z 1 daje 1, ale już w drugiej i trzeciej kolumnie mamy 0 i 1 oraz 1 i 0, co daje 0, więc wynik konikunki to 00000001
+
+# 2. Alternatywa Bitowa (czyli 'or' - widok operatora | (pajp-tak sie go nazywa))
+# print (a, "|", b, "=", a | b)
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("{:08b}".format(b))
+# print("-" * 8)
+# print("{:08b}".format(a | b)) # wynikiem jest 00000111, bo pierwsze 1 mamy w pierwszej linii (a=5) i drugiej linii (b=3) i 1 z 1 daje 1, oraz w drugiej i trzeciej kolumnie mamy 0 i 1 oraz 1 i 0, co daje nam jedynki,  więc wynik a;ternatywy  to 00000111
+
+# 3. Alternatywa x or - lternatywq rozłączna - widok operatora ^ - w tej alternatywie jest a, gdy bity się różnią, gdy są takie same jest 0
+# print (a, "^", b, "=", a ^ b)
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("{:08b}".format(b))
+# print("-" * 8)
+# print("{:08b}".format(a ^ b))
+
+# 4. Przesunięcie bitów w prawo >>
+
+# print (a, ">>", b, "=", a >> b) # tu przesuwamy o 3 miejsca, bo b=3
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("-" * 8)
+# print("{:08b}".format(a >> b))
+
+# print (a, ">>", 2, "=", a >> 2) # tu przesuwamy o 2 miejsca, bo b=3
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("-" * 8)
+# print("{:08b}".format(a >> 2))
+
+# 5. Przesunięcie bitów w lewo <<
+
+# print (a, "<<", 2, "=", a << 2) # tu przesuwamy o 2 miejsca, bo b=3
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("-" * 8)
+# print("{:08b}".format(a << 2))
+
+# 6. Negacja bitow ~  tylda (zanegowanie) - prezentowanie liczb ujemnych za pomocą zapisu binarnego -- czyli jeśli ostatni bit jest na jeden, to liczba jest ujemna, i unas tak jest, bo ostatnia jest jedynka
+# print ("~" + str(a), "=", ~a)
+# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("-" * 8)
+# print("{:08b}".format(~a))
+
+print()
+for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo
+    print("{0:08b} => {1:d}".format(i & 255, i))
