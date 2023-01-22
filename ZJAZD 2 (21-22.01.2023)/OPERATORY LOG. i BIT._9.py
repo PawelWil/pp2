@@ -56,12 +56,12 @@
 
 
 # --------------------------OPERATORY  BITOWE -----------------------
-a = 5 # 5 i 3, to są wartości dziesiętne
+a = 5 # 5 i 3, to są wartości dziesiętne, ale zapisywane są binarnie, czyli liczymy jak binarnie, czyli np. liczba 5 to: 00000101 --> 1 * 2 ** 0(1) + 0 * 2 ** 1(0) + 1 * 2 ** 2 (4) +.. --> i mamy 5 :)
 b = 3
 
 # 1. Koniukncja Bitowa (czyli 'i' - widok operatora &)
 # print (a, "&", b, "=", a & b)
-# # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
 # print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
 # print("{:08b}".format(b))
 # print("-" * 8)
@@ -105,7 +105,7 @@ b = 3
 # print("-" * 8)
 # print("{:08b}".format(a << 2))
 
-# 6. Negacja bitow ~  tylda (zanegowanie) - prezentowanie liczb ujemnych za pomocą zapisu binarnego -- czyli jeśli ostatni bit jest na jeden, to liczba jest ujemna, i unas tak jest, bo ostatnia jest jedynka
+# 6. Negacja bitow ~  tylda (zanegowanie) - TYLDĘ WPISUJE poprzez kombinacje: shift + spacja + '~' (tylda jest pod esc) - prezentowanie liczb ujemnych za pomocą zapisu binarnego -- czyli jeśli ostatni bit jest na jeden, to liczba jest ujemna, i unas tak jest, bo ostatnia jest jedynka
 # print ("~" + str(a), "=", ~a)
 # # print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
 # print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
@@ -115,3 +115,4 @@ b = 3
 print()
 for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo
     print("{0:08b} => {1:d}".format(i & 255, i))
+
