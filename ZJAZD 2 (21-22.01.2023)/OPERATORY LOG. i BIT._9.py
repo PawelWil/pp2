@@ -47,11 +47,11 @@
 # wyświetl cyfrę, chyba że
 # liczba parzysta lub liczba większa od 6, to wyświetl *
 
-# for i in range(10):
-#     if i % 2 == 0 or i > 6:
-#         print("*")
-#     else:
-#         print(i)
+for i in range(10):
+    if i % 2 == 0 or i > 6:
+        print("*")
+    else:
+        print(i)
 
 
 
@@ -112,7 +112,7 @@ b = 3
 # print("-" * 8)
 # print("{:08b}".format(~a))
 
-print()
-for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo
-    print("{0:08b} => {1:d}".format(i & 255, i))
+# print()
+# for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo
+#     print("{0:08b} => {1:d}".format(i & 255, i))
 
