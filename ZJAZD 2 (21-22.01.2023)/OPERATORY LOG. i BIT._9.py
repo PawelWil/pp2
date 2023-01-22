@@ -47,17 +47,17 @@
 # wyświetl cyfrę, chyba że
 # liczba parzysta lub liczba większa od 6, to wyświetl *
 
-for i in range(10):
-    if i % 2 == 0 or i > 6:
-        print("*")
-    else:
-        print(i)
+# for i in range(10):
+#     if i % 2 == 0 or i > 6:
+#         print("*")
+#     else:
+#         print(i)
 
 
 
 # --------------------------OPERATORY  BITOWE -----------------------
-a = 5 # 5 i 3, to są wartości dziesiętne, ale zapisywane są binarnie, czyli liczymy jak binarnie, czyli np. liczba 5 to: 00000101 --> 1 * 2 ** 0(1) + 0 * 2 ** 1(0) + 1 * 2 ** 2 (4) +.. --> i mamy 5 :)
-b = 3
+# a = 5 # 5 i 3, to są wartości dziesiętne, ale zapisywane są binarnie, czyli liczymy jak binarnie, czyli np. liczba 5 to: 00000101 --> 1 * 2 ** 0(1) + 0 * 2 ** 1(0) + 1 * 2 ** 2 (4) +.. --> i mamy 5 :)
+# b = 3
 
 # 1. Koniukncja Bitowa (czyli 'i' - widok operatora &)
 # print (a, "&", b, "=", a & b)
@@ -116,3 +116,21 @@ b = 3
 # for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo
 #     print("{0:08b} => {1:d}".format(i & 255, i))
 
+# 7. OPERATOR PORÓWNANIA
+
+# # 1 przykład
+a = 3
+b = 4
+c = 7
+# print(a < b < c) # da nam to true
+print(a < b and b < c) # to jest ten sam zapis co powyższy, czyli: print(a < b < c)
+
+# 2 przykład
+a = 3
+b = 4
+c = 7
+
+def get(a): # funkcja get pobiera
+    print("!!!!!!!!!") # funkcja return oddaje dane
+    return a
+print(a < b < c)
