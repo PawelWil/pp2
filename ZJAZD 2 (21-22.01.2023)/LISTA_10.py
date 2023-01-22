@@ -44,10 +44,11 @@
 
 
 # 2. USUWANIE
-# fruits = ["banan", "kiwi", "czereśnia", 99, True]
-# print(fruits)
-# del (fruits[-1]) # tu nam usuwa indeks [-1]
-# print (fruits)
+fruits = ["banan", "kiwi", "czereśnia", 99, True]
+print(fruits)
+del fruits[-1] # tu nam usuwa indeks [-1]
+del (fruits[-1]) # może być z okrągłymi nawiasami po del -> jest bardziej czytelne, ale nie musi
+print (fruits)
 #
 # # 3. Rozróżnienie między funcką - LEN
 # l = len(fruits)
