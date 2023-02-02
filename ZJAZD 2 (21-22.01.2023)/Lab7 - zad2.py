@@ -14,21 +14,19 @@
 
 
 
-# Rozwiązanie Pana MArcina
-
-points = int(input("Podaj liczbę pinktów (0-100): "))# podajemy ilość punktów studenta
+punkty = int(input("Podaj liczbę punktów (0-100): "))# podajemy ilość punktów studenta
 
 print("Twoja ocena jest", end=" ")
 
-if points > 95:
+if punkty > 95:
     print ("bardzo dobra (5,0)")
-elif points > 84:
+elif punkty > 84:
     print("ponad dobra (4,5)")
-elif points >= 70 :
+elif punkty >= 70 :
     print("dobra (4,0)")
-elif points > 60:
+elif punkty > 60:
     print("ponad ponad dostateczna (3,5)")
-elif points > 50:
+elif punkty > 50:
     print("dostateczna (3,0)")
 else: # to już koniec pętli, czyli wystąpi, gdy żadna z powyższych warunków nie zostanie spełnone
     print("niedostateczna (2,0)")
