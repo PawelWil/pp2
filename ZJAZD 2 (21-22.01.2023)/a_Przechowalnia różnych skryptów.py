@@ -46,3 +46,44 @@ print ("+" + "-+" * 9, "| " * 10, "+" + "+-" *9, sep="\n") #teraz dajemy separat
 
 
 # ------------------------------------------------------------------------------------
+# LABORATORIUM 7 - ZAD 1
+# Rozwiązanie Pana Marcina
+
+# I sposób:
+number  = int(input("Podaj liczbę: "))
+
+if (number ** .5) % 1 == 0: # jesli modulo 1 zwroci nam zero to na pewno jest liczba całkowita
+    str1 = "Tak"
+    str2 = ""
+else:
+    str1 = "nie"
+    str2 = "nie"
+
+print (str1 + ", pierwiastek kwadratowy z liczby " + str(number) + " " + str2 + " jest liczbą calkowitą ")
+
+
+
+#II sposób:
+# number  = int(input("Podaj liczbę: "))
+#
+# if (number ** .5) is_integer: # jesli modulo 1 zwroci nam zero to na pewno jest liczba całkowita
+#     str1 = "Tak"
+#     str2 = ""
+# else:
+#     str1 = "nie"
+#     str2 = "nie"
+#
+# print (str1 + ", pierwiastek kwadratowy z liczby " + str(number) + " " + str2 + " jest liczbą calkowitą ")
+
+# MOJE ROZWIĄZANIE:
+# number = int(input("Podaj liczbę: "))
+#
+# if number ** .5 % 1 == 0:
+#     print ("Pierwiastek kwadratowy z liczby 'number' jest liczbą calkowitą" )
+# else:
+#     print("nie jest liczbą całkowitą")
+
+
+
+# ------------------------------------------------------------------------------------
+# LABORATORIUM 7 - ZAD 2
