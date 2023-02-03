@@ -16,7 +16,7 @@
 sum = 0
 for i in range (64):
     sum += 2 ** i
-print ("suma wszystkich ziaren zboża na szachownicy: " + str(sum))
+print ("Suma wszystkich ziaren zboża na szachownicy: " + str(sum))
 
 #  LICZYMY TERAZ ILE TO BĘDZIE TON
 # 1 ziarno to: 0,4 mg (mili to jedna tysięczna grama)
