@@ -201,3 +201,109 @@ trains = round(tons / 2200, 1)
 # lub tak
 trains = int (tons / 2200) + 1
 print(trains)
+
+
+# ------------------------------------------------------------------------------------
+# LABORATORIUM 9 - ZAD 1
+
+# Wyświetl tylko liczby podzielne przez 3, 5 lub 7, ze zbioru liczb z zakresu
+# określonego przez użytkownika.
+
+# Rozwiązanie Pana Marcina:
+
+# I WERSJA - minimalistyczna
+print ("Proszę podać poniżej zakres liczb, w których znajdziemy liczby podzielne przez 3 lub 5 lub 7 ")
+range_from = int(input("Zakres zaczyna się od: "))
+range_to = int(input("zakres kończy się na: "))
+
+print("Liczby podzielne przez 3 lub 5 lub 7, to: ")
+for number in range (range_from, range_to + 1):
+    if number % 3 == 0 or number % 5 == 0 or number % 7 == 0:
+        print(number)
+
+# II WERSJA - full wersja
+# print("Podaj zakres liczb")
+# range_from = int(input("od: "))
+# range_to = int(input("do: "))
+#
+# print("Liczby z zakresu od", range_from, "do", range_to, "podzielne przez 3 lub 5 lub 7 to: ", end=" ") # zeby wypisać te liczby potrzebujemy end
+#
+# is_first = True # dodatkowa zmienna
+# for number in range (range_from, range_to + 1):
+#     if number % 3 == 0 or number % 5 == 0 or number % 7 == 0:
+#         if not is_first:
+#             print(", ", end="")
+#         print(number, end="")
+#         is_first = False
+# print (".")
+
+# Moje rozwiązanie:
+# a = int(input("Podaj liczbę dolną zbioru: "))
+# b = int(input("Podaj liczbę górną zbioru: "))
+#
+# for i in range(a, b+1):
+#     if i % 3 == 0:
+#         print("liczby podzielne przez 3, to: ", i)
+#     elif i % 5 == 0:
+#         print("liczby podzielne przez 5, to: ", i)
+#     elif i % 7 == 0:
+#         print("liczby podzielne przez 7, to: ", i)
+# else:
+#     print("te liczby są niepodzielne")
+
+# for i in range(10):
+
+
+
+# ------------------------------------------------------------------------------------
+# LABORATORIUM 9 - ZAD 2
+
+# # ZAD. 2
+# Udowodnij, że w zbiorze liczb z zakresu 1-100, jest 11 liczb, które są
+# parzyste i jednocześnie większe od 90, a gdy są nieparzyste, to
+# przynajmniej dzielą się przez 9.
+
+
+# Rozwiązanie Pana Marcina:
+
+# zawsze powinnismy to podzielić na mniejsze rowziązania, a potem dopiero to łączyć - bo czasami za duzo na raz tego jest!
+
+counter = 0
+for i in range (1, 101):# potrzebujemy liczby od 1 do 100, wiec robimy pętle for
+    if i % 2 == 0 and i > 90 or ( i % 2 != 0 and i % 9 == 0): # to jest pierwszy warunek=sprawdzamy parzystsc i wieksze od 90 (i % 2 == 0 and i > 90), a teraz drugi warunek:( i % 2 != 0 and i % 9 == 0)
+        counter += 1  # teraz checmy te zmienne zliczyć, wiec dajemy zmienną counter
+
+
+print("Tak to prawda, w zbiorze liczb z zakresu 1-100, jest " + str(counter) + " liczb, które są parzyste i jednocześnie większe od 90, a gdy są nieparzyste, to przynajmniej dzielą się przez 9.  "  + ".")
+
+
+
+# ------------------------------------------------------------------------------------
+# LABORATORIUM 9 - ZAD 3
+
+# # ZAD. 3
+# Napisz program wyznaczający wartość n-tego bitu dla dowolnej liczby
+# całkowitej. Bity liczymy od 0, od najmniej znaczącego bitu.
+
+#tu mamy sytuacje, że podajemy liczbę całkowitą, która ma swoje rozłożenie bitowe, np. dla liczby 1, mamy 0001, czyli jeśli podam liczbę 1 + bit 0 to wtedy dostanę , że bit na pozycji 0 (tu mamy 1) dla liczby 1(tu mamy bit na pozycji 0) i teraz 1 z 1 na tej samej poycji się nakładają, wieć mamy 1, WYNOSI 1. Zaś gdybym podał na innej pozycji, gdzie dla jedynki było nie jeden, a zeero, to wtedy byłoby 0, bo 1 i 0 daje zero.
+
+number = int (input("Podaj liczbę: "))  #podanie liczby całkowitej, dla której jest wyznaczana wartość n-tego bitu, podanego poniżej
+n = int(input("Podaj nr bitu: ")) # numery bitów
+
+# 01001 - przykładowa liczba - i tu się posilkujemy maską
+# 00001 - to jest moja  maska
+# &      -->za pomocą AND(koniunkcji)=& wyłuskamy te bity
+# 00001 - to jest wynik, który
+
+mask = 1 << n #potrzebujemy maskę wiec dodajemy taką zmienną
+result = number & mask
+
+bit = int(bool(result)) # wyłuskanie bity, czy to jest jeden, czy zero
+print("Bit na pozycji", n, "dla liczby", number, "wynosi", bit)
+
+
+# SPRAWDZENIE (to jest opcjonalne)
+print("{:08b}",format(number))
+print("{:08b}",format(mask))
+print("-" * 8)
+print("{:08b}",format(result))
