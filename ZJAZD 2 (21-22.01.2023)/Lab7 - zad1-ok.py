@@ -6,7 +6,7 @@
 # I sposób:
 number  = int(input("Podaj liczbę: "))
 
-if (number ** .5) % 1 == 0: # jesli modulo 1 zwroci nam zero to na pewno jest liczba całkowita
+if (number ** .5) % 2 == 0: # jesli modulo 1 zwroci nam zero to na pewno jest liczba całkowita
     str1 = "Tak"
     str2 = ""
 else:
