@@ -8,7 +8,20 @@
 # • >= większości lub równości
 # • <= mniejszości lub równości
 
+#  Priorytety operatorów -------
+# Podstawy programowania w języku Python - Instrukcja warunkowa 3
+# Priorytet Operator
+# 1 +, - jednoargumentowe
+# 2 **
+# 3 *, /, //, %
+# 4 +, - dwuargumentowe
+# 5 <, <=, >, >=
+# 6 ==, !=
+
+
 # print ( 7 > 11 ) # czy 7 jest większe od 11 - nie jest, czyli dostajemy odpowiedź 'false'
+# print ( 7 < 11 ) # tu 7 jest mniejsze od 11, więc 'true'
+
 
 # a, b = 11, 9 # przypisujemy wartości zmiennych w jednym wierszu, ale jest dużo mniej czytelny, gdy to robimy w kazdym soobnym wierszu - tu a = 11, zaś b = 9
 # print (a >= b) # oczywiscie true
@@ -68,44 +81,11 @@
 
 
       # C. Pierwsza gra :) - ODGADNIJ LICZBĘ
-import random # to jest ściągnięcie biblioteki, która jest mechanizmem do loswaonia liczb (jakichs znaków)
-
-number = random.randint(1, 3) # ona nam losuje liczbę z przedziału jaki jej podamy, czyli w naszym przypadku, z przdziału od 1 do 3
-guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : ")) # zmienna która nam poda jaka liczbę mamy na mysli
-if guess == number:
-    print("brawo! Dokładnie taką liczbę miałem na myśli!")
-else:
-    print("niestety, myślałem o liczbie: " + str(number) + ".")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#  Priorytety operatorów -------
-# Podstawy programowania w języku Python - Instrukcja warunkowa 3
-# Priorytet Operator
-# 1 +, - jednoargumentowe
-# 2 **
-# 3 *, /, //, %
-# 4 +, - dwuargumentowe
-# 5 <, <=, >, >=
-# 6 ==, !=
-
+# import random # to jest ściągnięcie biblioteki, która jest mechanizmem do loswaonia liczb (jakichs znaków)
+#
+# number = random.randint(1, 3) # ona nam losuje liczbę z przedziału jaki jej podamy, czyli w naszym przypadku, z przdziału od 1 do 3
+# guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : ")) # zmienna która nam poda jaka liczbę mamy na mysli
+# if guess == number:
+#     print("brawo! Dokładnie taką liczbę miałem na myśli!")
+# else:
+#     print("niestety, myślałem o liczbie: " + str(number) + ".")
