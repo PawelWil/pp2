@@ -92,7 +92,7 @@
 #     print("niestety, myślałem o liczbie: " + str(number) + ".")
 
 
-# ---- POnIŻEJ opcja z podwójną próbą -  tu zastosowałem dwa razy instrukcję 'else'
+# ---- POnIŻEJ opcja z podwójną próbą zgadywania  :) -  tu zastosowałem dwa razy instrukcję 'else'
 
 # import random # to jest ściągnięcie biblioteki, która jest mechanizmem do losowania liczb (jakichs znaków)
 
