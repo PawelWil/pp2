@@ -1,4 +1,4 @@
-# ZAD.3
+# LABORATORIUM 8 - ZAD 3
 # Załóżmy, że na pierwsze pole szachownicy kładziemy 1 ziarno zboża, na
 # drugie 2 ziarna, na trzecie 4 ziarna i na każde następne pole dwa razy
 # więcej ziaren niż na pole poprzednie. Napisz program, który zasymuluje
@@ -16,7 +16,7 @@
 sum = 0
 for i in range (64):
     sum += 2 ** i
-print ("Suma wszystkich ziaren zboża na szachownicy: " + str(sum))
+print ("suma wszystkich ziaren zboża na szachownicy: " + str(sum))
 
 #  LICZYMY TERAZ ILE TO BĘDZIE TON
 # 1 ziarno to: 0,4 mg (mili to jedna tysięczna grama)
@@ -40,6 +40,3 @@ trains = round(tons / 2200, 1)
 # lub tak
 trains = int (tons / 2200) + 1
 print(trains)
-
-
-
