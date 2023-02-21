@@ -1,3 +1,5 @@
+# ctr alt l = prawidłowe ustawienie kodu!
+
 # FUNKCJA INPUT
 
 #   1.KONKATENACJA  - łaczymy tylko string ze stringiem, nie da się mieszać tyów , np string z intiger. Jak jest int to trza dać przed nim string

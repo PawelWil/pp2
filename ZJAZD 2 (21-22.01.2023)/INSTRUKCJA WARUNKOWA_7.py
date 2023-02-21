@@ -1,3 +1,5 @@
+# ctr alt l = prawidłowe ustawienie kodu!
+
 # INSTRUKCJA WARUNKOWA
 
 #  Operatory relacji -------
