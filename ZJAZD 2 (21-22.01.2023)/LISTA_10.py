@@ -4,7 +4,7 @@
 # c = 6
 # d = 11
 # e = 99
-#
+
 # # print(a,b,c,d,e)# jak wyświrtlic te liczby - ale to jest tylko do małej liczby, przy liscie danych 1000 to już byłby problem, dlatego korzystamy z ponizszego rozwiązania
 # numbers = [2, 4, 8, 11, 99, 10, 10]
 # print(numbers)
@@ -19,8 +19,9 @@
 
 # 1. ----PRZYKŁAD
 # przechowywanie pól dolarówek w Denver
-# liczba produkcji monet oldolarypwych w latach 2012, 2013, 2014, w Denver i Philadelphi
+# liczba produkcji monet poldolarypwych w latach 2012, 2013, 2014, w Denver i Philadelphi
 #w denver było wyprodukowanych 1_700_000, w kolejnym roku 4_600_000, a wkolejnym 2_100_000
+#w philadelphi wypodukowanych 1_800_000, w kolejnym roku 5_000_000, a w kolejnym 2_500_000
 # denver = [1_700_000, 4_600_00, 2_100_000]
 #
 # philadelphia = []
@@ -44,31 +45,31 @@
 
 
 # 2. USUWANIE
-fruits = ["banan", "kiwi", "czereśnia", 99, True]
-print(fruits)
-del fruits[-1] # tu nam usuwa indeks [-1]
-del (fruits[-1]) # może być z okrągłymi nawiasami po del -> jest bardziej czytelne, ale nie musi
-print (fruits)
+# fruits = ["banan", "kiwi", "czereśnia", 99, True]
+# print(fruits)
+# del fruits[-1] # tu nam usuwa indeks [-1]
+# del (fruits[-1]) # może być z okrągłymi nawiasami po del -> jest bardziej czytelne, ale nie musi
+# print (fruits)
 #
-# # 3. Rozróżnienie między funcką - LEN
+# # 3. Rozróżnienie między funkcją - LEN - pokazuje ile elementów jest schowanych w danej liście - w tym przypadku mowa o liście 'fruits'
 # l = len(fruits)
 # print(l)
 #
 # # 4. Metoda APPEND + INSERT - dodanie konkretnych elementów
 #
-# fruits.append("jabłko")
+# fruits.append("jabłko") # metoda Append dodaje element, zawsze na koniec listy
 # print(fruits)
-#
-# fruits.insert(0, "gruszka")# mozemy tez dodawać za pomocą INSERT
-# print("fruits")
+
+# fruits.insert(0, "gruszka")# mozemy tez dodawać za pomocą INSERT - w tej metodzie trza podać, na które miejsce _pod jaki indeks ma być wrzucony dodatkowy element - w naszym przypdaku to jest indeks 0, czyli peirwszy, na którym będzie dodany element 'gruszka'
+# print(fruits)
 
 
 # ---------- 5. JAK ITEROWAĆ=sprawdzac co mamy, po LISTACH - jak się poruszać
 
   # I SPOSÓB
-fruits = ["banan", "jabłko", "czereśnia"]
-for i in range(len(fruits)):
-    print(fruits[i])
+# fruits = ["banan", "jabłko", "czereśnia"]
+# for i in range(len(fruits)):
+#     print(fruits[i])
 
   # II SPOSÓB
 # fruits = ["banan", "jabłko", "czereśnia"]
