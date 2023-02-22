@@ -413,3 +413,5 @@ most_common = -1
 for i in range (len(frequency)):
     if frequency[i] > most_common:
         most_common = i
+
+print("Najczęściej występującą cyfrą jest " + str(most_common) + ",", "występuje", frequency[most_common], "razy.")
