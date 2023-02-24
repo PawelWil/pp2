@@ -85,7 +85,7 @@
 
       # C. Pierwsza gra :) - ODGADNIJ LICZBĘ
 # import random # to jest ściągnięcie biblioteki, która jest mechanizmem do losowania liczb (jakichs znaków)
-
+#
 # number = random.randint(1, 3) # ona nam losuje liczbę z przedziału jaki jej podamy, czyli w naszym przypadku, z przdziału od 1 do 3
 # guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : ")) # zmienna która nam poda jaka liczbę mamy na mysli
 # if guess == number:
@@ -96,19 +96,19 @@
 
 # ---- POnIŻEJ opcja z podwójną próbą zgadywania  :) -  tu zastosowałem dwa razy instrukcję 'else'
 
-# import random # to jest ściągnięcie biblioteki, która jest mechanizmem do losowania liczb (jakichs znaków)
+import random # to jest ściągnięcie biblioteki, która jest mechanizmem do losowania liczb (jakichs znaków)
 
-# number = random.randint(1, 3) # ona nam losuje liczbę z przedziału jaki jej podamy, czyli w naszym przypadku, z przdziału od 1 do 3
+number = random.randint(1, 3) # ona nam losuje liczbę z przedziału jaki jej podamy, czyli w naszym przypadku, z przdziału od 1 do 3
 
-# guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : ")) # zmienna która nam poda jaka liczbę mamy na mysli
+guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : ")) # zmienna która nam poda jaka liczbę mamy na mysli
 
-# if guess == number:
-#     print("brawo! Dokładnie taką liczbę miałem na myśli!")
-# else:
-#     guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : "))
-#     if guess == number:
-#         print("brawo za drugim razem")
-#     else:
-#         print ('niestety..')
+if guess == number:
+    print("brawo! Dokładnie taką liczbę miałem na myśli!")
+else:
+    guess = int(input("Zgadnij jaką liczbę mam na myśli (chodzi o: 1, 2 lub 3) : "))
+    if guess == number:
+        print("brawo za drugim razem")
+    else:
+        print ('niestety..')
 
 

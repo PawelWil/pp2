@@ -13,18 +13,18 @@
 # print(chr(99)) # tu dostajemy co pod tym kodem ASCII się kryje - robimy to za pomocą funkcji CHR
 
 # --Przykład zamiany bitów:
-# print("{:08b}".format(ord("c"))) # to jest 01100011
+print("{:08b}".format(ord("c"))) # to jest 01100011
    # chcemy to 01100011 zmienic na 01101011
 # 01100011 - to jest nasza liczba
 # 00001000 - to jest maska, za pomocą której powyższą liczbe maskujemy
 # 01101011 - to jest za pomocą 'exor'- alternatywy rozłącznej, czyli zamiany bitów na przeciwne, ale tylko bitów, które wskażemy za pomoca powyższej maski
 
-# print("{:08b}".format(1<<3)) # to jest nasza maska (tu podczas tworzenia maski tez pokazuje jak sie przesuwa bity)
-# print("{:08b}".format(ord("c") ^ (1<< 3))) # to już jest finalny skutek
+print("{:08b}".format(1<<3)) # to jest nasza maska (tu podczas tworzenia maski tez pokazuje jak sie przesuwa bity)
+print("{:08b}".format(ord("c") ^ (1<< 3))) # to już jest finalny skutek
 
-# print(chr(ord("c") ^ ( 1 << 3))) # to jest cyfra k
+print(chr(ord("c") ^ ( 1 << 3))) # to jest cyfra k
 
-msg = "Xq|'gf(bm{|(nibfg)"
-for c in msg: # biore kazde z nas ze zmeinneg msg
+# msg = "Xq|'gf(bm{|(nibfg)"
+# for c in msg: # biore kazde z nas ze zmeinneg msg
 # print(c) # tu sobie zobaczę, ze ten ciag znaków z msg jest widoczny
-    print(chr(ord(c) ^ (1 << 3)), end="")
+    # print(chr(ord(c) ^ (1 << 3)), end="")

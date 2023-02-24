@@ -3,7 +3,7 @@
 # następującą figurę
 
 
-print ("Poniższa figura wygląda następująco: \n" + "+" + "-+" * 9, "| " * 10, "+" + "+-" *9, sep="\n")
+print ("Poniższa figura wygląda następująco: \n" + "+" + "-+" * 9, "| " * 10, "+" + "+-" *9,  sep="\n")
 
 # LABORATORIUM 6 - ZAD 3
 

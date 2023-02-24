@@ -67,9 +67,9 @@
 # ---------- 5. JAK ITEROWAĆ=sprawdzac co mamy, po LISTACH - jak się poruszać
 
   # I SPOSÓB
-# fruits = ["banan", "jabłko", "czereśnia"]
-# for i in range(len(fruits)):
-#     print(fruits[i])
+fruits = ["banan", "jabłko", "czereśnia"]
+for i in range(len(fruits)):
+    print(fruits[i])
 
   # II SPOSÓB
 # fruits = ["banan", "jabłko", "czereśnia"]

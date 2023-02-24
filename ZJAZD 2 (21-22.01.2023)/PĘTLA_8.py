@@ -42,8 +42,8 @@
 # for i in range (9, -1, -1): # czyli tu zamiast inkrementował, będę dekrementował, czyli zmniejszal o 1
 #     print(i)
 
-# for i in range (-8, -10, -1): # zaczynam od -8, na 10 koncze, a skacze co -1
-#     print(i)
+for i in range (-8, -10, -1): # zaczynam od -8, na -9 koncze, a skacze co -1
+    print(i)
 
 
 #---------
@@ -106,17 +106,17 @@
 
 
 # GRA-------------
-import random
-#
-counter = 1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
-number = random.randint(1,10)
-guess = int(input("Zgadnij jaką liczbę mam na mysli (1-10): ")) # pobieranie liczby od użytkownika, poprzez zgadywanie jaką liczbę mamy na myśli, oczywiście w tym przypadku od 1 do 10
-#
-while number != guess:
-    guess = int(input("Nie, to nie ta. Spróbuj jeszcze raz: "))
-    counter +=1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
-#
-print ("brawo udało Ci się  za: " + str(counter) + "razem" )
+# import random
+# #
+# counter = 1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
+# number = random.randint(1,10)
+# guess = int(input("Zgadnij jaką liczbę mam na mysli (1-10): ")) # pobieranie liczby od użytkownika, poprzez zgadywanie jaką liczbę mamy na myśli, oczywiście w tym przypadku od 1 do 10
+# #
+# while number != guess:
+#     guess = int(input("Nie, to nie ta. Spróbuj jeszcze raz: "))
+#     counter +=1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
+# #
+# print ("brawo udało Ci się  za: " + str(counter) + "razem" )
 
 
 
