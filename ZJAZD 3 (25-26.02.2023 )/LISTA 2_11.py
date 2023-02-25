@@ -219,7 +219,7 @@
 # print(numbers)
 # print (l2)
 
-# B. liosta w liscie = matrix = macierz
+# B. lista w liscie = matrix = macierz
 
 # numbers = [1, 2, 3]
 #
@@ -306,7 +306,7 @@ numbers = [ i for i in range (1, 11)]
 random_numbers = random.sample (numbers, 3) # tu metode sample - ona losuje elemnty ze zbioru numbers i losuje 3 elemnty
 
 random_numbers = random.sample (numenrs, 3)
-      
+
 
 
 random_numbers.sort() # teraz po losowaniu jeszcze musimy posrtować + sprawdzenie czy jest już w naszym zbiorzez, jesli tak, to musimy losować jeszcze raz
