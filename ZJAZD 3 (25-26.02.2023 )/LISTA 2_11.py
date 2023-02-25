@@ -200,11 +200,118 @@
 
 
 # ZADANIE:
-# chcemy dowiedziec się, ile liczb w przedziale od 1 do 300, które dzielą się przez 3 i 7 (jednocześnie)
+# Chcemy dowiedziec się, ile liczb w przedziale od 1 do 300, które dzielą się przez 3 i 7 (jednocześnie)
 
-print(len([i for i in range (1, 301)if i % 3 == 0 and i % 7 == 0])) # to nam mówi ile liczb w tym przedziale jest
+# print(len([i for i in range (1, 301)if i % 3 == 0 and i % 7 == 0])) # to nam mówi ile liczb w tym przedziale jest
+#
+#
+# numbers=[i for i in range (1, 301) if i % 3 ==0 and i % 7 == 0 ] # to nam mówi, jakie to są liczby
+# # #
+# print(numbers)
+
+# 14. Listy wielowymiarowe, czyli listy, w listach
+
+# numbers = [1, 2, 3]
+# # l2 = numbers # lista 2, l2, która wskaywac bedzie to samo co numbres
+# # zrobic liste i umiesci tam inna listę, czyli zaniezdzenie listy w liscie
+# l2 = [numbers] # to jest widoczne wtedy, gdy mamy podwójny nawias kwadratowy
+#
+# print(numbers)
+# print (l2)
+
+# B. liosta w liscie = matrix = macierz
+
+# numbers = [1, 2, 3]
+#
+#
+# matrix = [numbers[:], numbers[:]] # dwa razy to samo odwolanie, ale dwa raz to wsadzone jest + ivh pełne kopie [:]
+# numbers[0] = 99
+#
+# MATRIX = [0][0] # to coś nie działa..?
+#
+# print (matrix)
 
 
-numbers=[i for i in range (1, 301) if i % 3 ==0 and i % 7 == 0 ] # to nam mówi, jakie to są liczby
-# #
-print(numbers)
+# ZADANIE  - zaimplementowanie szachownicy - który zwizulalizje nam prostą sytuacje na planszy do gry w szachy
+
+ # 8 x 8 - macierz 8 razy 8
+
+#     A B C D E F G H
+#   1 # # # # # # # #
+#   2 # # # # # # # #
+#   3 # # # # # # # #
+#   4 # # # # # # # #
+#   5 # # # # # # # #
+#   6 # # # # # # # #
+#   7 # # # # # # # #
+#   8 # # # # # # # #
+
+
+# chess_row = ["--", "--", "--", "--", "--", "--", "--", "--",]# tworzymy liste, któa będzie miała 8 elemntów - prosty sposób
+# chess_row = ["--" for i in range (8) ] # to jest ten dobry spsób, poprzez pętle for
+#
+# chessboard = [chess_row [:] for i in range (8)]# teraz  za pomocą zagniezdzonego wyrazenie robie szachwonice, za pomoc for robie go 8 razy, i tu ważna rzecz, za pomocą [:] zrobiliśmy, ze te wszystkie listy są osobnymi listami
+
+    # lub można te powysze ( 2 linie) zrobic za pomoca jednej linii, jak poniżej:
+# chessboard = [["--" for i in range (8)] for i in range (8)]
+#
+# # teraz definijemy elemnty - biały pion + czarny pion
+# WHITE_POWN = "WP"
+# BLACK_POWN = "BP"
+#
+# chessboard[0][0] = WHITE_POWN #- w kolumnie 0 i wierszu 0 ustwiamy białego piona
+# chessboard[3][5] = BLACK_POWN #- w kolumnie 3 i wierszu 3 ustwiamy białego piona
+#
+# # teraz wyswietlamy plansze szachową- czyli nic innego jak rysujemy macierz:
+# for chess_row in chessboard:
+#     for chess_square in chess_row: # tu mamy pętle  w pętli
+#         print (chess_square, end = " ")
+#     print()
+
+
+# print (chessboard)
+
+
+# ZADANIE: losuj trzy z dziesięciu
+
+# SPOSÓB I:
+
+# import random
+#
+# random_numbers = [] # tu umieszczamy te liczby, w tej liście
+#
+# # for i in range (3):  # teraz iterujemy tyle razy ile razy mamy wylosowac liczb - w tym przypadku 3 - to jest na sztywno 3 losowanie , ale to jest zle, musi bec petla while ze zmienna counter
+#
+# counter = 3
+# while counter:
+#     number = random.randint (1, 10)
+#     if  number not in random_numbers:
+#         random_numbers.append(number)  # tu nam losuje liczbe ze zbioru od 1 do 10
+#         counter -= 1 # counter = counter - 1
+#
+#
+# random_numbers.sort() # teraz po losowaniu jeszcze musimy posrtować + sprawdzenie czy jest już w naszym zbiorzez, jesli tak, to musimy losować jeszcze raz
+#
+#
+# print (random_numbers)
+
+
+
+# SPOSÓB II -  na powyższe
+
+import random
+
+numbers = [ i for i in range (1, 11)]
+
+random_numbers = random.sample (numbers, 3) # tu metode sample - ona losuje elemnty ze zbioru numbers i losuje 3 elemnty
+
+random_numbers = random.sample (numenrs, 3)
+      
+
+
+random_numbers.sort() # teraz po losowaniu jeszcze musimy posrtować + sprawdzenie czy jest już w naszym zbiorzez, jesli tak, to musimy losować jeszcze raz
+
+
+print (random_numbers)
+
+
