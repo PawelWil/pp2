@@ -35,7 +35,7 @@ while counter <5: # dlatego 5, bo przecie zmamy 5 elelntów --do momnetu jak cou
 
 for row in range (len(chessboard)): # obracoam tą pętlą jaki jest rozmiar mojej szachownicy
     if row ==0:
-        print(" ", "A", "B", "C", "D", "E", "F", "G", "H", sep=" ")
+        print(" ", "A ", "B ", "C ", "D ", "E ", "F ", "G ", "H ", sep=" ")
     print (row +1, end = " ")
     for column in range (len(chessboard[row])):
         print(chessboard[row][column], end=" ") # teraz wyswiatlamy plansze szachwową, któa skalaada si e zwiersza i kolumn i oczywiscie argi,et end na ostep

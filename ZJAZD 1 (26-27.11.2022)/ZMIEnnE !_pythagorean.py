@@ -9,4 +9,4 @@ print("Długość przeciwprostokątnej trójkąta o przyprostokątnych", a, "ora
 # ważna uwaga - zmienne już w kodzie zawsze wpisuje bez apostrofów, czy cudzysłowów!!
 
 #teraz z użyciem concatenacji
-print("Długość przeciwprostokątnej trójkąta o przyprostokątnych" + str(a) + "oraz" str (b) + "wynosi" + str (c), ".")
+print("Długość przeciwprostokątnej trójkąta o przyprostokątnych" + str(a) + "oraz", str (b) + "wynosi" + str (c), ".")
