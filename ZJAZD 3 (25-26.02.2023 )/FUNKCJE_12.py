@@ -78,7 +78,20 @@
 #     print("Funkcja na razie nic nie zwraca")
 
 
+# Różnica pomiędzy funkcją 'print', a 'return'
 
+def my_name():
+    return "Marcin" # ta funkcja zwracca jakas  wartość, ale nie drukuje nic
+
+def show_my_name():
+    print("Marcin") # ta funkcja zwraca jakas  wartość i drukuje coś
+
+#Test z Return
+# redefine =  my_name()# jak widać return poprzez funkcje my_name nie zwraca nic
+# print (redefine * 10) # zeby zwrocic za pomocą return, trzz go wywolać poprzez print
+
+#Test z Print
+redefine = show_my_name() # tu jak widzimy od razu zwraca wartość
 
 
 # ZADANIE - robimy asterisks
@@ -95,7 +108,7 @@
 #     print("Proszę podaj", number_no, "lizbe:", end= " ")
 
 # show_message
-show_asterisks(50)
+# show_asterisks(50)
 
 # przekazayanie parametrów pozycyjnych:
 # print ("raz", "asD" , "trzy") --cos nie dziala...
