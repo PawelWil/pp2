@@ -92,7 +92,7 @@ def show_my_name():
 # print (redefine * 10) # zeby zwrocic za pomocą return, trzz go wywolać poprzez print
 
 #Test z Print
-redefine = show_my_name() # tu jak widzimy od razu zwraca wartość
+# redefine = show_my_name() # tu jak widzimy od razu zwraca wartość
 
 
 # ZADANIE - robimy asterisks

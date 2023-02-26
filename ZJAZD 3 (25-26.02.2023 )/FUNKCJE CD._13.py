@@ -2,15 +2,15 @@
 
 #1. jak wspoładziaja listy razem z funkcjami-----------
 # definiujemy funkcje
-# def sum_numbers(numbers): # to co jest w nawiasie to są parametry tej fukcji, tutja to zmienna 'numbers'
-#     sum = 0
-#     for element in numbers: #teraz korzystamy z petli, ktora to ziinna dostanie kolejne lelemty, któr bedzizemy iteroiwac, dla nas to lista, czyli dopisz/dodaj ten elemnt
-#         sum += element
-#     return sum
-#
-# numbers = [1,2,3]# to jest zmienna globalna 'numbers'
-# result = sum_numbers(numbers)
-# print (result)
+def sum_numbers(numbers): # to co jest w nawiasie to są parametry tej fukcji, tutja to zmienna 'numbers'
+    sum = 0
+    for element in numbers: #teraz korzystamy z petli, ktora to ziinna dostanie kolejne lelemty, któr bedzizemy iteroiwac, dla nas to lista, czyli dopisz/dodaj ten elemnt
+        sum += element
+    return sum
+
+numbers = [1,2,3]# to jest zmienna globalna 'numbers'
+result = sum_numbers(numbers)
+print (result)
 
 
 
