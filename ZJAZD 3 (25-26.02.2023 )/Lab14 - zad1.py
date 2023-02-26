@@ -6,28 +6,18 @@
 # • wyświetl użytkownikowi numer telefonu lub informacje o jego braku.
 
 
-phones = {"Tomek": 21312321, "Ada": 12341441, "Karol": 99999999} # numery telefonów ludzi
-name = input ("Podaj imię:")
-names = [name]
+phones = {
+    "Adam": 123123123,
+    "Karol": 111222333,
+    "Mariola": 22233344455,
+    "Iza": 2312312312
+}
 
-for name in phones():
+while True:
+    name = input ("Podaj imię: ")
+    if name == "":
+        break
     if name in phones:
-        print(name, "->", phones[name])
+        print("Telefon:", phones[name])
     else:
-        print("nie znaleziono slowa:", name, "w słowniku.")
-
-
-
-
-
-# animals_dict= {
-#     "kot": "cat",
-#     "pies": "dog",
-#     "chomik": "hamster"
-# }
-# words = ["kot", "lew", "chomik"] # to jest lista, bo kwadratowe nawiasy
-# for word in words:
-#     if word in animals_dict:
-#         print(word, "->", animals_dict[word])
-#     else:
-#         print("nie znaleziono slowa:", word, "w słowniku.")
+        print("NIe znaleziono telefonu dla imienia", name)
