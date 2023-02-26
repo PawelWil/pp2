@@ -116,10 +116,10 @@ def show_my_name():
 
 
 #KOlejny przyklad
-# def introduce (first_name, last_name):
-#     print("czesc jestem", first_name, last_name)
-# introduce("Jan", "Kowalski")
-# introduce("Kowalski", "Jan") # jak widać jest wazna kolejność przekazywanych argumentów
+def introduce (first_name, last_name):
+    print("czesc jestem", first_name, last_name)
+introduce("Jan", "Kowalski")
+introduce("Kowalski", "Jan") # jak widać jest wazna kolejność przekazywanych argumentów
 
 #przekazywanie argumentow słow kluczowych
 # def introduce (first_name, last_name):
