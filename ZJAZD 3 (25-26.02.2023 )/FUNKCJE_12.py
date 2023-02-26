@@ -1,4 +1,5 @@
 # -- FUNKCJE--------------
+# DEBUGGER (czyli ten robak u góry) to jest opcja sledzenia krok po kroku programu, pokazuje jakie wartosci są przypisawene itd.
 
 #funkcje były stwoswane gdy chcieliśmu pobrac dane od uzytowniak, za pomocą funkcji inout, np.:
 # name = input("Jak masz na imie:")
