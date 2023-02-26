@@ -30,7 +30,6 @@ def define_players():
 
 
 
-
 def define_win_points():
     return fetch_and_validate_int("Zdefiniuj liczbę punktów wygranej: ")
 
@@ -56,7 +55,6 @@ def count_points(players, win_points):
             if is_winner(players, win_points):
                 return player_name
         counter += 1
-
 
 
 
