@@ -55,16 +55,16 @@
 
 
 # --------------------------OPERATORY  BITOWE -----------------------
-a = 5 # 5 i 3, to są wartości dziesiętne, ale zapisywane są binarnie, czyli liczymy jak binarnie, czyli np. liczba 5 to: 00000101 --> 1 * 2 ** 0(1) + 0 * 2 ** 1(0) + 1 * 2 ** 2 (4) +.. --> i mamy 5 :)
-b = 3
+# a = 5 # 5 i 3, to są wartości dziesiętne, ale zapisywane są binarnie, czyli liczymy jak binarnie, czyli np. liczba 5 to: 00000101 --> 1 * 2 ** 0(1) + 0 * 2 ** 1(0) + 1 * 2 ** 2 (4) +.. --> i mamy 5 :)
+# b = 3
 
 # 1. Koniukncja Bitowa (czyli 'i' - widok operatora &)
-print (a, "&", b, "=", a & b)
-print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
-print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
-print("{:08b}".format(b))
-print("-" * 8)
-print("{:08b}".format(a & b)) # wynikiem jest 00000001, bo pierwsze 1 mamy w pierwszej linii (a=5) i drugiej linii (b=3) i 1 z 1 daje 1, ale już w drugiej i trzeciej kolumnie mamy 0 i 1 oraz 1 i 0, co daje 0, więc wynik konikunki to 00000001
+# print (a, "&", b, "=", a & b)
+# print (bin(a)) # teraz przedstawiamy w postaci binarnej --> bin = binary
+# print("{:08b}".format(a)) # na osmiu pozycjach, chcemy rzpisać te bity binarnie - to jest bardziej praktyczne niż powyzsze rozpisanie, które jest ok - i tu korzystamy z funkcji 'format'
+# print("{:08b}".format(b))
+# print("-" * 8)
+# print("{:08b}".format(a & b)) # wynikiem jest 00000001, bo pierwsze 1 mamy w pierwszej linii (a=5) i drugiej linii (b=3) i 1 z 1 daje 1, ale już w drugiej i trzeciej kolumnie mamy 0 i 1 oraz 1 i 0, co daje 0, więc wynik konikunki to 00000001
 
 # 2. Alternatywa Bitowa (czyli 'or' - widok operatora | (pajp-tak sie go nazywa))
 # print (a, "|", b, "=", a | b)
@@ -112,7 +112,7 @@ print("{:08b}".format(a & b)) # wynikiem jest 00000001, bo pierwsze 1 mamy w pie
 # print("{:08b}".format(~a))
 
 # print()
-# for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo
+# for i in range(5, -6, -1): # przykład iteracji do tylu i pokazanie jak to wygląda bitowo i dziesiętnie
 #     print("{0:08b} => {1:d}".format(i & 255, i))
 
 # 7. OPERATOR PORÓWNANIA

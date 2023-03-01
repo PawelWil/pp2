@@ -53,7 +53,8 @@
 #
 # # 3. Rozróżnienie między funkcją - LEN - pokazuje ile elementów jest schowanych w danej liście - w tym przypadku mowa o liście 'fruits'
 # l = len(fruits)
-# print(l)
+# print(l) # albo tak
+# print(len(fruits)) #albo tak
 #
 # # 4. Metoda APPEND + INSERT - dodanie konkretnych elementów
 #
@@ -67,9 +68,10 @@
 # ---------- 5. JAK ITEROWAĆ=sprawdzac co mamy, po LISTACH - jak się poruszać
 
   # I SPOSÓB
-fruits = ["banan", "jabłko", "czereśnia"]
-for i in range(len(fruits)):
-    print(fruits[i])
+# fruits = ["banan", "jabłko", "czereśnia"]
+# for i in range(len(fruits)):
+    # print(fruits[i]) # to jest iterowanie pionowe, bo nie ma end = ' '
+    # print(fruits[i], end=" ") # to jest iterowanie poziiome, bo jes end = ' '
 
   # II SPOSÓB
 # fruits = ["banan", "jabłko", "czereśnia"]

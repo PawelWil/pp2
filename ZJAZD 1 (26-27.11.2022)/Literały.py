@@ -6,8 +6,8 @@
 #print(8+2)
 #print(1_000_000) # to pokazuje w łatwiejszy spób dużą liczbę - latwiej widoczna
 #print(-2) #liczba z operatorem
-#print(type(2)) # to mowi nam jakiego typu jest ten znak - tu integer
-#print(type("asd")) # to mowi nam jakiego typu jest ten znak - tu string
+# print(type(2)) # to mowi nam jakiego typu jest ten znak - tu integer
+# print(type("asd")) # to mowi nam jakiego typu jest ten znak - tu string
 
 
 # SYSTEMY LICZBOWE (ZAWSZE idziemy od lewej do Prawej!!)
@@ -54,7 +54,7 @@
 
 
 # LICZBY ZMIEnnoprzecinkowe (tu mamy część ułąmkową równą zero) - liczba FLOAT
-#print(2.0)
+# print(2.0)
 # lub
 #print(.123)
 # lub
@@ -65,13 +65,13 @@
 #print(type(1e10)) -  jaki typ liczby
 
 # Zadanie 2 z Laboratorium 3 - określić typy literałów
-print (type("100.5"))
-print (type(2.0,))
-print (type(100.5))
-print (type('.0eeee-100'))
-print (type(.0e-100))
-print (type(528))
-print (type(False))
+# print (type("100.5"))
+# print (type(2.0,))
+# print (type(100.5))
+# print (type('.0eeee-100'))
+# print (type(.0e-100))
+# print (type(528))
+# print (type(False))
 
 
 
@@ -86,11 +86,11 @@ print (type(False))
 
 # WARTOŚCI Logiczne (tzw. wartości boolowskie)
 
-#print(False)
-#print(type(False))
-#print(type(2>3)) #bo 2 nie jest większe od 3
-#print(2>3)
+# print(False)
+# print(type(False))
+# print(type(2>3)) #bo 2 nie jest większe od 3
+# print(2>3)
 
-#print(bool(1)) # wartość większa od 0, dlatego True
+# print(bool(1)) # wartość większa od 0, dlatego True
 #print(bool(13)) # wartość większa od 0, dlatego True
 #print(bool(0)) # to jest zero, dlatego False

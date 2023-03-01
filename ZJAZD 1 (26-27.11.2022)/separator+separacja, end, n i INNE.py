@@ -12,13 +12,13 @@
 
 
 # opcja nowej lini, za pomocą /n
-#print("A", "B", sep="\n", end=" ")
+# print("A", "B", sep="\n", end=" ")
 # print("C", "D", sep="\n", end=" ")
 # print("E", "F", sep="\n", end=" ")
-#print ("Będę uważał na zajęciach z Pythona. \n" * 100)
+# print ("Będę uważał na zajęciach z Pythona. \n" * 100)
 
 #Tabulacja
-# print("\tabc", "\tabc")
+# print("\t\tabc", "\tabc")
 
 #nowa linia
 # print("\n\nabc\nghj")

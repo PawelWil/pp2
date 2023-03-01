@@ -29,24 +29,24 @@
 # for i in range (3,10): # tu iteruje od 3 do 10
 #     print(i)
 
-#---------
+# ---------
 # for i in range (2, 10, 3):
 #     print (i)
- #początek itercaji to i=2
- #dopóki i < 10 => na 10 koncze
- #skaczemy co 3
+# początek itercaji to i=2
+# dopóki i < 10 => na 10 koncze
+# skaczemy co 3
 
 
-#---------
+# ---------
 # teraz przykład, gdy zaczynamy pętle od wartości 9, czyli i=9, ale checmy ją wykonywać dopoki nasze i będzie wieszke od -1, poniewaz bedę skakal co -1
 # for i in range (9, -1, -1): # czyli tu zamiast inkrementował, będę dekrementował, czyli zmniejszal o 1
 #     print(i)
 
-for i in range (-8, -10, -1): # zaczynam od -8, na -9 koncze, a skacze co -1
-    print(i)
+# for i in range (-8, -10, -1): # zaczynam od -8, na -9 koncze, a skacze co -1
+#     print(i)
 
 
-#---------
+# ---------
 # for i in range (9, 6, -1):
 #     print (i)
 # start i=9
@@ -54,16 +54,16 @@ for i in range (-8, -10, -1): # zaczynam od -8, na -9 koncze, a skacze co -1
 # skok o -1
 
 
-#---------
+# ---------
 # TRYB Debug - wpisuje kod + daję znak robak (prawa górna strona) - Debugger to narzędzie pozwalające na kontrolę wykonywania kodu programu. Dzięki niemu możesz zapauzować wykonywanie programu w danym momencie (np. we wskazanej linii kodu). Po zatrzymaniu bardzo często debugger oferuje możliwość podglądnięcia obecnego stanu uruchomionego programu.
 # for i in range(5):
 #     print(i)
 
-#--------
+# --------
 # SILNIA
 # teraz obliczamy silnie "!" - SILNIA to operacja w matematyce, ze operacja 3 silnia (3!), to: 3! = 1 * 2 *3
 
-#----silnia za pomocą pętli FOR
+# ----silnia za pomocą pętli FOR
 # number = 5 # -- dla liczby5 --> 5! = 1 * 2 * 3 * 4 * 5 = 120
 # factorial = 1
 # pętla for będzie za to odpowiadac
@@ -80,7 +80,7 @@ for i in range (-8, -10, -1): # zaczynam od -8, na -9 koncze, a skacze co -1
 # print(factorial)
 
 
-#------silnia za pomocą pętli WHILE
+# ------silnia za pomocą pętli WHILE
 # number = 5
 # factorial = 1
 # while number:
@@ -90,36 +90,40 @@ for i in range (-8, -10, -1): # zaczynam od -8, na -9 koncze, a skacze co -1
 #     print(factorial)
 
 
-#------ normalna pętla
+# ------ normalna pętla
 # for i in range(5):
 #     print(i)
 # else: # to else się wykona tylko wtedy, gdy pętla nie zostanie przerwana np. opercają break, czyli zakonczenie pętli definitywnie
 #     print("Koniec pętli...")
 
-#---------
-# for i in range(5):
-#     print(i)
-#     if i ==3:
-#         break
-# else: # tu się else nie wykonało, bo mamy break
+# number = int(input('podaj liczbe: '))
+# for i in range(1):
+#     if number > 3:
+#         print('>3')
+#     elif number < 3:
+#         print ('<3')
+# else: # to else się wykona tylko wtedy, gdy pętla nie zostanie przerwana np. opercają break, czyli zakonczenie pętli definitywnie
 #     print("Koniec pętli...")
 
 
+# ---------
+# for i in range(5):
+#     print(i)
+#     if i == 3:
+#         break
+# else:  # tu się else nie wykonało, bo mamy break
+#     print("Koniec pętli...")
+
 # GRA-------------
-# import random
+import random
+
 # #
-# counter = 1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
-# number = random.randint(1,10)
-# guess = int(input("Zgadnij jaką liczbę mam na mysli (1-10): ")) # pobieranie liczby od użytkownika, poprzez zgadywanie jaką liczbę mamy na myśli, oczywiście w tym przypadku od 1 do 10
+counter = 1  # ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
+number = random.randint(1, 10)
+guess = int(input("Zgadnij jaką liczbę mam na mysli (1-10): "))  # pobieranie liczby od użytkownika, poprzez zgadywanie jaką liczbę mamy na myśli, oczywiście w tym przypadku od 1 do 10
 # #
-# while number != guess:
-#     guess = int(input("Nie, to nie ta. Spróbuj jeszcze raz: "))
-#     counter +=1 #ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
+while number != guess:
+    guess = int(input("Nie, to nie ta. Spróbuj jeszcze raz: "))
+    counter += 1  # ta zmienna counter jest po to żeby zliczyła, za którym razem udało nam się zgadnąć tą liczbę, i dzięki temu powie nam za który razem zgadłem
 # #
-# print ("brawo udało Ci się  za: " + str(counter) + "razem" )
-
-
-
-
-
-
+print("brawo udało Ci się  za: " + str(counter) + "razem")

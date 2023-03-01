@@ -39,10 +39,11 @@
 
 
 # 6. Sprawdzenie czy liczba jest parzysta
-#print(3 % 2) # jeżeli wynik jest 0 to jest parzysta, jeśli wynik nie jest zero, tzn. że nie jest parzysta
+# print(3 % 2) # jeżeli wynik jest 0 to jest parzysta, jeśli wynik nie jest zero, tzn. że nie jest parzysta
 #print(3 % 2) # tu jak widać jest jeden, czyli nieparzysta
-#print(3%2 ==0) # tu możemy zrobić również za pomocą opearora porówania, nie jst 0 wiec false
-#print(16 % 2) # tu mamy wynik 0, czyli parzysta
+# print(3%2 ==0) # tu możemy zrobić również za pomocą opearora porówania, nie jst 0 wiec false
+# print(16 % 2) # tu mamy wynik 0, czyli parzysta
+# print(16 % 2==0) # tu mamy wynik 0, czyli parzysta i pokazuje jako True
 
 # Operatory 1-argumentowe, maj najwyzszy priorytet
 #print(-1)
