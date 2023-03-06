@@ -7,7 +7,7 @@ while True:
 
     numbers = []
     while True:
-        try:  # musiałem poszukać w internecie jak zrobić pętlę która kończy się kiedy nie da się liczby całkowitej i nie wykrzaczy kodu bo input daje string
+        try:
             num = input("Podaj liczbę całkowitą: ")
             numbers.append(int(num))
         except ValueError:
