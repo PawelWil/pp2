@@ -12,7 +12,7 @@ import random
 #1. Okreslamy puste pole szachowe:
 BLANK_SQUARE = "--"
 
-#.2 LIsat figur ktore beded chcial rozmiscic losowwo:
+#.2 Lista figur ktore beded chcial rozmiscic losowwo:
 pieces = ("WP", "BP", "BP", "BT", "WQ" )
 # teraz te 5 elelmntów losowo rozmieszczamy na szacxhownicy ( 3piony, wieza, damka)
 
@@ -41,5 +41,3 @@ for row in range (len(chessboard)): # obracoam tą pętlą jaki jest rozmiar moj
         print(chessboard[row][column], end=" ") # teraz wyswiatlamy plansze szachwową, któa skalaada si e zwiersza i kolumn i oczywiscie argi,et end na ostep
     print()
 
-
-# COŚ MI NIE DZIAŁA - FILM nr 3... :(

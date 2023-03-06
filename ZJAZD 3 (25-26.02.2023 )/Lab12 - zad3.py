@@ -8,7 +8,7 @@
 # • zaprezentuj wyniki korzystając z wcześniej przygotowanych funkcji.
 
 
-# jak się liczy wskaźnik BMI - najlepiej sprawdzić w google
+# jak się liczy wskaźnik BMI:
 # BMI = masa / (wzrost)**2
 
 # 1. zapytaj użytkownika o wzrost i wagę,

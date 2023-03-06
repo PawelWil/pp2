@@ -17,10 +17,9 @@ def transform_data(list1, list2, list3): #pobierac bedzie 3 listy
     merge_list_without_duplicates(list3, result)
     return tuple(result)
 
-    # pass # to jak dam, to zawiesza działanie linii nad
+
 
 print(transform_data([1,2], [1,1], [4,4,4]))
 print(transform_data([1,2,3], [1,2,3], [4,5,6]))
 print(transform_data(["Ala","ma"], ["Ala","ma","kota"], ["mysz"]))
 
-# to zadanie polega na tym, że wszystko się musi zawierac w jednym wierszu, ale bez powtórzeń

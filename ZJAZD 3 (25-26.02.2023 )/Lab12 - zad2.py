@@ -7,7 +7,7 @@
 # • 344555 i 788998
 
 
-# tworzymy kilka funcji
+# tworzymy kilka funcji:
 
 # 1 funkcja - liczy obwód prostokąta:
 
@@ -28,10 +28,10 @@ def diaganol_length(a, b):
 # teraz pokazujemy rezulataty za pomocą jednej funkcji:
 
 def show_result (a, b):# z niej wywolujemy inne funkcje
-    print ("prost o bokach ", a, "i", b)
-    print("Owbod:", perimiter(a, b))
-    print("Pole pow", surface_area(a, b))
-    print("Dlug przek", diaganol_length(a, b))
+    print ("Prostokąt o bokach:", a, "i", b)
+    print("Owbód:", perimiter(a, b))
+    print("Pole powierzchni:", surface_area(a, b))
+    print("Długość przekątnej:", diaganol_length(a, b))
     print()
 
 show_result(4, 5)

@@ -11,9 +11,9 @@ while True:
         break
 
     try:
-        number = float(input("Podaj " + str(counter) + "liczbę zmiennoprzecinkową"))
+        number = float(input("Podaj " + str(counter) + " liczbę zmiennoprzecinkową: "))
         numbers.append(number)# dodajemy ją do pustej listy powyżej za pomocą metody append
         counter += 1
     except:
-        print("Podana wart jest niepopr, sprobuj ponownie")
+        print("Podana wartość jest niepoprawna, proszę spróbuj ponownie")
 print(numbers)

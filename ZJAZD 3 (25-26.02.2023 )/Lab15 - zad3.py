@@ -4,9 +4,6 @@
 # wprowadzaniem błędnych danych przez użytkownika.
 
 
-
-# Poniszy program jezt z LAB 14, zad3
-
 def fetch_and_validate_int(standard_msg, error_msg="To nie jest liczba"):
     while True:
         try:
@@ -17,7 +14,7 @@ def fetch_and_validate_int(standard_msg, error_msg="To nie jest liczba"):
 
 def define_player(player_no):  # pojedynczy gracz
     player_points = []  # lista
-    player_name = input("Podaj imię" + str(player_no) + "gracza:")
+    player_name = input("Podaj imię " + str(player_no) + " gracza:")
     return {player_name: player_points}
 
 
@@ -50,7 +47,7 @@ def count_points(players, win_points):
     while True:
         print("\nTura: ", counter)
         for player_name in players.keys():
-            player_points = fetch_and_validate_int("Podaj punkty dla gracza" + player_name + ":")
+            player_points = fetch_and_validate_int("Podaj punkty dla gracza " + player_name + ": ")
             players[player_name].append(player_points)
             if is_winner(players, win_points):
                 return player_name

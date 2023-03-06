@@ -10,13 +10,13 @@
 # 1 krok: definiowanie liczby oraz imion graczy,------
 def define_player(player_no):  # pojedynczy gracz
     player_points = []  # lista
-    player_name = input("Podaj imię" + str(player_no) + "gracza:")
+    player_name = input("Podaj imię " + str(player_no) + " gracza:")
     return {player_name: player_points}
 
 
 def define_players():
     players = {}
-    players_total = int(input("Podaj liczbe graczy (1-8): "))  # bedzie tam info ilu graczy tam bedzie
+    players_total = int(input("Podaj liczbę graczy (1-8): "))  # bedzie tam info ilu graczy tam bedzie
     for i in range(players_total):
         players.update(define_player(i + 1))
     return players
@@ -49,7 +49,7 @@ def count_points(players, win_points):
     while True:
         print("\nTura: ", counter)
         for player_name in players.keys():
-            player_points = int(input("Podaj punkty dla gracza" + player_name + ":"))
+            player_points = int(input("Podaj punkty dla gracza " + player_name + ":"))
             players[player_name].append(player_points)
             if is_winner(players, win_points):
                 return player_name
@@ -59,7 +59,7 @@ def count_points(players, win_points):
 # 4 krok: wyświetlanie informacji o zwycięzcy oraz zdobytych punktach poszczególnych graczy.------------
 
 def show_results(players, winner):
-    print("\nWygrał gracz i imieniu: ", winner + ", brawo!\n")
+    print("\nWygrał gracz o imieniu: ", winner + ", brawo!\n")
     print("Szczegółowa tabela wyników")
     for player, points in players.items():
         print(player, "->", points)
