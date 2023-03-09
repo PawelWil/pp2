@@ -1,37 +1,40 @@
 # -- FUNKCJE--------------
 # DEBUGGER (czyli ten robak u góry) to jest opcja sledzenia krok po kroku programu, pokazuje jakie wartosci są przypisawene itd.
 
-#funkcje były stwoswane gdy chcieliśmu pobrac dane od uzytowniak, za pomocą funkcji inout, np.:
-# name = input("Jak masz na imie:")
-# print(("Witaj " + name + "!")* 100)
+#--- Funkcje były stosowane gdy chcieliśmu pobrac dane od uzytowniak - tworzyliśmy zmienną + za pomocą funkcji input, któr mogła być uruchomiona
+# z tym argumentem, podanym przez użytkownika.
+# Print, to też jest funkcja, która przekazuje argumenty, które są w nią wpisane.
+# name = input("Jak masz na imie:") # Funkcja input
+# print(("Witaj " + name + "!")* 100) # Funkcja print
 
-# Funkcja związana z pobraniem i wyswietleniem liczb (get and show numbers)
+
+# --- Funkcja związana z pobraniem i wyswietleniem liczb (get and show numbers) -
+
+# Standardowy sposób:
+
+# pobieramy od uzytkownika 3 liczby i je wyświetlimy:
+
+# print("Podaj liczbę: ")
+# a = int (input()) # tą liczbe za pomoca int rzutujemy do liczby calkowitej i wrzucamy do fukcji input!
+
+# print("Podaj liczbę: ")
+# b = int (input())
+
+# print("Podaj liczbę: ")
+# c = int (input())
+
+# print ("Pobrano liczby: ", a, b, c)
 
 
-# --Standardowy sposób:
+#2 - tu to samo co powyzej, ale juz za pomocą fuckji 'def'
+# def show_message():  # tu definiujemy nową funkcję, do której wrzucimy funkcję print
+#     print("Podaj liczbę: ", end=" ")
 
 # pobieramy od uzytkownika 3 liczby
-
-# print("Podaj liczbę: ")
-# a = int (input()) # tą liczbe za pomoca int rzutujemy do liczby calkowitej!
-#
-# print("Podaj liczbę: ")
-# b = int (input())
-#
-# print("Podaj liczbę: ")
-# c = int (input())
-#
-# print ("Pobrano liczby: ", a, b, c)
-
-
-#2 - tu to samo co powyzej, juz za pomocą fuckji 'def'
-# def show_message():  # tu definiujemy funkcję
-#     print("Podaj liczbę: ", end=" ")
-#
-#
-# # pobieramy od uzytkownika 3 liczby
 # show_message()
-# a = int (input()) # tą liczbe za pomoca int rzutujemy do liczby calkowitej!
+# a = int (input()) # Prosimy o podanie za pomocą zmiennej 'a' i funkcji 'input' liczby,
+# która to będzie powiązana z poleceniem pochodzącym z funkcji 'show message'="Podaj liczbę" - za nią się wyświetli wartość zmiennej 'a'
+# + tą liczbe za pomoca int rzutujemy do liczby calkowitej!
 
 # show_message()
 # b = int (input())
@@ -39,11 +42,59 @@
 # show_message()
 # c = int (input())
 
+# print ("Pobrano liczby: ", a, b, c)
+
+
+#--- jaki atuty funkcji, np. chcemy dodać w funkcji słowo "proszę", to teraz wystarczy że w funkcji print dopisuje to słowo
+# i ono się już wyświetla, we wszystkich zapytaniach, nie trzeba z osobna tego słowa 'proszę' wprowadzać. Oczywiście można również
+# dodawać inne znaki, które już będą widoczne w pozostalych zapytaniach
+
+
+# --- PARAMETRYZOWAnIE FUnKCJI:
+# def show_asteriks(how_many): # to jest parametryzowanie funkcji - nasz parametr = how_many + podajemy wartość tego parametru
+                                # podczas wywołania funkcji(poniżej),czyli np. (10), (1212) itd. i dzięki temu parametrowi wyświetlamy *
+                                # tą zadaną ilość razy
+    # print("*" * how_many)
+
+# show_asteriks(10)
+# show_asteriks(1212)
+
+
+# --- ulepszenie programu 1
+# def show_message():
+#     print("Proszę podaj liczbę: ", end=" ") # tu dodajemy to słowo 'proszę' i jak widzimy na już mamy zapytanie ze słowem 'proszę'
+
+# pobieramy od uzytkownika 3 liczby
+# show_message()
+# a = int (input()) # wytłumaczenie znaczenia zmiennej a i b i c powyżej!
+
+# show_message()
+# b = int (input())
+
+# show_message()
+# c = int (input())
 
 # print ("Pobrano liczby: ", a, b, c)
 
 
-#333 Pobieranie liczb
+# --- ulepszenie programu 2
+# def show_message(number_no):
+#     print("Proszę podaj", number_no, "liczbę: ", end=" ") # tu dodajemy to słowo 'proszę' i jak widzimy na już mamy zapytanie ze słowem 'proszę'
+
+# pobieramy od uzytkownika 3 liczby
+# show_message(1) # tu teraz do fukcji show_message podajemy argument number_no = 1
+# a = int (input()) # wytłumaczenie znaczenia zmiennej a i b i c powyżej!
+
+# show_message(2) # tu teraz do fukcji show_message podajemy argument number_no = 2
+# b = int (input())
+
+# show_message(3) # tu teraz do fukcji show_message podajemy argument number_no = 3
+# c = int (input())
+
+# print ("Pobrano liczby: ", a, b, c)
+
+
+#333 ---- Pobieranie liczb
 
 # def get_number(number_no):  # tu definiujemy funkcję
 #     print("Podaj liczbę: ", number_no, "liczbe", end=" ")
@@ -81,11 +132,11 @@
 
 # Różnica pomiędzy funkcją 'print', a 'return'
 
-def my_name():
-    return "Marcin" # ta funkcja zwracca jakas  wartość, ale nie drukuje nic
-
-def show_my_name():
-    print("Marcin") # ta funkcja zwraca jakas  wartość i drukuje coś
+# def my_name():
+#     return "Marcin" # ta funkcja zwracca jakas  wartość, ale nie drukuje nic
+#
+# def show_my_name():
+#     print("Marcin") # ta funkcja zwraca jakas  wartość i drukuje coś
 
 #Test z Return
 # redefine =  my_name()# jak widać return poprzez funkcje my_name nie zwraca nic
@@ -116,10 +167,10 @@ def show_my_name():
 
 
 #KOlejny przyklad
-def introduce (first_name, last_name):
-    print("czesc jestem", first_name, last_name)
-introduce("Jan", "Kowalski")
-introduce("Kowalski", "Jan") # jak widać jest wazna kolejność przekazywanych argumentów
+# def introduce (first_name, last_name):
+#     print("czesc jestem", first_name, last_name)
+# introduce("Jan", "Kowalski")
+# introduce("Kowalski", "Jan") # jak widać jest wazna kolejność przekazywanych argumentów
 
 #przekazywanie argumentow słow kluczowych
 # def introduce (first_name, last_name):
