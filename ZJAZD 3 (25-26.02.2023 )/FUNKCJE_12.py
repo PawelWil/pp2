@@ -94,39 +94,46 @@
 # print ("Pobrano liczby: ", a, b, c)
 
 
-#333 ---- Pobieranie liczb
 
-# def get_number(number_no):  # tu definiujemy funkcję
+#333 ------- Pobieranie liczb
+
+# def get_number(number_no):  # tu definiujemy funkcję, która będzie pobierała od razu ten numer
 #     print("Podaj liczbę: ", number_no, "liczbe", end=" ")
 #     return int(input())
-# a = get_number(1)
+# a = get_number(1) # funkcja 'get_number' realizuje dwie rzeczy: 1)wyswietla etykiete korzystajac z argumentów które przekazujemy ,
+# 2)pobiera ją od uzytkowina i zwraca za pomoca funckji return
 # b = get_number(2)
 # c = get_number(3)
 # print ("Pobrano liczby: ", a, b, c)
 
 
-#4444
-# def get_number(number_no):  # tu definiujemy funkcję
-#
-#     return int(input("Podaj liczbę: " + str(number_no) + "liczbe"))
+#333'
+# def get_number(number_no):  # tu powyzsze jeszcze skracamy, czyli bez print, od razu w jednej linii z return
+    # + na koniec  drukowanie poprzez print
+
+    # return int(input("Podaj liczbę: " + str(number_no) + "liczbe")) #
 # a = get_number(1)
 # b = get_number(2)
 # c = get_number(3)
 # print ("Pobrano liczby: ", a, b, c)
 
-#5555
+# 333''--lub jeszcze większe uproszczenie, jak poniżej:
+
 # def get_number(number_no):  # tu definiujemy funkcję
-#
-#     return int(input("Podaj liczbę: " + str(number_no) + "liczbe"))
-#
+
+    # return int(input("Podaj liczbę: " + str(number_no) + "liczbe "))
+
 # print ("Pobrano liczby: ",get_number(1), get_number(2), get_number(3))
 
-#66767
 
-# def my_fun():
-#     pass # to jest zaslepka, nie wiemy jak
-#     # return None
-# if my_fun() == None:
+#--- Kolejny przyklad na zwracanie funkcji 'NONE'
+# def my_fun(): # ta funkcja bedzie zwracała wartosc 'none'
+# pass # to jest zaslepka, jak nie wiemy co nasz skrypt bedzie wykonywał
+#     return None #1) - albo bedzie spełniony ponizszy warunek 'if', bo mamy przypisaną wartość 'none'
+#     return 123 #2) - albo jesli damy zeby coś zwrociła, np 123, a nie nic=none, to wiadomo, że w tym przypadku nic się nie wyswietli,
+# bo ten poniższy warunek if nie zostanie spełniony, czyli wyswietli się komunikat: Process finished with exit code 0
+# if my_fun() == None: # jesli funkcja zwraca wartosc 'none', czyli nic, to dajemy oczywiscie, ze nic nie zwraca
+#     jesli cos damy, to wiadomo, ze nie da komunikatu 'nic nie zwraca'
 #     print("Funkcja na razie nic nie zwraca")
 
 
@@ -170,62 +177,85 @@
 # def introduce (first_name, last_name):
 #     print("czesc jestem", first_name, last_name)
 # introduce("Jan", "Kowalski")
-# introduce("Kowalski", "Jan") # jak widać jest wazna kolejność przekazywanych argumentów
+# introduce("Kowalski", "Jan") # jak widać jest wazna kolejność przekazywanych argumentów, bo jak je odwrócimy, to
+# będą wyświetlane na odwrót
 
 #przekazywanie argumentow słow kluczowych
 # def introduce (first_name, last_name):
 #     print("czesc jestem", first_name, last_name)
-# introduce(first_name="Jan", last_name="Kowalski") # i tu już zawsze bedzie ok, nawet jak te zmienne obrocimy
+# introduce(first_name="Jan", last_name="Kowalski") # i tu już zawsze bedzie ok, nawet jak te zmienne obrocimy, bo do argumentów na sztywno
+# przypisujemy jakąś wartość, czyli do argumentu 'first_name' na sztywno dajemy Jan ', a z racji, ze w funkcji ten argument jest jako pierwszy
+# to zawsze będzie wyswietlany, jako pierwszy, nawet gdy zaczniemy od argumentu drugiego 'last_name'=Kowalski
 # introduce(last_name="Kowalski", first_name="Jan")
 
-# # miksowanie
+# # --- miksowanie argumentu zafiksowanego na sztywno, oraz wartości bez podanego przypisanie do argumentu:
 # def introduce (first_name, last_name):
 #     print("czesc jestem", first_name, last_name)
-# introduce(first_name="Jan", last_name="Kowalski")
+# introduce("Jan", last_name="Kowalski") # i tak to działa, ale WAŻnA rzecz: zawsze na koncu musi być ostatni argument,
+# czyli last name, jak będzie przed, to wyskoczy błąd (przykład z błędem poniżej)
+# introduce("Kowalski", first_name="Jan") #jest źle-- Typ błędu: introduce() got multiple values for argument 'first_name'
+# introduce(last_name="Kowalski", "Jan") # jest źle-- Typ błedu: positional argument follows keyword argument
 
-# KOLEJNE
+#---- KOLEJNE - tu już do funkcji intrduce, do jej argumentów, od razu można podać wartości domyślne, nie dodawać ich później,
+# mowa o wartości 'Jan' i 'Kowalsi', jako wartości domyślne
 # def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą, wtedy gdy nie podamy wartości w introduce
 #     print("czesc jestem", first_name, last_name)
-# introduce() # jak tak jest to są wartiości domyslene  z góry
-# introduce("Marcin", "Nowak") # jak tak to wartości domyslke są zastepowane tymi waartoscami obok
-# introduce(last_name="Nowak") #tu mozemy miksowac
+# introduce() # 1 sposób wyświetlania: wtedy jak mamy te wartości domyślne, to samo puste wywołanie funkcji 'intrduce'
+# pokazuje nam wartiości domyslne  wpisane z góry
 
-#KOLEJNE - return
+# introduce("Marcin", "Nowak") #  2 sposób: ale nie stoi nic na przeszkodzie, żeby te wartości domyslke mogły być zastepowane
+# innymi wartościami, mimo tego, że są na sztywno wprowadzone - w naszym przypadku: 'Jan' zastąpiony przez 'Marcin' + 'Kowalski' przez 'NOWAK'
+
+# introduce(last_name="Nowak") # 3 sposób: tu mozemy miksowac, poprzez podanie zafiksowanego argumentu, np. last_name="Nowak", bez podania
+# 'first_name', gdzie wiadomo, że first name zostało zafiksowane jako Jan, więc w sumie będzie Jan Nowak
+
+
+
+#KOLEJNE ----- ZWRACAnIE WARTOŚCI przez funkcję: "return"
 # def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą, wtedy gdy nie podamy wartości w introduce
 #     print("czesc jestem", first_name, last_name)
-#     return 12
+    # return 12
+    # return  None
+    # poprzez funkcję zwracania 'return', która w naszym przypadku jest przypisana do funcji'introduce', nasz faunkcja 'introduce'
+    # poprzez funkcje 'return' będzie zwracała '12' lub "NONE', ale będzie zwracała dopiero, jak się wywoła funkcję drukującą,
+    # czyli funkcję 'print', która wydrukuje oczywiście: ("czesc jestem", first_name, last_name) + wartość z funkcji return
 # print(introduce()) # introduce to jest ta funkcja, żeby była jasność!!!!!!!!!!!!
 
 
-#SPOsoby wykorzystania:
+#SPOsoby wykorzystania: funkcja, która będzie odliczła i pytała, czy chcemy życzenia -- parametr 'wishes'
 # def count_down(wishes = True):# funkcja ktora sluzy do odliczania, czy checmu zyczenia. Program bedzie wyswietlał 3,2 ,1, 0
 #     print("Trzy...")
 #     print("Dwa...")
 #     print("Jeden...")
-#
-#     if not wishes:# jesli nie chcemy to przepyszcamu
-#         return
-#
-#     print ("Szczesliwego nowergo roku:")
-#         # jesli nie checm,y to:
-#
-# # count_down(wishes=True) # tu dostajemy wszystko z szcesl wboweg roku
-# count_down(wishes=False) # tu dostajemy tylko 1,2 ,3
-#
-# print (type(count_down(wishes=False))) # to pokazuje nam jaki to typ funkcji
+
+    # if not wishes:# jesli nie chcemy życzeń, to dajemy if not
+    #     return
+
+    # print ("Szczesliwego nowergo roku:")
+
+# count_down(wishes=True) # 1 sposób wyswietlenia, gdy wartośc argumemtu jest true: tu dostajemy wiadomo odliczanie, z życzeniami 'szczesliwego nowego roku'wszystko z szcesl wboweg roku
+# count_down((True))
+# count_down(wishes=False) # 2 sposób wyswietlenia, gdy wartośc argumemtu jest false:  tu dostajemy tylko 1,2 ,3, bez zyczen
+
+# print ((count_down(wishes=False))) # tu za pomocą funkcji drukującej, widzimy, że funkcja 'return' zwraca 'nic'='none'
+# + oczywisćie drukuje "trzy", "dwa", "jeden"
+
+# print (type(count_down(wishes=False))) # to pokazuje nam jaki to typ funkcji, czyli klasa/typ - 'none' type
 
 
-##KOLEJNEEE:
-# def sum(a, b):
-#     return a + b # to nam zwraca tą wartość
-# result = sum (1, 6)
-#
+##----KOLEJNEEE: przykład z sumowaniem - bedzie miał funkcje, która będzie sumowała
+# def sum(a, b): #bedzie miał funkcje 'sum', która będzie sumowała + będzie przybierała 2 wartości a i b + bedzie zwracała 'a+b' poprzez funkcje return
+#     return a + b # poprzez funkcję 'return' będzie nam zwracana wartość a+b, bezposrednio za pomocą zmiennej 'result'
+# result = sum (1, 6) # do zmiennj result podtsawimy to co zwrói funkcja sum - czyli sumujemy 2 liczby, a=1 i b=6
+# i na koncu wyswietlimy co wyswietlilismy jako suma, w zmiennej result
+
 # print (result)
 
-# KOlejne
+# --KOlejne - powiązane z powyższym - mowa, że musimy podać wszystkie argumety, jak nie podamy nic albo nawet braknie jednego,
+# to wtedy wywali nam błąd
 # def sum(a, b):
 #     return a + b # to nam zwraca tą wartość
-# result = sum () #  nie mozemy tak zrobić, bo muszą byc dwa warunki jqak powyzej, jak jest tak to jest błąd
-#
+# result = sum () #  nie mozemy tak zrobić, bo muszą byc dwa warunki jak powyzej, jak jest tak to jest błąd
+# result = sum (1) # nie mozemy tak zrobić, bo muszą byc dwa warunki jak powyzej, jak jest tak to jest błąd
 # print (result)
 
