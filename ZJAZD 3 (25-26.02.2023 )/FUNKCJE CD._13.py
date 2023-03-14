@@ -2,31 +2,44 @@
 
 
 # 1. jak wspoładziaja listy razem z funkcjami-----------
-# definiujemy funkcje
-# def sum_numbers(numbers): # to co jest w nawiasie to są parametry tej fukcji, tutja to zmienna 'numbers'
-#     sum = 0
-#     for element in numbers: #teraz korzystamy z petli, ktora to ziinna dostanie kolejne lelemty, któr bedzizemy iteroiwac, dla nas to lista, czyli dopisz/dodaj ten elemnt
+# definiujemy funkcje, która będzie zliczać sumę elementów naszej listy przekazanej do finkcji
+# def sum_numbers(numbers): # to co jest w nawiasie to są parametry tej fukcji, tutaj zmienną 'numbers'
+#     sum = 0 # tu dajemy zmienną lokalną 'sum'
+#     for element in numbers: #teraz korzystamy z petli, ktora to zmienna dostanie kolejne elementy, naszego obiektu, kótrym jest lista
+#     która to zaś bedzie iterowana
 #         sum += element
-#     return sum
+#     return sum # zwraca nam naszą sumę
 
+# -- 1 sposób na pokazanie sumy - bezpośredni sposób
+# print (sum_numbers([1,2,3]))
+
+# -- 2 sposób na pokazanie sumy - dekomponuemy na mniejsze elemnty: dajemy zmienną 'numbers', gdzie przypiszemy listę
+#następnie zmienna 'result' gdzie do funkcji sum_numbers wrzucamy listę + finalnie drukujemy za pomocą print tą zmienną 'result'
+#w której zawarta jest lista.
 # numbers = [1,2,3]# to jest zmienna globalna 'numbers'
 # result = sum_numbers(numbers)
 # print (result)
 
 
-# 2. Funkcja ktora generuje lsoowo liczby w zakresie od 0 do 99---------
 
-# import random
-#
-# def generate_numbers(total_numbers):
-#     numbers = []# zmienna lokalna
-#     for i in range (total_numbers): #  czyli tyle razy bedziemy przez tą pętlę przechodizc
-#         numbers.append(random.randint(1, 99))
-#     return numbers #zwrcamay nasza listę numbers poprzez return
-#
-# print (generate_numbers(10)) # wylosuj nam 10 liczb i pokaz na ekranie, i te wszystie liczby są w zakresie od 0 do 99
-# print (generate_numbers(100))
-# print (generate_numbers(123233))
+# 2. Funkcja ktora generuje listę z losowymi liczbami w zakresie od 0 do 99---------
+# parametrem tej funkcji będzie ile liczb będziemy chcieli wylosować, a funkcja będzie nam tą wartość zwracała
+
+# import random # importujemy moduł 'random' do generowanie liczb pseudolosowych
+
+# def generate_numbers(total_numbers): # parametrem naszej funkcji to ilosc liczb = total numbers
+#     numbers = []# zmienna lokalna = pusta lista
+#     for i in range (total_numbers): #  w pętli for element i, w zasiegu range = total_numbers (czyli tu
+#     będzie info ile razy bedziemy przez tą pętlę przechodzić)
+#         numbers.append(random.randint(1, 99)) # do listy 'numbers' dodamy za każdym razem wylsowaną wartość,
+#         wylosowaną za pomocą odwołanaia do modułu random + oczywiście skorzystamy z metody randint = za pomocą której
+#         będziemy losowac liczby w zakresie miedzy 1 a 99.
+#     return numbers # A teraz po losowaniu zrwacamy naszą listę o nazwie 'numbers'
+
+# print (generate_numbers(10)) # używamy naszej funkcji 'generate_numbers' za pomocą ktorej (oczywiście zeby się te liczby wylosowane wyświetliły, musimy uzyć funkcji drukującej 'print')
+# w tym przypadku wylosuje nam 10 liczb, z zakresu od 1 do 99 i pokaze na ekranie
+# print (generate_numbers(100)) # tu nam wylosuje 100 liczb
+# print (generate_numbers(123233)) # a tu nam wylosuje 123233 liczb
 
 
 # 3. Zasieg zmiennych--------
@@ -62,18 +75,18 @@
 
 # --- przykła 0''' - rekurencja
 # rekurencja(rekursja)to odwołanie funkcji do samej siebie
-def show_me_recusrion(n):
-    if n < 1:
-        return
-    print ("recursion \n" * n) # jak dam separator \n po słowie, to każdy kolejny będzie się zaczynał od nowej linii
-    n =- 1 # tu dajemy n=-1, bo chcemy, żeby to się od 20 razy zmniejszało co 1, 20-1=19, 19-1=18, 18-1-17 itd..
+# def show_me_recusrion(n):
+#     if n < 1:
+#         return
+#     print ("recursion \n" * n) # jak dam separator \n po słowie, to każdy kolejny będzie się zaczynał od nowej linii
+#     n =- 1 # tu dajemy n=-1, bo chcemy, żeby to się od 20 razy zmniejszało co 1, 20-1=19, 19-1=18, 18-1-17 itd..
     # aż osiągnie wartość <1, czyli 0, to przestanie się już obniżać od 20 i na podstawie funkcji 'return' zwraca tą wartość,
     # która z kolei dzięki funkcji print(tej powyżej) jest wyświetlana(drukowana). Gdyby nie było print, a samo return, to te wartości
     # by się nie wydrukowały, tylko kod by się wykonał, czyli byłoby: 'Process finished with exit code 0'
-    show_me_recusrion(n) # tu mamy znów odwołanie do znów do funkcji show_me_recursion, na zasadzie własnie rekursji,
+    # show_me_recusrion(n) # tu mamy znów odwołanie do znów do funkcji show_me_recursion, na zasadzie własnie rekursji,
     # czyli odwołanie tej samej funkcji, do tej samej funkcji (inaczej: odwołanie funkcji, do samej siebie)
 
-show_me_recusrion(20)
+# show_me_recusrion(20)
 
 
 # przyklad 1
@@ -89,28 +102,34 @@ show_me_recusrion(20)
 # x = 99 # zmienna globalna 99
 # scope_test() # jak to uruchmimy tą funkcje poprzez scope_test i mamy u gory print, to jak widać te 99 się pokazało
 
-# # przyklad 3-------
-# def scope_test (): # ma jedną zmienną lokalką x - to jest x poniżej
-#     x=123 # zmienna lokalna
-#     print(" wsrodku funkji:" + str(x)) # to wyswietla niezaleznie dla globalnej lokalnej x = 123
-#
+# # przyklad 3------- ZASIĘG ZMIEnnych CD.
+def scope_test (): # definujemy funkcje o nazwie scope_test ,  ma on ajedną zmienną lokalką x - to jest x poniżej,
+# do której przypiszemy wartość 123
+    x=123 # zmienna lokalna
+    print(" wsrodku funkji:" + str(x)) # to wyswietla niezaleznie dla globalnej lokalnej x = 123
+
 # x = 99 # zmienna globalna 99
 # scope_test() # jak to uruchmimy tą funkcje poprzez scope_test i mamy u gory print, to jak widać te 99 się pokazało
 # print(" na zewnatrz: " + str(x)) # to wyswietla niezaleznie dla globalnej zmiennenn x = 99
 
 
-# przyklad 4 - tu wplywamy na zmienną globalną i znienić ją w ciele funkcji---------
+# przyklad 4 - tu wplywamy na zmienną globalną i znienić ją w ciele funkcji (nadpisujemy zmienną globalną,
+# za pomocą zmiennej w lokalnej w ciele funkcji---------
 # def scope_test ():
-#     global x # zeby to zrobić trezba uzyc instrukcji global, która zacznie traktować zmienną x, nawet lokalnie/wewntarz bedzie traktować jako globalną
-#     x=123 # zmienna lokalna
-#     print(" wsrodku funkji:" + str(x)) # to wyswietla niezaleznie dla globalnej lokalnej x = 123
-#
+#     global x # zeby moc zamienic zmienną globalną trzeba uzyc instrukcji global, która zacznie traktować zmienną x,
+    # nawet lokalnie/wewntarz bedzie traktować jako globalną
+    # x=123 # zmienna lokalna , która zastępują zmienną globalną (x=99)
+    # print(" w środku funkji: ", x) # to wyswietla niezaleznie dla globalnej lokalnej x = 123, bo globalna zosyała zamieniona
+    # (info jak powyżej). Tu nie użyliśmy konkatenacji, dlatego nie zamienilismy liczby całkowitej na stringa
+
 # x = 99 # zmienna globalna 99
 # scope_test() # jak to uruchmimy tą funkcje poprzez scope_test i mamy u gory print, to jak widać te 99 się pokazało
-# print(" na zewnatrz: " + str(x)) # po uzyciu instrukcji globalnej jak widać wyswiretla się  x = 123.
+# print(" na zewnątrz funkcji: " + str(x)) # po uzyciu instrukcji globalnej jak widać wyswiretla się  x = 123.
+# Tu użyliśmy konkatenacji, dlatego zamienilismy liczby całkowitą na stringa
 
 
-### ZDefiniowanie fukcji, ktorej zadaniem jest zmiana wartości---------
+
+### -------------ZDefiniowanie fukcji, ktorej zadaniem jest zmiana wartości---------
 
 # def change_value(n):# do tej funkcji przekazujemy argument n - mowa o wartosciach skalarnych, czyli liczby (int, float) --> tu n = val
 #     print ("przed zmiana:", n)
