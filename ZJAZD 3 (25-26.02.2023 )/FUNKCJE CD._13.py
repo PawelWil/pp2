@@ -131,48 +131,59 @@ def scope_test (): # definujemy funkcje o nazwie scope_test ,  ma on ajedną zmi
 
 ### -------------ZDefiniowanie fukcji, ktorej zadaniem jest zmiana wartości---------
 
-# def change_value(n):# do tej funkcji przekazujemy argument n - mowa o wartosciach skalarnych, czyli liczby (int, float) --> tu n = val
-#     print ("przed zmiana:", n)
-#     n+= 1
-#     print("po zmianie", n)
-#
-# val = 7 # do tej zmiennej globalnej przeakuzjemy wartos c int = 7
+# def change_value(n):# do tej funkcji przekazujemy argument n - mowa o wartosciach skalarnych, czyli liczby (int, float), a potem lista -->
+# zadaniem tej funkcji będzie zamiana wartości, do tej funkcji będziemy przekazywać wartości tu n = val
+#     print ("przed zmiana:", n) # sprawdzamy wartość obecną
+#     n+= 1 # teraz dokunuemy zmiany, gdzie n zwiekszamy o 1
+#     print("po zmianie", n) # teraz pokazujemy co się stało po zmianie, czyli po dodaniu 1 do argumentu n, które zgodnie z poniższą
+# wartością zmiennej 'val'=7 wynosi 7, będzie wynosić 8.
+
+# val = 7 # do tej zmiennej globalnej przeakuzjemy jakąś wartosc int = 7
+# change_value(val) # za pomocą tej change_value mozemy zmienić wartość listy 'val=[1,2]'
+# i następnie program przekazuje do piewrszej linii , tak gdzie funkcja def jest opisana ,
+# nawet jak jest n ale tu już jest val i to wchodzi zamiast n
+# print(val) # tu wiadomo, że wyswietlimy 7, a nie 8, bo ten print odnosi się do zmiennej globalnej (powyżej)
+
+
+## przekazujemy listę - jakas wartość nieskalarna------------ jakaś np. lista
+# def change_value(n):# do tej funkcji przekazujemy argument n - tu nieskalarna, czyli np. lista --> tu n = val = [1,2]
+#     print ("przed zmiana:", n) # tu się odnosi do zmiennej globalne
+#     n = [0,0] # tu się odwołuje do zmiennej lokalnej, gdzie pod n podstawilismy całkeim inny obiekt, ale lokalnie,
+    # który ma pierwszenstow nad globalną, dlatego [1,2], zostało zastąpione [0,0]
+    # print("po zmianie", n) # tu po zmianie wyświetli się zmienna n = [0,0], który został podany powyżej
+
+# val = [1,2] # do tej zmiennej globalnej przeakuzjemy liste
 # change_value(val) # za pomocą tej change_value mozemy zmienić wartość listy 'val=[1,2] - i następnie program przekazuje do piewrszej linii , tak gdzie funkcja def jest opisana , nawet jak jest n ale tu już jest val i to wchodzi zamiast n
-# print(val)
+# print(val) # tu funkcja change_value będzie się odnosić do zmiennej 'val', która jest zmienną globalną,
+# która rowna się: val = [1,2], czyli wyświetli się lista [1,2]
 
-
-## przekazujemy listę - jakas wartość nieskalarna------------
-# def change_value(n):# do tej funkcji przekazujemy argument n - tu nieskalarna, czyli lista --> tu n = val
+## Kolejny przyklad - zmien wartosc listy, która jest listą mającą element 0 [0] i podstaw za nią wartos 999--------------
+# def change_value(n):
 #     print ("przed zmiana:", n)
-#     n = [0,0] # pod n podstawilismy całkeim inny pbiekt, ale lokalnie, który ma pierwszenstow nad globalną, dlatego [1,2], zostało zastąpione [0,0]
-#     print("po zmianie", n)
-#
+#     n[0] = 999 # tu bedziemy miec: [999, 2] pod n, w indeksie 0 podstawilismy całkeim inny obiekt, ale lokalnie,
+    # który ma pierwszenstow nad globalną, dlatego [1,2]=przed zmianą, zostało zastąpione [999,2]=po zmianie
+    # print("po zmianie", n)
+
 # val = [1,2] # do tej zmiennej globalnej przeakuzjemy liste
 # change_value(val) # za pomocą tej change_value mozemy zmienić wartość listy 'val=[1,2] - i następnie program przekazuje do piewrszej linii , tak gdzie funkcja def jest opisana , nawet jak jest n ale tu już jest val i to wchodzi zamiast n
 # print(val)
 
-## Kolejny przyklad - zmien wartosc listy i podstwa wartos 999--------------
-# def change_value(n):# do tej funkcji przekazujemy argument n - tu nieskalarna, czyli lista --> tu n = val
-#     print ("przed zmiana:", n)
-#     n[0] = 999 # tu bedziemy miec: [999, 2] pod n podstawilismy całkeim inny pbiekt, ale lokalnie, który ma pierwszenstow nad globalną, dlatego [1,2], zostało zastąpione [0,0]
-#     print("po zmianie", n)
-#
-# val = [1,2] # do tej zmiennej globalnej przeakuzjemy liste
-# change_value(val) # za pomocą tej change_value mozemy zmienić wartość listy 'val=[1,2] - i następnie program przekazuje do piewrszej linii , tak gdzie funkcja def jest opisana , nawet jak jest n ale tu już jest val i to wchodzi zamiast n
-# print(val)
+
 
 
 ##-----------------
-## 1. robie funckje ktora ma zestaw argumetow, ale nie checimy definiowac ile tych argumetow jest--------
+### 1. Robię funckje ktora ma zestaw argumetow, ale nie chcemy definiowac ile tych argumetow jest--------
 # def my_func(*args):
-#     for el in args:
+#     for el in args: # pętla for - dla el(elementów) w zbiorze args(argumentów)
 #         print(el)
-#
-# my_func(1,2,3,4,5,6,7,8) # teraz tą funkcje 'my func' sobie wywolujemy!!
 
-# 2. to jest przekazywanie wielu argumetow, jako argumentów przekazywanych przez nazwe, a nie przez pozycję--------
-# def my_func(**args):
-#     for el in args.items():
-#         print(el)
-#
-# my_func(val1 = "raz", val2 = 999) # teraz tą funkcje 'my func' sobie wywolujemy!!;
+# my_func(1,2,3,4,5,6,7,8) # teraz z ręki postawiliśmy do funkcji my_func, do jej argumentu (*args) co ten argument 'args'
+# będzie w sobie zawierał, czyli będzie zawierał liczby od 1 do 8
+
+### 2. to jest przekazywanie wielu argumentow, jako argumentów przekazywanych przez nazwe, a nie przez pozycję--------
+# ????
+def my_func(**args):
+    for el in args.items():
+        print(el)
+
+my_func(val1 = "raz", val2 = 999) # teraz tą funkcje 'my func' sobie wywolujemy!!;
