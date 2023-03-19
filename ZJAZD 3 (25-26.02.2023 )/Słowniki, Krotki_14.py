@@ -13,7 +13,14 @@
 # print (numbers[0])
 # print (numbers[-1])
 
-# iteracja krotki----
+# -- prosty przykład krotki:
+
+# a, b = (1, 2) # krotka a, b o wartościach 1 i 2
+# print(a)
+# print(b)
+
+
+# -- iteracja krotki----
 # numbers = ( 1, 2, 3)
 
 # for i in numbers:
@@ -122,15 +129,14 @@
 # }
 # -- 1. za pomocą metody 'keys' wyciągam wszystkie klucze ze słownika
 # for key in animals_dict.keys():
-    # print(key) # a. teraz wyswietlam tylko same klucze
-    # print(key, "->", animals_dict[key]) # b. teraz wyswietlam klucze wraz z ich wartościami, które wiadomo że pochodzą ze słownika
-    # 'animals_dict' i iterowany jest po słowie 'key' więc jego daję w nawiasie kwadratowym - bo on przechodzi przez słownik
+# print(key) # a. teraz wyswietlam tylko same klucze
+# print(key, "->", animals_dict[key]) # b. teraz wyswietlam klucze wraz z ich wartościami, które wiadomo że pochodzą ze słownika
+# 'animals_dict' i iterowany jest po słowie 'key' więc jego daję w nawiasie kwadratowym - bo on przechodzi przez słownik
 
 # -- 2. Ale tez istnieje uproszczona metoda, gdzie nie trzeba dawać 'keys', python sam automatycznie to wyszuka
 # for key in animals_dict:
 #     print(key) # a. teraz wyswietlam tylko same klucze
-    # print(key, "->", animals_dict[key])
-
+# print(key, "->", animals_dict[key])
 
 
 # --------------WYCIGAnIE WARTOŚCI ZE SŁOWnIKA - robimy to za pomocą metody 'values'
@@ -152,7 +158,7 @@
 # }
 # for item in animals_dict.items(): # tu za pomocą items, klucze i ich wartości są przedstawiane w postaci Krotek,
 #     czyli ciągów znaków
-    # print(item)
+# print(item)
 
 
 # --------------WYCIGAnIE ELEMEnTÓW polskich i angielskich ZE SŁOWnIKA w postaci KROTEK- robimy to za pomocą metody 'items'# for pl, en in animals_dict.items():
@@ -163,26 +169,38 @@
 # }
 # for pl, en in animals_dict.items(): # dzięki elementom pl = słowo polskie i en = słowo angielskie, python nam ze słownika dosłownie wyświetli
 #     słowa polskie i słowa angielskie
-    # print(pl, "->", en) # tu najpierw będzie polskie słowo, potem angielskie
-    # print(en, "->", pl) # zaś tu odwrotnie sobie zrobiłem przykład, czyli wpier angielskie,a potem polskie
+# print(pl, "->", en) # tu najpierw będzie polskie słowo, potem angielskie
+# print(en, "->", pl) # zaś tu odwrotnie sobie zrobiłem przykład, czyli wpier angielskie,a potem polskie
 
 
+# ---------------MODYFIKACJA SŁOWnIKA: AKTUALIZACJA(cos chcemy dodać), ZMiana nazwy WARTSCI --------
 
-# ---------------MODYFIKACJA SŁOWnIKA--------
-
-# # aktualizacja slownika
+# --- aktualizacja slownika
 # animals_dict= {
 #     "kot": "cat",
 #     "pies": "dog",
 #     "chomik": "hamster"
 # }
-# animals_dict["swinka"] = "pig"
-# animals_dict.update({"kurczak": "chicken"})
-#
+# animals_dict["swinka"] = "pig" #1. tu dodajemy dodatkowy klucz z wartością, czyli klucz="swinka", a jego wartość="pig"
+# animals_dict.update({"kurczak": "chicken"}) # dodanie dodatkowego klucza, można też zrobić za pomocą funcji update
+# animals_dict.update({"swinka": "piggy"})# zmiana wartości klucza, na inny - też robimy za pomocą fukcji update
+
+# print(animals_dict) # ten print wyświetla nam cały słownik po różnych modyfikacjach
+
+
+# --------------------------TWORZEnIE KOPII, za pomocą metody 'copy' ---
+# animals_dict= {
+#     "kot": "cat",
+#     "pies": "dog",
+#     "chomik": "hamster"
+# }
+
+# dict2 = animals_dict.copy()
+# print(dict2) # tu już nam wyświetla kopię słownika 'animals_dict'
+
 # print(animals_dict)
 
-# zmiana--
-
+# -------------------------- USUWAnIe, za pomocą metody 'delay', jakiegoś konkretnego klucza---
 # animals_dict= {
 #     "kot": "cat",
 #     "pies": "dog",
@@ -191,41 +209,14 @@
 # animals_dict["swinka"] = "pig"
 # animals_dict.update({"kurczak": "chicken"})
 # animals_dict.update({"swinka": "pigy"})
-#
-# print(animals_dict)
 
-# kopia---
-# animals_dict= {
-#     "kot": "cat",
-#     "pies": "dog",
-#     "chomik": "hamster"
-# }
-# animals_dict["swinka"] = "pig"
-# animals_dict.update({"kurczak": "chicken"})
-# animals_dict.update({"swinka": "pigy"})
-#
 # dict2 = animals_dict.copy()
-# print(dict2)
-#
-# print(animals_dict)
 
-# usuwanie---
-# animals_dict= {
-#     "kot": "cat",
-#     "pies": "dog",
-#     "chomik": "hamster"
-# }
-# animals_dict["swinka"] = "pig"
-# animals_dict.update({"kurczak": "chicken"})
-# animals_dict.update({"swinka": "pigy"})
-#
-# dict2 = animals_dict.copy()
-#
-# del dict2["swinka"]
-#
+# del dict2["swinka"] # 1. tu usuwany konkretny key ze słownika, czyli usuwamy 'swinka'
+
 # print(dict2)
 
-# usuwanie ostatniejo ellentu
+# -------------------------- USUWAnIe, za pomocą metody 'popitem', tylko ostatniego klucza ze słownika---
 # animals_dict= {
 #     "kot": "cat",
 #     "pies": "dog",
@@ -234,11 +225,30 @@
 # animals_dict["swinka"] = "pig"
 # animals_dict.update({"kurczak": "chicken"})
 # animals_dict.update({"swinka": "pigy"})
-#
+
 # dict2 = animals_dict.copy()
-#
-# # del dict2.popitem() #???????
-#
+
+# dict2.popitem() # także jako ostatni element to 'chicken', więc on będzie usunięty ze slownika
+# dict2.popitem() # jeśli to powielimy, to kolejne ostatnie elementy będziemy usuwać. Teraz usuniemy 'swinka'
+
 # print(dict2)
 
-# ????????są jeszcz inne rzeczy - przesluchać filmik!!!!
+
+# -------USUnIĘCIE WSZYSTKICH KLUCZY - czyli wyczyszczenie słownika, ale nie jego usunięcie- za pomocą 'CLEAR'
+# animals_dict = {
+#     "kot": "cat",
+#     "pies": "dog",
+#     "chomik": "hamster"
+# }
+# animals_dict["swinka"] = "pig"
+# animals_dict.update({"kurczak": "chicken"})
+# animals_dict.update({"swinka": "pigy"})
+
+# dict2 = animals_dict.copy()
+
+# dict2.popitem()  # także jako ostatni element to 'chicken', więc on będzie usunięty ze slownika
+# dict2.popitem()  # jeśli to powielimy, to kolejne ostatnie elementy będziemy usuwać. Teraz usuniemy 'swinka'
+
+# dict2.clear() # także wyczyścił caly slownik i dostajemy pusty słownik = {}
+
+# print(dict2)
