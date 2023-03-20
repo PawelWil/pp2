@@ -1,13 +1,14 @@
 # # zamiana wartości dwóch zmiennych
 # a = 1 #1 zmienna
 # b = 4 # 2 zmienna
-#
+
 # print("a =", a, "b=", b)
 # --i Teraz zamiana wartości, chcemy żeby a=4, zaś b=1
 # -1 sposób, po prostu dajemy zmienną tymczasową tmp=a, którą potem podstawiamy pod b, która jest równa a, zaś a przyrównujemy do b, i a staje się b
 # tmp = a
 # a = b
 # b = tmp
+# print("a =", a, "b=", tmp)
 
 # print("a =", a, "b=", b)
 # -2 sposób, ten docelowy i najłatwiejszy: po prostu w jednej linii umieszczamy a, b, i po =, podmieniamy kolejność!
@@ -64,7 +65,7 @@
 
 # print(numbers)
 
-# 4. Bardziej optymalna metopda sortowania - metoda SORT - od największej do najmniejszej - # --praktyczne i szybkie sortowanie, za pomocą metody 'sort'
+# 4. Bardziej optymalna metoda sortowania - metoda SORT - od największej do najmniejszej - # --praktyczne i szybkie sortowanie, za pomocą metody 'sort'
 # numbers = [4, 5, 2, 1, 3, 333333, 3, 456]
 # numbers.sort()
 # print(numbers)
@@ -86,7 +87,8 @@
 # print(letters)
 
 
-# 7. ORD (ordinal = porządkowanie, właściwa kolejnośc) mówi nam jakie mają wartości poszczególne elemnty w kodzie Ascii - dla duzego A i duzego C
+# 7. ORD (ordinal = porządkowanie, właściwa kolejnośc) mówi nam jakie mają wartości poszczególne elementy w kodzie Ascii
+# - dla duzego A i duzego C
 # letters = ["A", "C", " ", "B"]
 # print(ord("A"), ord("C")) # za pomocą funkcji ord(ordinal), możemy zobaczyć, jaka to jest wartość w kodzie Ascii
 # letters.sort()
@@ -95,15 +97,16 @@
 # 8. ORD mówi nam jakie mają wartości poszczególne elemnty w kodzie Ascii - dla małego a i małego b i dużego B.
 # generalnie małe literki są większe w kodzie Ascii, niż duże litery
 # letters = ["a", "a", " ", "B"]
-# print(ord("a"), ord("b"))
+# print(ord("a"), ord("b"), ord("B"))
 # letters.sort(reverse = True)
 # print(letters)
 
 
 # ------9. Teraz Lista jako typ referencyjny, czyli na podkreslienie /na większa uważność gdy bedziemy operowac na tych listach
+#--- PODMIAnA Elementów LISTY, za pomocą indeksacji
 
 # A. tu mamy dwie nazwy, a lista jedna
-# list_1 = [9] # prosta lista, 1-elementowa, jej elementem będzi liczba 9
+# list_1 = [9] # prosta lista, 1-elementowa, jej elementem będzie liczba 9
 # list_2 = list_1 # dla tej listy stworzymy kolejną  listę - mamy zmienna lista2, do której podstawiam listę 1.
 # Tu można powiedzieć, że mamy jedną listę, której wartość to 9 [9] + ma ona dwie nazwy, które do tel listy [9] prowadzą,
 # czyli nazwa=referencja=zmienna list_1 i list_2
@@ -124,6 +127,7 @@
 
 #teraz robimy operację z podmianką elementów, dla listy 2, gdzie podtsawimy 13 i finalnie dostaniemy dwie osobne wartości
 # dla list_1 = 13, zaś dla list_2=9
+# list_2 = list_1
 # list_2[0] = 13 # elemnt o innkesie 0, zminieam na 13
 # print (list_2) # obie listy (1 i 2) mają teraz wartość 13
 # print (list_1)
@@ -137,9 +141,10 @@
 #         0  1  2  3  4  - indeksowanie za pomocą indeksów dodatnich
 # numbers=[10, 8, 6, 4, 2] # lista numbers
 #       -5  -4 -3 -2 -1  - indeksowanie, za pomocą indeksów ujemnych
-# #dla liczby numers chcemy stworzyć nową listę, np. new_numbers, c bedzie wycinkiem , jakąs częscią listy numbers - i teraz mówimy co chcemy wycinać
-# new_numbers = numbers[1:3] # chcemy na bazie listy numbers, stworzyć nową listę new_numbers, czyli wycinek jakś cześć listy numbers
-# czyli żeby wycinać z listy numbers, wpisujemy numbers(bo z tej losty wycinamy) + w nawiasie kwadratowym, pokazujemy co chcemy wyciąć
+# #dla listy numbers chcemy stworzyć nową listę, np. new_numbers, co bedzie wycinkiem , jakąs częscią listy numbers -
+# i teraz mówimy co chcemy wycinać
+# new_numbers = numbers[1:3] # chcemy na bazie listy numbers, stworzyć nową listę new_numbers, czyli wycinek jakaś cześć listy numbers
+# czyli żeby wycinać z listy numbers, wpisujemy numbers(bo z tej listy wycinamy) + w nawiasie kwadratowym, pokazujemy co chcemy wyciąć
 # i tu w naszym przykładzie, chcemy wycinać od elementu, który równa się '1', czyli jest to 8 + chcemy jeszcze wyciąć 6, czyli
 # dochodzimy do elementu 3(liczba 4), który jest granicą, ale nie jest brany pod uwagę
 # robimy to również z użyciem znaku ':', który pokazuje zakres od do
@@ -160,14 +165,15 @@
 # ----c. wycinka(slicing), za pomocą indeksów mieszanych, czyli dodatnich i ujemnych
 #        -5 -4 -3 -2 -1
 # numbers=[10, 8, 6, 4, 2]
-#        1  2  3   4  5
+#        0   1  2  3  4
 # new_numbers = numbers [-4:3]
-# print(new_numbers) # nowa lista, która jest wynikime numbers
+# print(new_numbers) # nowa lista, która jest wynikiem numbers
 # print(numbers) # one się oczywiście nie zmieniła
 
 # ----d. jeśli chcemy całość skopiować, to możemy to zrobić na dwa sposoby. Albo z użyciem[:] albo za pomoca funkcji 'len' = length
-
-# # #dla liczby numers chcemy stworzyć nową listę, np. new_numbers, c bedzie wycinkiem , jakąs częscią listy numbers - i teraz mówimy co chcemy wycinać
+  # + funkcja 'len', również zwraca nam LICZBĘ ELEMEnTÓW
+# # #dla listy numbers chcemy stworzyć nową listę, np. new_numbers, co bedzie wycinkiem , jakąs częscią listy numbers -
+# i teraz mówimy co chcemy wycinać
 # numbers=[10, 8, 6, 4, 2]
 # new_numbers = numbers [:] # [:] - to nam kopiuję całość = 1 sposób
 # albo
@@ -188,12 +194,12 @@
 # print(numbers)
 
 
-# 12. Operatory IN oraz NOT
+# 12. Operatory IN oraz NOT - SPRAWDZEnIE, czy JAKIŚ ELEMEnT jest ZAWARTY W LIŚCIE lub GO nIE MA
 
 # numbers=[10, 8, 6, 4, 2]
-#
-# print (5 in numbers)# sprawdzenie, czy 5 jest w liscie numbers --> wiadomo, ze nie ma, wiec mamy false
-# print(7 not in numbers) #to jest sprawdzenie, że 7 nie ma w tej liscie --> no wiadomo, ze nie ma , wiec mamy True
+
+# print (5 in numbers, "- jest w liście")# sprawdzenie, czy 5 jest w liscie numbers --> wiadomo, ze nie ma, wiec mamy false
+# print(7 not in numbers, " - nie ma w liście ") #to jest sprawdzenie, że 7 nie ma w tej liscie --> no wiadomo, ze nie ma , wiec mamy True
 
 
 # 13. Wyrażenie listowe - list comprehensions = listy złożone - chodzi np. o tworzenie bardzo rozbudowanych list(1000 elementów)
@@ -222,10 +228,13 @@
 # print(numbers)
 
 # # kolejny przykład z obliczeniem:
-# numbers=[i ** 2 for i in range (1, 101)] # tu możemy te wszystkie wartości podnięść do potęgi, załóżmy dla 100 elementów
+# numbers=[i ** 2 for i in range (1, 101)] # tu możemy te wszystkie wartości podnięść do potęgi,
+# czyli wiadomo że 1x1=1, 2x2=4, 3x3=0, 4x4=16 itd. bo też wiadomo, że idziemy po kolei,
+# bo iterujemy za pomocą pętli for załóżmy dla 100 elementów
 # print(numbers)
 
-# kolejny przykład - mowa o instrukcji warunkowej, po pętli użyjemy zapisu if i dodamy jakiś warunkek -
+# ------Kolejny przykład - mowa o instrukcji warunkowej, po pętli użyjemy zapisu if i dodamy jakiś warunkek,
+# który będzie nam warunkował te liczby, które mają być wyświetlane -
 # np wyświetlamy liczby od 1 do, ale mają być liczby parzyste. Oczywiście mogą być różne warunki, np. nieparzyste (%2=!0)
 # podzielne przez 7 (% 7 == 0) itd. itp.
 # numbers=[i for i in range (1, 101) if i % 2 ==0 ] # tu nam daje liczby do 100, ale tylko liczby parzyste
@@ -342,17 +351,17 @@ random_numbers = [] # tu umieszczamy te liczby, w tej liście
 # dajemy pętla while = losuj dopóki, i tu dodatkowo jest potrzebna nam zmienna pomocnicza 'couter', która bedzie nam liczbe losowan
 # mamy miec 3 wylosowane liczby
 
-counter = 3
-while counter:
-    number = random.randint (1, 10) # zmienna number będzie przechowuywać liczbę z losowania ze zbioru od 1 do 10
-    if  number not in random_numbers: # tu dajemy warunek, który sprawdza, czy wylosowana liczba, sie już w tej liście nie pojawiła, dlatego daje 'not in'
-        random_numbers.append(number)  # jeśli się nie pojawiła, to dodaję tą liczbę do zmiennej number
-        counter -= 1 # counter = counter - 1 --> czyli jak już losowanie się zakonczyło sukcesem, to muszę zmniejszyć ilość losowań do 2,
+# counter = 3
+# while counter:
+#     number = random.randint (1, 10) # zmienna number będzie przechowuywać liczbę z losowania ze zbioru od 1 do 10
+#     if  number not in random_numbers: # tu dajemy warunek, który sprawdza, czy wylosowana liczba, sie już w tej liście nie pojawiła, dlatego daje 'not in'
+#         random_numbers.append(number)  # jeśli się nie pojawiła, to dodaję tą liczbę do zmiennej number
+#         counter -= 1 # counter = counter - 1 --> czyli jak już losowanie się zakonczyło sukcesem, to muszę zmniejszyć ilość losowań do 2,
         # potem do 1 i na 0 się pętla konczy
 
-random_numbers.sort() # teraz po losowaniu jeszcze musimy posortować
+# random_numbers.sort() # teraz po losowaniu jeszcze musimy posortować
 
-print (random_numbers)
+# print (random_numbers)
 
 
 # SPOSÓB II -  na powyższe
