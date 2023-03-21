@@ -1,8 +1,8 @@
 # -- FUNKCJE--------------
 # DEBUGGER (czyli ten robak u góry) to jest opcja sledzenia krok po kroku programu, pokazuje jakie wartosci są przypisawene itd.
 
-#--- Funkcje były stosowane gdy chcieliśmu pobrac dane od uzytowniak - tworzyliśmy zmienną + za pomocą funkcji input, któr mogła być uruchomiona
-# z tym argumentem, podanym przez użytkownika.
+#--- Funkcje były stosowane gdy chcieliśmu pobrac dane od uzytownika - tworzyliśmy zmienną
+# + za pomocą funkcji input, któr mogła być uruchomiona z tym argumentem, podanym przez użytkownika.
 # Print, to też jest funkcja, która przekazuje argumenty, które są w nią wpisane.
 # name = input("Jak masz na imie:") # Funkcja input
 # print(("Witaj " + name + "!")* 100) # Funkcja print
@@ -45,7 +45,7 @@
 # print ("Pobrano liczby: ", a, b, c)
 
 
-#--- jaki atuty funkcji, np. chcemy dodać w funkcji słowo "proszę", to teraz wystarczy że w funkcji print dopisuje to słowo
+#--- jakie atrybuty funkcji, np. chcemy dodać w funkcji słowo "proszę", to teraz wystarczy że w funkcji print dopisuje to słowo
 # i ono się już wyświetla, we wszystkich zapytaniach, nie trzeba z osobna tego słowa 'proszę' wprowadzać. Oczywiście można również
 # dodawać inne znaki, które już będą widoczne w pozostalych zapytaniach
 
@@ -95,10 +95,10 @@
 
 
 
-#333 ------- Pobieranie liczb
+#333 ------- Pobieranie liczb za pomocą funkcji 'return'
 
 # def get_number(number_no):  # tu definiujemy funkcję, która będzie pobierała od razu ten numer
-#     print("Podaj liczbę: ", number_no, "liczbe", end=" ")
+#     print("Podaj ", number_no, "liczbę", end=" ")
 #     return int(input())
 # a = get_number(1) # funkcja 'get_number' realizuje dwie rzeczy: 1)wyswietla etykiete korzystajac z argumentów które przekazujemy ,
 # 2)pobiera ją od uzytkowina i zwraca za pomoca funckji return
@@ -108,7 +108,7 @@
 
 
 #333'
-# def get_number(number_no):  # tu powyzsze jeszcze skracamy, czyli bez print, od razu w jednej linii z return
+# def get_number(number_no):  # tu powyzsze jeszcze skracamy, czyli bez print, od razu w jednej linii tez z RETURn
     # + na koniec  drukowanie poprzez print
 
     # return int(input("Podaj liczbę: " + str(number_no) + "liczbe")) #
@@ -117,7 +117,7 @@
 # c = get_number(3)
 # print ("Pobrano liczby: ", a, b, c)
 
-# 333''--lub jeszcze większe uproszczenie, jak poniżej:
+# 333''--lub jeszcze większe uproszczenie, też z return jak poniżej:
 
 # def get_number(number_no):  # tu definiujemy funkcję
 
@@ -142,8 +142,16 @@
 # def my_name():
 #     return "Marcin" # ta funkcja zwracca jakas  wartość, ale nie drukuje nic
 #
+# 1 wariant funkcji - prosty
 # def show_my_name():
 #     print("Marcin") # ta funkcja zwraca jakas  wartość i drukuje coś
+# show_my_name()
+
+# 2 wariant - troszkę trudniejszy
+# def show_my_name(ile):
+#     print("Marcin"* ile) # ta funkcja zwraca jakas  wartość i drukuje coś
+# show_my_name(10) # tu w funkcji show_my_name, podajemy jej wartość, do ktorej funkcja print się odnosi, czyli mnozy "Marcin" x 10,
+# gdzie 10 to nic innego jak "ile" z  funkcji show_my_name
 
 #Test z Return
 # redefine =  my_name()# jak widać return poprzez funkcje my_name nie zwraca nic
@@ -166,11 +174,11 @@
 # def show_message(number_no):
 #     print("Proszę podaj", number_no, "lizbe:", end= " ")
 
-# show_message
-# show_asterisks(50)
+# show_message (10)
 
-# przekazayanie parametrów pozycyjnych:
-# print ("raz", "asD" , "trzy") --cos nie dziala...
+
+# ------- przekazywanie parametrów pozycyjnych do funkcji:
+# print ("raz", "dwa" , "trzy") #--cos nie dziala...
 
 
 #KOlejny przyklad
@@ -192,15 +200,16 @@
 # def introduce (first_name, last_name):
 #     print("czesc jestem", first_name, last_name)
 # introduce("Jan", last_name="Kowalski") # i tak to działa, ale WAŻnA rzecz: zawsze na koncu musi być ostatni argument,
-# czyli last name, jak będzie przed, to wyskoczy błąd (przykład z błędem poniżej)
+# czyli last name, jak będzie przed, to wyskoczy błąd (przykład z błędem poniżej), albo na poczatku pierwszy argument
+# w przeciwnym razie, jak w przykładach poniższych, gdzie pierwszy argument jest na koncu wystąpi błąd
 # introduce("Kowalski", first_name="Jan") #jest źle-- Typ błędu: introduce() got multiple values for argument 'first_name'
 # introduce(last_name="Kowalski", "Jan") # jest źle-- Typ błedu: positional argument follows keyword argument
 
-#---- KOLEJNE - tu już do funkcji intrduce, do jej argumentów, od razu można podać wartości domyślne, nie dodawać ich później,
+#---- KOLEJNE - tu już do funkcji introduce, do jej argumentów, od razu można podać wartości domyślne, nie dodawać ich później,
 # mowa o wartości 'Jan' i 'Kowalsi', jako wartości domyślne
 # def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą, wtedy gdy nie podamy wartości w introduce
 #     print("czesc jestem", first_name, last_name)
-# introduce() # 1 sposób wyświetlania: wtedy jak mamy te wartości domyślne, to samo puste wywołanie funkcji 'intrduce'
+# introduce() # 1 sposób wyświetlania: wtedy jak mamy te wartości domyślne, to samo puste wywołanie funkcji 'introduce'
 # pokazuje nam wartiości domyslne  wpisane z góry
 
 # introduce("Marcin", "Nowak") #  2 sposób: ale nie stoi nic na przeszkodzie, żeby te wartości domyslke mogły być zastepowane
@@ -215,6 +224,7 @@
 # def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą, wtedy gdy nie podamy wartości w introduce
 #     print("czesc jestem", first_name, last_name)
     # return 12
+    # lub
     # return  None
     # poprzez funkcję zwracania 'return', która w naszym przypadku jest przypisana do funcji'introduce', nasz faunkcja 'introduce'
     # poprzez funkcje 'return' będzie zwracała '12' lub "NONE', ale będzie zwracała dopiero, jak się wywoła funkcję drukującą,
@@ -222,19 +232,20 @@
 # print(introduce()) # introduce to jest ta funkcja, żeby była jasność!!!!!!!!!!!!
 
 
-#SPOsoby wykorzystania: funkcja, która będzie odliczła i pytała, czy chcemy życzenia -- parametr 'wishes'
-# def count_down(wishes = True):# funkcja ktora sluzy do odliczania, czy checmu zyczenia. Program bedzie wyswietlał 3,2 ,1, 0
+#----SPOsoby wykorzystania: funkcja, która będzie odliczła i pytała, czy chcemy życzenia -- parametr 'wishes'
+# def count_down(wishes = True):# funkcja ktora sluzy do odliczania, czy chcemy zyczenia. Program bedzie wyswietlał 3,2 ,1, 0
 #     print("Trzy...")
 #     print("Dwa...")
 #     print("Jeden...")
-
-    # if not wishes:# jesli nie chcemy życzeń, to dajemy if not
-    #     return
-
+#
+#     if not wishes:# jesli nie chcemy poniższych życzeń='Szczesliwego Nowego Roku', to dajemy if not
+#         return
+#
     # print ("Szczesliwego nowergo roku:")
 
-# count_down(wishes=True) # 1 sposób wyswietlenia, gdy wartośc argumemtu jest true: tu dostajemy wiadomo odliczanie, z życzeniami 'szczesliwego nowego roku'wszystko z szcesl wboweg roku
-# count_down((True))
+# count_down(wishes=True) # 1 sposób wyswietlenia, gdy wartośc argumemtu jest true: tu dostajemy wiadomo odliczanie,
+# z życzeniami 'szczesliwego nowego roku'wszystko z szcesl wboweg roku --> czyli spełniony jest argument funkcji
+# count_down((True)) # 2 sposób - tu tak samo jest spełniony warunek funkcji count_down - jak powyżej
 # count_down(wishes=False) # 2 sposób wyswietlenia, gdy wartośc argumemtu jest false:  tu dostajemy tylko 1,2 ,3, bez zyczen
 
 # print ((count_down(wishes=False))) # tu za pomocą funkcji drukującej, widzimy, że funkcja 'return' zwraca 'nic'='none'
