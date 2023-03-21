@@ -182,8 +182,8 @@ def scope_test (): # definujemy funkcje o nazwie scope_test ,  ma on ajedną zmi
 
 ### 2. to jest przekazywanie wielu argumentow, jako argumentów przekazywanych przez nazwe, a nie przez pozycję--------
 # ????
-def my_func(**args):
-    for el in args.items():
-        print(el)
-
-my_func(val1 = "raz", val2 = 999) # teraz tą funkcje 'my func' sobie wywolujemy!!;
+# def my_func(**args):
+#     for el in args.items():
+#         print(el)
+#
+# my_func(val1 = "raz", val2 = 999) # teraz tą funkcje 'my func' sobie wywolujemy!!;

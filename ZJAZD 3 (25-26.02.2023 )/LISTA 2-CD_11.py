@@ -103,7 +103,7 @@
 
 
 # ------9. Teraz Lista jako typ referencyjny, czyli na podkreslienie /na większa uważność gdy bedziemy operowac na tych listach
-#--- PODMIAnA Elementów LISTY, za pomocą indeksacji
+# --- PODMIAnA Elementów LISTY, za pomocą indeksacji
 
 # A. tu mamy dwie nazwy, a lista jedna
 # list_1 = [9] # prosta lista, 1-elementowa, jej elementem będzie liczba 9
@@ -112,20 +112,20 @@
 # czyli nazwa=referencja=zmienna list_1 i list_2
 
 # list_2[0] = 13 # dla listy 2 element o indeksie 0, zminieam na 13, czyli zamiast 9 jest 13, ale że list_1=lista_2, to
-#wiadomo, że automatycznie ta wartość listy [9], została zmieniona w obu nazwach=referencjach=zmiennych na [13]
+# wiadomo, że automatycznie ta wartość listy [9], została zmieniona w obu nazwach=referencjach=zmiennych na [13]
 # print (list_2) # ale ważne, gdyż obie listy (1 i 2) mają teraz wartość 13, bo referencyjnie lista 1 została przyrównana do listy 2
 # print (list_1)
 
 
 # 10. wycinanie SLising = Robienie kopii
-#--- generalnie kopiowanie, nazywane jest jako metoda slicing, czyli wycinanie!
+# --- generalnie kopiowanie, nazywane jest jako metoda slicing, czyli wycinanie!
 
 # robienie całościowej kopii:
 # list_1 = [9]
 # list_2 = list_1 [:]# to robi kopie całej listy, z wszystkimi elementami -czyli w nawiasie kwadratowym, daję dwukropek [:]
 # tu dostajemy kopie list_1, zapisaną pod nazwą list_2
 
-#teraz robimy operację z podmianką elementów, dla listy 2, gdzie podtsawimy 13 i finalnie dostaniemy dwie osobne wartości
+# teraz robimy operację z podmianką elementów, dla listy 2, gdzie podtsawimy 13 i finalnie dostaniemy dwie osobne wartości
 # dla list_1 = 13, zaś dla list_2=9
 # list_2 = list_1
 # list_2[0] = 13 # elemnt o innkesie 0, zminieam na 13
@@ -155,7 +155,7 @@
 # ----b. wycinka(slicing), za pomocą indeksów ujemnych
 #          -5 -4 -3 -2 -1
 # numbers=[10, 8, 6, 4, 2]
-#dla liczby numers chcemy stworzyć nową listę, np. new_numbers, c bedzie wycinkiem , jakąs częscią listy numbers - i teraz mówimy co chcemy wycinać
+# dla liczby numers chcemy stworzyć nową listę, np. new_numbers, c bedzie wycinkiem , jakąs częscią listy numbers - i teraz mówimy co chcemy wycinać
 # new_numbers = numbers[-4:-2] # tu chcemy też wyciąć 8 i 6, ale za pomocą indeksowania ujemnego, czyli wiadomo, że zaczynam
 # od indeksu '-4', a kończę na indeksie '-2'
 # print(new_numbers) # nowa lista, która jest wynikime numbers
@@ -171,7 +171,7 @@
 # print(numbers) # one się oczywiście nie zmieniła
 
 # ----d. jeśli chcemy całość skopiować, to możemy to zrobić na dwa sposoby. Albo z użyciem[:] albo za pomoca funkcji 'len' = length
-  # + funkcja 'len', również zwraca nam LICZBĘ ELEMEnTÓW
+# + funkcja 'len', również zwraca nam LICZBĘ ELEMEnTÓW
 # # #dla listy numbers chcemy stworzyć nową listę, np. new_numbers, co bedzie wycinkiem , jakąs częscią listy numbers -
 # i teraz mówimy co chcemy wycinać
 # numbers=[10, 8, 6, 4, 2]
@@ -242,24 +242,25 @@
 
 
 # ZADANIE:
-# Chcemy dowiedziec się, ile jest liczb w przedziale od 1 do 300, które dzielą się przez 3 i 7 (jednocześnie), z wykorzystaniem wyrażenia listowego.
+# Chcemy dowiedziec się, ile jest liczb w przedziale od 1 do 300, które dzielą się przez 3 i 7 (jednocześnie),
+# z wykorzystaniem wyrażenia listowego.
 # Ma to być jedna linijka kodu.
 
-# -- tu mamy ile liczb
+# -- tu mamy ILE liczb
 # print(len([i for i in range (1, 301)if i % 3 == 0 and i % 7 == 0])) # funkcja len (length) mówi nam ile liczb w tym przedziale jest
 # które jednocześnie dzielą się przez 3 i 7. Czyli ta liczba 14, to pokazuje nam ilość tych liczb.
 # !Wyrażenie listowe, to jest to wyrażenie ujęte w nawiasie
 
-# -- tu mamy jakie to są liczby
+# -- tu mamy JAKIE TO SĄ liczby
 # numbers=[i for i in range (1, 301) if i % 3 ==0 and i % 7 == 0 ] # to nam mówi, jakie to są liczby
-# # #
+
 # print(numbers)
 
 # 14. Listy wielowymiarowe, czyli listy, w listach
 
 # numbers = [1, 2, 3]
-# # l2 = numbers # lista druga = l2, która wskaywac bedzie to samo co lista numbers
-# # ---PRZYKŁAD: zrobic listę i umiescić tam inna listę, czyli zagniezdzenie listy w liscie
+# l2 = numbers # lista druga = l2, która wskazywac bedzie to samo co lista numbers
+# ---PRZYKŁAD: zrobic listę i umiescić tam inna listę, czyli zagniezdzenie listy w liscie
 # l2 = [numbers] # to jest widoczne wtedy, gdy mamy podwójny nawias kwadratowy
 
 # print(numbers)
@@ -272,10 +273,11 @@
 # matrix = [numbers[:], numbers[:]] #A. dwa razy to samo odwolanie, ale dwa raz to wsadzone jest + ich pełne kopie [:]
 # print (matrix)
 
-#B.
+# B.PODMIAnA wartości elementów listy
 #            0  1  2  3  4
 # numbers = [1, 2, 3, 4, 5]
-# numbers[2] = 99 # tu mamy, że na drugim elemencie pojawi się liczba 99
+# numbers[2] = 99 # tu mamy, że na trzecim elemencie pojawi się liczba 99
+# print(numbers)
 
 # MATRIX = [numbers [1:2], numbers[2:3], numbers[0]] # tu jak widać mamy listę w liście, po slicingu, czyli odcięciu pewnych liczb
 # oraz pokazuje nam rownież konkretny elemnt położony na 0-ym bicie, czyli w naszym przypadku element '1'.
@@ -297,11 +299,13 @@
 #   8 # # # # # # # #
 
 
-# chess_row = ["--", "--", "--", "--", "--", "--", "--", "--",]# tworzymy liste(szachowy wiersz), która wiadomo będzie miała 8 elemntów=szachowy wiersz - prosty sposób
+# chess_row = ["--", "--", "--", "--", "--", "--", "--", "--",]# tworzymy liste(szachowy wiersz),
+# która wiadomo będzie miała 8 elemntów=szachowy wiersz - prosty sposób
 # chess_row = ["--" for i in range (8) ] # to jest powielanie szachowego wiersza poprzez pętle for
 
-# chessboard = [chess_row [:] for i in range (8)]# teraz  za pomocą zagniezdzonego wyrazenia listowego robie całą szachwonice, za pomoc for robie go 8 razy,
-# i tu ważna rzecz, za pomocą [:] zrobiliśmy, ze te wszystkie listy są osobnymi listami
+# chessboard = [chess_row [:] for i in range (8)]# teraz  za pomocą zagniezdzonego wyrazenia listowego robie całą szachwonice,
+# a za pomoc for robie go 8 razy,
+# i tu ważna rzecz, za pomocą [:] zrobiliśmy, ze te wszystkie listy są osobnymi listami, w sensie zrobiliśmy ich kopie
 
 # lub można te powysze ( 2 linie) zrobic za pomoca jednej linii, jak poniżej:
 # chessboard = [["--" for i in range (8)] for i in range (8)]
@@ -332,16 +336,16 @@
 
 import random # moduł do losowania losowego
 
-random_numbers = [] # tu umieszczamy te liczby, w tej liście
+random_numbers = []  # tu umieszczamy te liczby, w tej liście
 
 # -----TO UŻYCIE PĘTLI 'FOR' jest tylko przykładem losowania na sztywno - poniższa pętla while jest PRAWIDLOWA!!!
-# for i in range (3):  # teraz iterujemy tyle razy ile razy mamy wylosowac liczb - w tym przypadku 3
-#     random_numbers.append(random.randint(1,10)) ## te liczby, które się pojawią w  liście random_numbers
+# for i in range(3):  # teraz iterujemy tyle razy ile razy mamy wylosowac liczb - w tym przypadku 3
+#     random_numbers.append(random.randint(1, 10))  ## te liczby, które się pojawią w  liście random_numbers
 # wylosujemy poprzez użycie funkcji randint ze zbioru od 1 do 10
-# random_numbers.sort()#jak już je wylosujemy i wrzucimy do listy 'random_numbers',
+# random_numbers.sort()  # jak już je wylosujemy i wrzucimy do listy 'random_numbers',
 # to jeszcze je w tej liście posortujemy, poprzez funkcję 'sort'
-# print (random_numbers)# i teraz zerknijmy, co mamy, poprzez drukowanie za pomocą funkcji 'print'
-#-------
+# print(random_numbers)  # i teraz zerknijmy, co mamy, poprzez drukowanie za pomocą funkcji 'print'
+# -------
 
 
 #  - for to jest pętla, która ustawia na sztywno ustaloną ilość losowań, ale nie o to nam do konca chodziło, musi bec petla while ze zmienna counter, za pomocą której określamy 3 losowania
@@ -351,17 +355,17 @@ random_numbers = [] # tu umieszczamy te liczby, w tej liście
 # dajemy pętla while = losuj dopóki, i tu dodatkowo jest potrzebna nam zmienna pomocnicza 'couter', która bedzie nam liczbe losowan
 # mamy miec 3 wylosowane liczby
 
-# counter = 3
-# while counter:
-#     number = random.randint (1, 10) # zmienna number będzie przechowuywać liczbę z losowania ze zbioru od 1 do 10
-#     if  number not in random_numbers: # tu dajemy warunek, który sprawdza, czy wylosowana liczba, sie już w tej liście nie pojawiła, dlatego daje 'not in'
-#         random_numbers.append(number)  # jeśli się nie pojawiła, to dodaję tą liczbę do zmiennej number
-#         counter -= 1 # counter = counter - 1 --> czyli jak już losowanie się zakonczyło sukcesem, to muszę zmniejszyć ilość losowań do 2,
-        # potem do 1 i na 0 się pętla konczy
+counter = 3
+while counter:
+    number = random.randint (1, 10) # zmienna number będzie przechowuywać liczbę z losowania ze zbioru od 1 do 10
+    if  number not in random_numbers: # tu dajemy warunek, który sprawdza, czy wylosowana liczba, sie już w tej liście nie pojawiła, dlatego daje 'not in'
+        random_numbers.append(number)  # jeśli się nie pojawiła, to dodaję tą liczbę do zmiennej number
+        counter -= 1 # counter = counter - 1 --> czyli jak już losowanie się zakonczyło sukcesem, to muszę zmniejszyć ilość losowań do 2,
+# potem do 1 i na 0 się pętla konczy
 
-# random_numbers.sort() # teraz po losowaniu jeszcze musimy posortować
+random_numbers.sort() # teraz po losowaniu jeszcze musimy posortować
 
-# print (random_numbers)
+print (random_numbers)
 
 
 # SPOSÓB II -  na powyższe
