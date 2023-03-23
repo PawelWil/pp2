@@ -1,7 +1,12 @@
 # KROTKI ------------------------------------------------
-#           0  1  2
+# krotki są niemutowalne = niezmienne-----w przeciwieństwie do list --
+# czyli nie można w nich nic podmieniać, co najwyżej je kopiowac w całości lub wycinkach
+# nie mozemy tez usunąc jakichs elelmentow krotki-------
+# Są w nawiasach okrągłych, w przeciwienstwie do list, które są w nawiasach kwadratowych
+
+#             0  1  2
 # numbers = ( 1, 2, 3) # ta zmienna numbers, to jest krotka, nieedytowalna, w nawiasach okrągłych
-#          -3 -2 -1
+#            -3 -2 -1
 
 # numbers = 1, 2, 3 # mozna tez krotkę zapisac bez nawiasów - to jest prostszy sposób
 # numbers = () # to jest pusta krotka
@@ -31,23 +36,24 @@
 # print(numbers[1:2]) # tu mamy wycinek o wartości 2, = to jest kopia tego wycinka
 # print (numbers[:])# można również zrobić kopię calej krotki, poprzez znak ':'
 
-# - kopia krotki
+# ----wygerenowanie krotki za pomocą generatora wyrażenia 'tuple' i pętli for - od od 0 do 9
 # generator krotki, za pomocą generatora wyrażenia--------wygerenowanie krotki za pomocą generatora wyrażenia 'tuple'
 # numbers = tuple(x for x in range (10)) # x dla x, który zawiera się w petli, gdzie iterujemy od 0 do 9
 # print(numbers)
 
-# krotki są niemutowalne = niezmienne-----
+# krotki są niemutowalne = niezmienne-----czyli nie można w nich nic podmieniać, co najwyżej je kopiowac w całości lub wycinkach
 # numbers = tuple(x for x in range (10))
-
 # print(numbers)
 
-# numbers[0] = 9999 # jak widać podmiana nie działa w krotkach, czyli krotki po prostu są niezmienialne=niemutowalne
-# - mamy błąd "TypeError:
+# - jak widać poniżej nie można w nich nic podmieniać
+# numbers = (1, 2, 3, 4)
+# numbers[0] = 9999# jak widać podmiana nie działa w krotkach, czyli krotki po prostu są niezmienialne=niemutowalne
+# print (numbers)# - mamy błąd "TypeError:
 
 # nie mozemy tez usunąc jakichs elelmentow krotki-------
 
 # numbers = tuple(x for x in range (10))
-#
+
 # print(numbers)
 #
 # del numbers[0] # nie da się usunąć elemntów krotki
@@ -78,7 +84,7 @@
 # print(numbers)
 
 
-# SŁOWNIKI = zestaw, klucz, wartosc , wiadomo, że za pomocą klamerek się robi słowniki ------------------------------------------------
+# SŁOWNIKI = zestaw, klucz, wartosc , wiadomo, że za pomocą klamerek'{}' się robi słowniki ------------------------------------------------
 
 # phones = {"Tomek": 21312321, "Ada": 12341441, "Karol": 99999999} # numery telefonów ludzi. "Tomek"=klucz,
 # zaś 21312321 = wartość (tego klucza Tomek)
@@ -90,28 +96,28 @@
 # to Tomek z samego poczatku, jest podmienioony z ostatnia wartością
 # print(phones)
 
-# typowy zapis takiego słownika---
+# typowa struktura zapisu takiego słownika - jest bardziej czytelna niż w jednej linii---
 # animals_dict= {
 #     "kot": "cat",
 #     "pies": "dog",
 #     "chomik": "hamster"
 # }
 # print (animals_dict) # tu nam wyświetla cały słownik
-# print (animals_dict["kot"]) # tu wyszukujemy konkretny klucz, za pomocą metody bezposredniego odwołania
-# print (animals_dict.get("kot")) # a tu wyszukujemy konkretny klucz, za pomocą metody 'get',
+# print (animals_dict["kot"]) # tu wyszukujemy wartość dla konkretnyego klucza, za pomocą metody bezposredniego odwołania
+# print (animals_dict.get("kot")) # tu podobnie, też wyszukujemy wartość dla konkretnego klucza, ale za pomocą metody 'get',
 # i który to ostatecznie wyświetli tylko jego wartość, w naszym przypadku będzie to 'cat'
 # print (animals_dict.get("krowa")) # w tym przypadku klucza 'krowa' nie ma, więc wyświetli nam 'None'
 # print (animals_dict.get("krowa", "brak takiego slowa")) # w tym przypadku dzięki funkcji 'get', która ma opcję wyświetlenia czegoś,
 # jak nie znajdzie danego elementu. I tak unas wiadomo 'krowy' nie ma, więc dzięki funkcji wyświetli się nam info:'brak takiego słowa'
 
 
-# weryfikacja, czy istnieje taki klucz w słowniku----------- chce dla tych kluczy sprawdzić wartości
+# weryfikacja, czy istnieje jakiś konkretny klucz w słowniku, pochodzący np. z listy----------- chce dla tych kluczy sprawdzić wartości
 # animals_dict = { # przykładowy słownik
 #     "kot": "cat",
 #     "pies": "dog",
 #     "chomik": "hamster"
 # }
-# words = ["kot", "lew", "chomik"]  # to jest lista, bo kwadratowe nawiasy, której to elelmenty odwołam do kluczy w słowniku
+# words = ["kot", "lew", "chomik"]  # to jest lista, bo kwadratowe nawiasy, której to elementy odwołam do kluczy w słowniku
 # for word in words:  # uzywam do tego pętli for- dla słowa word, w liscie 'words'
 #     if word in animals_dict:  # jesli jakiś element z listy words jest w słowniku 'animals_dict', to wyświetl to słowo
 # żeby ten warunek 'if' zaistniał daje 'in' + gdzie (u nas to słownik animals_dict),
@@ -129,14 +135,14 @@
 # }
 # -- 1. za pomocą metody 'keys' wyciągam wszystkie klucze ze słownika
 # for key in animals_dict.keys():
-# print(key) # a. teraz wyswietlam tylko same klucze
-# print(key, "->", animals_dict[key]) # b. teraz wyswietlam klucze wraz z ich wartościami, które wiadomo że pochodzą ze słownika
+#     print(key) # a. teraz wyswietlam tylko same klucze
+#     print(key, "->", animals_dict[key]) # b. teraz wyswietlam klucze wraz z ich wartościami, które wiadomo że pochodzą ze słownika
 # 'animals_dict' i iterowany jest po słowie 'key' więc jego daję w nawiasie kwadratowym - bo on przechodzi przez słownik
 
 # -- 2. Ale tez istnieje uproszczona metoda, gdzie nie trzeba dawać 'keys', python sam automatycznie to wyszuka
 # for key in animals_dict:
 #     print(key) # a. teraz wyswietlam tylko same klucze
-# print(key, "->", animals_dict[key])
+#     print(key, "->", animals_dict[key]) # b.teraz wyswietlam klucze, z wartościami
 
 
 # --------------WYCIGAnIE WARTOŚCI ZE SŁOWnIKA - robimy to za pomocą metody 'values'
@@ -151,15 +157,14 @@
 
 # --------------WYCIGAnIE ELEMEnTÓW ZE SŁOWnIKA w postaci KROTEK- robimy to za pomocą metody 'items'
 # * tak gwoli przypomnienia, wiadomo, że krotek nie możemy modyfikować
-# animals_dict = { # przykładowy słownik
+# animals_dict = {  # przykładowy słownik
 #     "kot": "cat",
 #     "pies": "dog",
 #     "chomik": "hamster"
 # }
-# for item in animals_dict.items(): # tu za pomocą items, klucze i ich wartości są przedstawiane w postaci Krotek,
-#     czyli ciągów znaków
-# print(item)
-
+# for item in animals_dict.items():  # tu za pomocą items, klucze i ich wartości są przedstawiane w postaci Krotek,
+# czyli ciągów znaków
+#     print(item)
 
 # --------------WYCIGAnIE ELEMEnTÓW polskich i angielskich ZE SŁOWnIKA w postaci KROTEK- robimy to za pomocą metody 'items'# for pl, en in animals_dict.items():
 # animals_dict = { # przykładowy słownik
@@ -169,8 +174,8 @@
 # }
 # for pl, en in animals_dict.items(): # dzięki elementom pl = słowo polskie i en = słowo angielskie, python nam ze słownika dosłownie wyświetli
 #     słowa polskie i słowa angielskie
-# print(pl, "->", en) # tu najpierw będzie polskie słowo, potem angielskie
-# print(en, "->", pl) # zaś tu odwrotnie sobie zrobiłem przykład, czyli wpier angielskie,a potem polskie
+#     print(pl, "->", en) # tu najpierw będzie polskie słowo, potem angielskie
+#     print(en, "->", pl) # zaś tu odwrotnie sobie zrobiłem przykład, czyli wpier angielskie,a potem polskie
 
 
 # ---------------MODYFIKACJA SŁOWnIKA: AKTUALIZACJA(cos chcemy dodać), ZMiana nazwy WARTSCI --------
