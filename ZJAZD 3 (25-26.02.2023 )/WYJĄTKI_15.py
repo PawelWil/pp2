@@ -1,8 +1,12 @@
 # WYJĄTKI________________
-# 0. EXCEPTION - wyjątek występuję, gdy podczas wykonywania składniowo poprawnego kodu Pythona wystąpi błąd.
-# W terminologii Pythona jest zgłaszany wyjątek. Ale kod sie wykona. --> tu chodzi o to, że kod jest napisany prawidłowo,
-# ale np. użytkownik wprowadził nieprawidłowe dane wejściowe, żeby ten kod zadziałał-wtedy on się zakończy i powiadomi, że dane są złe
-# lub np. jak drukujemy - wszystko poszło dobrze, ale nie drukuje bo nie ma papieru, itd..
+# 0. EXCEPTION - wyjątek występuję-jest dodawany do kodu, gdy podczas wykonywania prwidłowego kodu Pythona wystąpi błąd, ale nie z winy kodu,
+# a my chcemy na bazie wyjątku wyjaśnić co jest przyczyną tego.
+# W terminologii Pythona jest zgłaszany wyjątek.
+# --- Generalnie jest tak, że kod sie wykona, ale nie zakończy powodzeniem --> tu chodzi o to, że kod jest napisany prawidłowo,
+# ale np. użytkownik wprowadził nieprawidłowe dane wejściowe (zamiast liczby=intiger,float, wpisał stringa lub nie wpisał nic
+# i dał od razu enter itd.), i teraz dzięki wprowadzonemu wyjątkowi program się zakończy i powiadomi, że dane są złe (zły znam wprowadzony
+# albo nic) lub np. jak drukujemy - wszystko poszło dobrze, ale nie drukuje bo nie ma papieru, itd..
+
 # Przykładowe blędy Exceptions = Wyjątków:
 # 1.TypeError - nie można wykonać operacji w ramach danego typu, np.dodać wartości do napisu
 # 2.IndexError - przekroczenie zasięgu listy lub krotki
@@ -36,7 +40,7 @@
 # for i in range (5): # pobieramy od użytkownika w pętli od i w range 5 te liczby
 #     n = int(input("Podaj liczbę całkowitą: ")) # tu poprosimy o tą liczbę calkowitą, pięc razy, bo wiadomo, że mamy pętle for
 #     numbers.append(n) # tu wiadomo, że dodajemy naszą liczbę na koniec listy
-# print(n) # i teraz jak wszystko pójdzie  dobrze, to te piec liczb można podać i program się zakonczy,
+# print(numbers) # i teraz jak wszystko pójdzie  dobrze, to te piec liczb można podać i program się zakonczy,
 # ale jak coś pójdzie nie tak, np. podam literkę zamiast liczby, to po hamsku się ten kod zakonczy
 # z informacją: ValueError: invalid literal for int() with base 10: 'e'
 
@@ -50,35 +54,35 @@
 # counter = 0
 
 # while True:  # ma true zeby sie wogole uruchomila
-#     if counter > 4:  # jesli counter większe od 4, to opuść tą pętle, czyli będzie pięć powtórzen = zapytań, bo 0,1,2,3,4 = 5 zapytan, a po przekroczeniu liczby 4,
-# czyli piątego powtórzenia, pętla się zakonczy - ale ważne piątego poprawnego
-# break  # przy pomocy instrukcji break tą pętlę można opuścic
-# try:  # tu robimy sprawdzenie czy czasem ten fragment kodu nie wygenerował jakiegoś wyjątku i obsłuzymy ten błąd jesli go wygenerwoał
-# tak jak poniżej:
-# n = int(input("Podaj liczbę całkowitą: "))  # wyswietlimy podaj liczbe
-# numbers.append(n)  # a jesli już wszystko poszło dobrze, to tą liczbę dopisujemy
-# counter += 1  # po to żeby móc zliczać ilość prób
-# except:
-#     print("To nie jest liczba calkowita-sprobuj ponownie")  # tu damy jako except, to nie jest liczba całkowita
+#     if counter > 4:  # jesli counter większe od 4, to opuść tą pętle, czyli będzie pięć powtórzen = zapytań, bo 0,1,2,3,4 = 5 zapytan,
+    # a po przekroczeniu liczby 4, czyli piątego powtórzenia, pętla się zakonczy - ale ważne piątego poprawnego
+    #     break  # przy pomocy instrukcji break tą pętlę można opuścic
+    # try:  # tu robimy sprawdzenie czy czasem ten fragment kodu nie wygenerował jakiegoś wyjątku i obsłuzymy ten błąd jesli go wygenerwoał
+    # tak jak poniżej:
+    #     n = int(input("Podaj liczbę całkowitą: "))  # wyswietlimy podaj liczbe
+    #     numbers.append(n)  # a jesli już wszystko poszło dobrze, to tą liczbę dopisujemy
+    #     counter += 1  # po to żeby móc zliczać ilość prób
+    # except:
+    #     print("To nie jest liczba calkowita-sprobuj ponownie")  # tu damy jako except, to nie jest liczba całkowita
 
 # print(numbers)
 
+# d. ---INWERSJA -  skrypt który pobiera liczbę i wyswietla odwroność tej liczby
 
-# d. ---INWERSJA -  skrypt który pobiera liczbę i wyswietla odwroność te jliczby
-
-while True:  # wykorzystujemny pętlę while
-    try:  # wiadomo, żeby dodać wyjątki dajemy klauzule 'try-except'
-        number = int(input("Podaj liczbe cakowitą: "))  # pobiermay sobie tą liczbę
-        print("Odwrotna liczba:", 1 / number)  # teraz robimy inwersje tej liczby, czyli odwracamy ją,
-        # czyli jeden przez naszą liczbę, którą jest number
+# while True:  # wykorzystujemny pętlę while
+#     try:  # wiadomo, żeby dodać wyjątki dajemy klauzule 'try-except'
+#         number = int(input("Podaj liczbe cakowitą: "))  # pobieramy sobie tą liczbę
+#         print("Odwrotna liczba:", 1 / number)  # teraz robimy inwersje tej liczby, czyli odwracamy ją,
+# czyli jeden przez naszą liczbę, którą jest number
 
     # except:  # 1 sposób - ale to jest taki bardzo ogólne info, że coś poszło nie tak, ale dalej do konca nie wiemy co
     #     print("Cos poszło nie tak")
+
 # -- 2 sposób poniżej jest bardziej precyzyjny w obsłudze wyjątków:
-    except ValueError: # tu już robimy precyzyjniej, na wypadek wystąpienia liter + musimy podać dokładną nazwę tego błędu
-        print("To nie jest liczba calkowita")
-    except ZeroDivisionError: # tu już robimy precyzyjniej, na wypadek wystąpienia zera + musimy podać dokładnie tą nazwę tego błedu
-        print("Bład dzielenia przez zero")
+#     except ValueError: # tu już robimy precyzyjniej, na wypadek wystąpienia liter + musimy podać dokładną nazwę tego błędu
+#         print("To nie jest liczba calkowita")
+#     except ZeroDivisionError: # tu już robimy precyzyjniej, na wypadek wystąpienia zera + musimy podać dokładnie tą nazwę tego błedu
+#         print("Bład dzielenia przez zero")
 
 
 # ZeroDivisionError: -- zła liczba
