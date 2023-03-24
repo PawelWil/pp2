@@ -50,7 +50,7 @@
 # dodawać inne znaki, które już będą widoczne w pozostalych zapytaniach
 
 
-# --- PARAMETRYZOWAnIE FUnKCJI:
+# --- PARAMETRYZOWAnIE FUnKCJI - wyświetlanie za pomocą funkcji danego znaku ileś razy, z użyciem wartości funkcji:
 # def show_asteriks(how_many): # to jest parametryzowanie funkcji - nasz parametr = how_many + podajemy wartość tego parametru
                                 # podczas wywołania funkcji(poniżej),czyli np. (10), (1212) itd. i dzięki temu parametrowi wyświetlamy *
                                 # tą zadaną ilość razy
@@ -178,10 +178,10 @@
 
 
 # ------- przekazywanie parametrów pozycyjnych do funkcji:
-# print ("raz", "dwa" , "trzy") #--cos nie dziala...
+# print ("raz", "dwa" , "trzy")
 
 
-#KOlejny przyklad
+#KOlejny przyklad - wprowadzenie imienia i nazwiska + zamiana jego kolejności za pomocą funkcji
 # def introduce (first_name, last_name):
 #     print("czesc jestem", first_name, last_name)
 # introduce("Jan", "Kowalski")
@@ -222,7 +222,7 @@
 
 #KOLEJNE ----- ZWRACAnIE WARTOŚCI przez funkcję: "return"
 # def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą, wtedy gdy nie podamy wartości w introduce
-#     print("czesc jestem", first_name, last_name)
+    # print("czesc jestem", first_name, last_name)
     # return 12
     # lub
     # return  None
