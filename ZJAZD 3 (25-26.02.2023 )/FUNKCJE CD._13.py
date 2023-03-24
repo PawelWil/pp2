@@ -102,7 +102,7 @@
 #     print(x)
 # scope_test() # to jest uruchomienie tej funkcji - dzuiala ale sie nic nie pojawia , bo retiurn zwraca wartosc, a nie pokazjuje jak print
 
-# przykład 1'' - tu zmienna lokalna x + globalna y, i dzięki funkcji print w ciele funkcji wartość zmiennej lokalnej się wyświetli,
+# przykład 1'' - tu zmienna lokalna x + globalna y, i dzięki funkcji print w ciele funkcji wartość zmiennej lokalnej x się wyświetli,
 # + dzięki globalnej funkcji print, wartość zmiennej y też się wyświetli
 # def scope_test (): # ma jedną zmienną lokalką x - to jest x poniżej
 #     x = 123
@@ -146,8 +146,8 @@
 # print(" na zewnatrz: " + str(x)) # to wyswietla niezaleznie dla globalnej zmiennenn x = 99
 
 
-# przyklad 4 - tu wplywamy na zmienną globalną i zmieniamy ją w ciele funkcji (nadpisujemy zmienną globalną,
-# za pomocą zmiennej w lokalnej w ciele funkcji---------
+# przyklad 4 - tu wplywamy na zmienną globalną i zmieniamy ją w ciele funkcji za pomocą funkcji 'global', przy
+# pomocy zmiennej w lokalnej w ciele funkcji---------
 # def scope_test ():
 #     global x # zeby moc zamienic zmienną globalną trzeba uzyc instrukcji global, która zacznie traktować zmienną x,
     # nawet lokalnie/wewntarz bedzie traktować jako globalną
@@ -162,7 +162,7 @@
 
 
 
-### -------------ZDefiniowanie fukcji, ktorej zadaniem jest zmiana wartości---------
+### -------------ZDefiniowanie fukcji, ktorej zadaniem jest zmiana wartości-pokazuje wartość przed n+=1 i po
 
 # def change_value(n):# do tej funkcji przekazujemy argument n - mowa o wartosciach skalarnych, czyli liczby (int, float), a potem lista -->
 # zadaniem tej funkcji będzie zamiana wartości, do tej funkcji będziemy przekazywać wartości tu n = val
@@ -178,7 +178,7 @@
 # print(val) # tu wiadomo, że wyswietlimy 7, a nie 8, bo ten print odnosi się do zmiennej globalnej (powyżej)
 
 
-## przekazujemy listę - jakas wartość nieskalarna------------ jakaś np. lista
+## wrzucenie listy do fukcji + zmiana wartości globalnej listy, na wartość lokalną listy
 # def change_value(n):# do tej funkcji przekazujemy argument n - tu nieskalarna, czyli np. lista --> tu n = val = [1,2]
 #     print ("przed zmiana:", n) # tu się odnosi do zmiennej globalne
 #     n = [0,0] # tu się odwołuje do zmiennej lokalnej, gdzie pod n podstawilismy całkeim inny obiekt, ale lokalnie,
@@ -190,10 +190,11 @@
 # print(val) # tu funkcja change_value będzie się odnosić do zmiennej 'val', która jest zmienną globalną,
 # która rowna się: val = [1,2], czyli wyświetli się lista [1,2]
 
-## Kolejny przyklad - zmien wartosc listy, która jest listą mającą element 0 [0] i podstaw za nią wartos 999--------------
+## Kolejny przyklad - zmiana wartosci listy po indeksie - tu lista w indeksie 0 miała wartość 1, ale za 1 podstawiono
+# i zmieniono na wartos 999--------------
 # def change_value(n):
 #     print ("przed zmiana:", n)
-    # n[0] = 999 # tu bedziemy miec: [999, 2] pod n, w indeksie 0 podstawilismy całkeim inny obiekt, ale lokalnie,
+#     n[0] = 999 # tu bedziemy miec: [999, 2] pod n, w indeksie 0 podstawilismy całkeim inny obiekt, ale lokalnie,
     # który ma pierwszenstow nad globalną, dlatego [1,2]=przed zmianą, zostało zastąpione [999,2]=po zmianie
     # print("po zmianie", n)
 
@@ -206,7 +207,8 @@
 
 
 ##-----------------
-### 1. Robię funckje ktora ma zestaw argumetow, ale nie chcemy definiowac ile tych argumetow jest--------
+### 1. Robię funckje ktora ma z ręki wstawione argumenty, i z ręki może być ich ilość zmieniona - nie ma tu z góry podanej liczby
+# argumentów poprzez pętle for
 # def my_func(*args):
 #     for el in args: # pętla for - dla el(elementów) w zbiorze args(argumentów)
 #         print(el)
@@ -216,8 +218,8 @@
 
 ### 2. to jest przekazywanie wielu argumentow, jako argumentów przekazywanych przez nazwe, a nie przez pozycję--------
 
-# def my_func(**args):
-#     for el in args.items():
-#         print(el)
+def my_func(**args):
+    for el in args.items():
+        print(el)
 
-# my_func(val1 = "raz", val2 = 999) # teraz tą funkcje 'my func' sobie wywolujemy!!;
+my_func(val1 = "raz", val2 = 999) # teraz tą funkcje 'my func' sobie wywolujemy!!;

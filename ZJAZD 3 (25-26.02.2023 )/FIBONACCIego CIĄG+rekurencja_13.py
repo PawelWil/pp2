@@ -40,22 +40,22 @@
 #         return # to wyjdz z tej funkcji, zebysmy się mogli zatrzymac, bo inaczej by to szlo w nieskonconsoc
 #     print (number) # wydrukuj tą liczbę
 #     number += 1 #podnieś tą liczbę o 1 - czyli wchodzimy za kazdym razem do srodka, tak jak matrioszki
-#     recursion(number) #wywyłaj tą liczbę rekurencyjnie = dzięki temu mamy rekursje, czyli funkcja w funkcji, czyli tych funkcji rekurencyjnych
-    # mamy 20, bo 1 jest 2, 2 w 3, itd.
+#     recursion(number) #wywyłaj tą liczbę rekurencyjnie = dzięki temu mamy rekursje, czyli funkcja w funkcji,
+#     czyli tych funkcji rekurencyjnych mamy 20, bo 1 jest 2, 2 w 3, itd.
 
 # recursion(10)
 
-# 2----- Teraz poakzanie 100 elelntu ciagu fibonacciego, ale z uzyciem rekurencji:-----------
+# 2----- Teraz pokazanie 20 elementów ciagu fibonacciego, z uzyciem rekurencji:-----------
 # 1, 1, 2(1+1), 3 (2+1), 5 (3+2), 8 (5+3), 13 (8+5), 21 (13+8), 34 (21+13) ...
-def fib(n): # w funkcji 'fib' argument 'n' będzie nam wskazywal numer tego ciągu
-    if n < 1 : # jesli ktos poda liczbę mniejszą od 1, to się nic nie uda i zwracane za pomocą if będzie NONE
-        return None # czyli jesli n < 1 zwracamy None, ale nie wyswietlamy :) - bo wyswietla print, a return zapamietuję tą dana
-    if n < 3: # to mozemy tez uzyc 'elif' zamiast 'if'
-        return 1
+# def fib(n): # w funkcji 'fib' argument 'n' będzie nam wskazywal numer tego ciągu
+#     if n < 1 : # jesli ktos poda liczbę mniejszą od 1, to się nic nie uda i zwracane za pomocą if będzie NONE
+#         return None # czyli jesli n < 1 zwracamy None, ale nie wyswietlamy :) - bo wyswietla print, a return zapamietuję tą dana
+#     if n < 3: # to mozemy tez uzyc 'elif' zamiast 'if'
+#         return 1
 
-    return fib(n - 1) + fib(n-2) #
+    # return fib(n - 1) + fib(n-2) #
 
-for n in range (1, 10): # to poakzuyje do 10 elementu ciag fibonacciego
-    print(n, "->", fib(n))
+# for n in range (1, 20): # to poakzuyje do 10 elementu ciag fibonacciego
+#     print(n, "->", fib(n))
 
 # DEBUGGER (czyli ten robak u góry) to jest opcja sledzenia krok po kroku programu, pokazuje jakie wartosci są przypisawene itd.
