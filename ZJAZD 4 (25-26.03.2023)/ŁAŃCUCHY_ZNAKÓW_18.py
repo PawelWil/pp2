@@ -89,11 +89,12 @@
 #
 # print("a" == chr(ord("a")))
 
-#---ŁANCUCH ZNAKÓW JAO SEKWENCJA
+#---ŁANCUCH ZNAKÓW JAkO SEKWENCJA
 
 # ten teks jest indeksowany
     #    0123456789
 # txt = "Ala ma kota"
+#          ...-4-3-2-1
 # print(txt[2]) # wyswietlamy a
 # print(txt[-3]) # wyswietlamy o
 
@@ -162,30 +163,35 @@
 # print(alphabet)
 
 #------
-alphabet = ""
-for i in range (ord("a"), ord("z") + 1 ):
-    alphabet += chr(i)
-# print(min([1,2,3]))
-
-print(min("abcABC"))
-print(max("abcABC"))
-
-
-print(max("Ala ma kota"))
+# alphabet = ""
+# for i in range (ord("a"), ord("z") + 1 ):
+#     alphabet += chr(i)
+# # print(min([1,2,3]))
+#
+# print(min("abcABC"))
+# print(max("abcABC"))
+#
+#
+# print(max("Ala ma kota"))
 
 #---FUNKCJA INDEKS
 
-print(alphabet.index("w")) # jaki ma indeks literka w = 22
+# print(alphabet.index("w")) # jaki ma indeks literka w = 22
+#
+# print("aAbByYzZAa".index("A")) # mam wartosc 1 - funkcja ineks zrwaca inkeks ierwszego wystapienia, tak ze dlatego rtaz tą jedynkę wyswietliło
+# print("aAbByYzZAa".index("ZA"))
+#
+# print([1,2,3].index(3))
+#
+# # --- Funkcja List
+# print(list(alphabet))
+#
+# print(alphabet.count("a"))
+# print("Ala ma kota".count("a"))
+#
+# print([1,1,2,2,4].count(1))
 
-print("aAbByYzZAa".index("A")) # mam wartosc 1 - funkcja ineks zrwaca inkeks ierwszego wystapienia, tak ze dlatego rtaz tą jedynkę wyswietliło
-print("aAbByYzZAa".index("ZA"))
-
-print([1,2,3].index(3))
-
-# --- Funkcja List
-print(list(alphabet))
-
-print(alphabet.count("a"))
-print("Ala ma kota".count("a"))
-
-print([1,1,2,2,4].count(1))
+# ---szyfr cezara
+# ABCDEFG # szyfr cezara z przesunieceim trzy, to mamy wtedy
+#    ABCD # tu mamy to przesunięcie
+# XYZ
