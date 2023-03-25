@@ -1,2 +1,2 @@
 def fun():
-    print("Jestem fukncją z modułu " + __name__)
+    print("Jestem fukncją fun() z modułu  mod1 z pakietu pack1")
