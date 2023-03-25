@@ -1,4 +1,4 @@
-# przyklad importowanain  modułów
+# przyklad importowanain  modułów - zrobiona kopia
 
 # import math # importuje,y moduł 'math'
 # print (math.pi) # z modułu math wyswietlamy wartosc pi
