@@ -4,16 +4,19 @@
 # zabezpieczyć zmienne instancji przed przypadkowym nadpisaniem (enkapsulacja).
 
 import random
-
+# shift F6 - zmiana jakiegos elemntu kodu, we wszystki
 class Dice:  # dice = kostka
     def __init__(self):
-        self.value = None
+        self.__value = None
 
     def throw(self):
-        self.value = random.randint(1, 6)
+        self.__value = random.randint(1, 6)
+
+    def get_value(self):
+        return self.__value
 
     def __str__(self):
-        return "[{}]".format(self.value) # mozna tez to zapisac tak:   "[" + self.value + "]"
+        return "[{}]".format(self.__value) # mozna tez to zapisac tak:   "[" + self.value + "]"
 
 
 
@@ -21,17 +24,17 @@ class Dice:  # dice = kostka
 class DicePair:
 
     def __init__(self):
-        self.pair = [Dice(), Dice()]
+        self.__pair = [Dice(), Dice()]
 
     def throw(self):
-        self.pair[0].throw()
-        self.pair[1].throw()
+        self.__pair[0].throw()
+        self.__pair[1].throw()
 
     def is_double(self):
-        return self.pair[0].value == self.pair[1].value
+        return self.__pair[0].get_value() == self.__pair[1].get_value()
 
     def __str__(self):
-        return str(self.pair[0]) + str(self.pair[1])
+        return str(self.__pair[0]) + str(self.__pair[1])
 
 dices = DicePair()
 while True:
