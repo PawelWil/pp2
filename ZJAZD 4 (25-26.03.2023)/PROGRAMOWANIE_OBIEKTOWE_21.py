@@ -1,12 +1,12 @@
-# class MyClass: # tworzenia klasy
-#      pass
-#
-#
+# class MyClass: # tworzenie klasy
+#     pass
+# #
+# #
 # my_obj = MyClass() # tworzenie obiektu
 # my_obj.x = 5 # obiekt ma własciwość x i wartość 5
-#
+# #
 # print(my_obj.x)
-# # print(type(my_obj)) # jaki typ obiektu
+# print(type(my_obj)) # jaki typ obiektu
 #
 # my_obj2 = MyClass()# kolejny obiekt cklasy main class
 # my_obj2.x = 99
@@ -107,7 +107,7 @@
 class Stack:  # definiujemy klasę stosu
     def __init__(self):  # definiujemy konstruktor
         # print("Cześć!") # 1. przykładowe wyswietlenie
-        self.__stack_list = []  # jak są 2 x underscores : __ to jest to traktowane jako stos prywatny
+            self.__stack_list = []  # jak są 2 x underscores : __ to jest to traktowane jako stos prywatny
 
     def push(self, val):  # teraz definiujemy metodę push
         self.__stack_list.append(val)
@@ -119,7 +119,7 @@ class Stack:  # definiujemy klasę stosu
 
 
 class StackSum(Stack):  # to dodajemy zeby byla suma
-    def__init__(self):
+    def __init__(self):
         Stack.__init__(self)
         self.__sum = 0
 
@@ -128,36 +128,43 @@ class StackSum(Stack):  # to dodajemy zeby byla suma
 
     def push(self, val):
         self.__sum += val
+        Stack.push(self, val)
 
-# ----
+    def pop(self):
+        val = Stack.pop(self)
+        self.__sum -=val
+        return val
+
+#
+# # ----
 obj = StackSum()
 obj2 = StackSum()
-
-
+#
+#
 obj.push(3)
 obj.push(2)
 obj.push(1)
-
+#
 obj2.push(4)
 obj2.push(4)
 obj2.push(4)
-
+#
 print ("stos 1", obj.get_sum())
 print ("stos 1", obj2.get_sum())
-
+#
 print(obj2.pop())
 print(obj2.pop())
 print(obj2.pop())
-
+#
 print(obj.pop())
 print(obj.pop())
 print(obj.pop())
-
+#
 print ("stos 1", obj.get_sum())
 print ("stos 1", obj2.get_sum())
-
-# --- tu już korzystamy z tej klasy
-
-obj = Stack()
-# obj.__stack_list = [4,4,4,]
-print()
+#
+# # --- tu już korzystamy z tej klasy
+#
+# obj = Stack()
+# # obj.__stack_list = [4,4,4,]
+# print()
