@@ -10,7 +10,7 @@
 
 class Stack:  # definiujemy klasę stosu
 
-    def __init__(self):  # definiujemy konstruktor = obiekt klasy Stack
+    def __init__(self):  # definiujemy konstruktor
         # print("Cześć!") # 1. przykładowe wyswietlenie
             self.__stack_list = []  # jak są 2 x underscores : __ to jest to traktowane jako stos prywatny
 
@@ -44,7 +44,7 @@ class StackSum(Stack):  # to dodajemy zeby byla suma
         return val
 
 
-
+# utwórz 3 stosy (3 obiekty klasy Stack),
 s1 = Stack()
 s2 = Stack()
 s3 = Stack()
