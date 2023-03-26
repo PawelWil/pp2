@@ -1,0 +1,1 @@
+# Działów 19 i 20 nie było - od razu Pan Marcin przeszedł do OOP(Object Oriented Programming)

@@ -6,13 +6,30 @@
 #
 # {'Ala': 2, 'Tomek': 1}
 
+# DOBRE ROZWIĄZANIE PANA MARCINA:
 
-#Definujemy funkcję zliczającą ilość wystąpień poszczególnych elementów listy w formie słownika.
-def sum_numbers(numbers):
-    sum = 0  # tu dajemy zmienną lokalną 'sum'
-    for element in numbers:
-        sum += element
-    return sum
+# def frequency_occurrences (source_list):
+#     target_dict = {}
+#     for e in  source_list:
+#         if e in target_dict:
+#             target_dict[e] += 1
+#         else:
+#             target_dict[e] = 1
+#     return  target_dict
+#
+# print(frequency_occurrences(["Ala", "Tomek", "Ala"]))
+# print(frequency_occurrences([1,1,1]))
+# print(frequency_occurrences([1,23,34243,35234,522,222,222]))
 
-print (sum_numbers({1,1,3}))
+#lub ponizej szybsza metoda, za pomocą funkcji 'count'
+
+def frequency_occurrences (source_list):
+    target_dict = {}
+    for e in  source_list:
+        target_dict[e] = source_list.count(e)
+    return  target_dict
+print(frequency_occurrences(["Ala", "Tomek", "Ala"]))
+print(frequency_occurrences([1,1,1]))
+print(frequency_occurrences([1,23,34243,35234,522,222,222]))
+
 
