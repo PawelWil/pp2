@@ -50,6 +50,8 @@ products.append(Product("Płyn do naczyń", "chemia", 4.50))
 
 
 # -----cos mi tu źle podlicza rabat - sprawdzic na filiku!!!!!!!!!!!!!!!!
+# ciekawy serwer, gdzie jest duzo kodów: www.codewars.com - tu mozna rozwiązywac różne skrypty
+
 show_products(products)
 special_offer(products, "spozywcze,", 30)
 print("\nPromocja\n-------------")
