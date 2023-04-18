@@ -9,30 +9,17 @@
 # ---------- ROZWIĄZANIE Pana Marcina:
 # • wyświetl informacje o procesorze komputera,
 
-import math
-import random
-import platform
+import math # w module math, będą dane o sinusie
+import random # na bazie modułu random będzie losowanie
+import platform # w module platform, będą dane o procesorze
 
-print ("Procesor: ", platform.processor())# procesor
-print("Losowanie: ", random.sample([x for x in range (1, 11)], 3))# 3 nie powtarzajece sie liczby
-print("Sinus 90: ", math.sin(math.radians(90)))
+print ("Procesor: ", platform.processor())# procesor - korzystamy z modułu platform, która ma funkcję procesorze, na bazie którego
+# dostaniemy informacje o procesorze
+print("Losowanie: ", random.sample([x for x in range (1, 11)], 3))# wylosowanie 3 nie powtarzajecych sie liczb, za pomocą  modułu random,
+# który ma funkcje sample, w której trzeba ustawić zbiór losować
+print("Sinus 90: ", math.sin(math.radians(90))) # moduł math, i funkcja sinus
 
 
-# --------- MOJE ROZWIĄZANIE
-# • wyświetl informacje o procesorze komputera:
-# import platform
-# print(platform.machine()) # nazwa procesora - procek np firmy intel lub AMD
-# print(platform.processor())# tu juz dokładne info o procesorze
-#
-#
-# # • wylosuj 3 niepowtarzalne liczby ze zbioru 1-10,
-# from random import  choice, sample
-# lst = [i for i in range(1, 11)] # 2 sposób tworzenia listy 10 elemntowej, gdzie jak mamy np 1000 elemntów to mozna go uzyc
-#
-# print(sample(lst, 3)) # tu wybieramy nie liczbe ale zbior 5iu liczb
-#
-#
-# # wyznacz sinus 90 stopni.
-# import math # importuje,y moduł 'math'
-#
-# print(math.sin(90))# przykład użycia
+
+
+
