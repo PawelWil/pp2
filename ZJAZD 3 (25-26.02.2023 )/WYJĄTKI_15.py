@@ -9,11 +9,14 @@
 
 # Przykładowe blędy Exceptions = Wyjątków:
 # 1.TypeError - nie można wykonać operacji w ramach danego typu, np.dodać wartości do napisu
+
 # 2.IndexError - przekroczenie zasięgu listy lub krotki
+
 # 3.ValueError - nieobslugiwana wartość lub typ danych
+
 # 4.ZeroDivisionError - błąd dzielenia przez zero
 
-# 1. SYNTAX ERROR = błedy skladni, występuje w momencie gdy probujemy uruchomić składniowo nieprawidłowy kod Pythona.
+# 5.SYNTAX ERROR = błedy skladni, występuje w momencie gdy probujemy uruchomić składniowo nieprawidłowy kod Pythona.
 # Taki kod nie jest wogóle wykonywany, nawet te linie, które są poprawne składniowo.
 # - tego sie na da ominąc żeby python idle mógł wykonać kod - trzeba po prostu te błędy poprawic.
 # a.

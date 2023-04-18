@@ -33,6 +33,7 @@
 
 
 # #------- pokazywanie wycinków krotki / kopii jakiegoś elementu krotki + całej krotki
+# numbers = ( 1, 2, 3)
 # print(numbers[1:2]) # tu mamy wycinek o wartości 2, = to jest kopia tego wycinka
 # print (numbers[:])# można również zrobić kopię calej krotki, poprzez znak ':'
 
@@ -166,7 +167,8 @@
 # czyli ciągów znaków
 #     print(item)
 
-# --------------WYCIGAnIE ELEMEnTÓW polskich i angielskich ZE SŁOWnIKA w postaci KROTEK- robimy to za pomocą metody 'items'# for pl, en in animals_dict.items():
+# --------------WYCIGAnIE ELEMEnTÓW polskich i angielskich ZE SŁOWnIKA w postaci KROTEK- robimy to za pomocą metody 'items'# for pl, en
+# in animals_dict.items():
 # animals_dict = { # przykładowy słownik
 #     "kot": "cat",
 #     "pies": "dog",
