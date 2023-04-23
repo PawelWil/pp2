@@ -1,0 +1,2 @@
+# w tym module nie wpisywaliśmy nic, tylko chcieliśmy pokazać za pomocą pliku 'app6', że jak wywołamy pakiet 'subpage1'
+# module1, to się wyświetli zawartość automatyczne tworzonego pliku inicjującego ten pakiet, czyli __init__.py
