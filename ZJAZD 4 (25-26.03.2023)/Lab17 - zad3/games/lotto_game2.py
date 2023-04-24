@@ -1,6 +1,8 @@
-from games.MODUŁY_16 import get_user_numbers, check_numbers, draw_numbers
+# tu robimy import z mojego pulpitu, z folderu 'packages', pakietu 'games' i modułu 'lotto', do PyCharma, w ktorym to zastosujemy
+# logikę do obecnej gry 'lotto_game2'
+from games.lotto import get_user_numbers, check_numbers, draw_numbers
 
-from MODUŁY_16 import get_user_numbers, check_numbers, draw_numbers
+
 
 print("Witaj w grze lotto!")
 user_numbers = get_user_numbers()

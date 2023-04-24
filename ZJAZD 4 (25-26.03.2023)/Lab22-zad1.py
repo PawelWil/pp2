@@ -5,7 +5,6 @@
 # • metoda powinna zwiększać zarobki o podaną wartość procentową,
 # • domyślnie metoda powinną zwiększać zarobkio 10%.
 
-#-----Rozw Pana Marcina
 class Employee:
     def __init__(self, firstname, lastname, age, salary):
         self.__firstname = firstname

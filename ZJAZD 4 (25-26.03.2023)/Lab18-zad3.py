@@ -9,15 +9,15 @@ delta = 3
 # print(ord("A")) # to nie jest potrzebne - tylko testowo, pokazuje zakres
 # print(ord("Z")) # to nie jest potrzebne - tylko testowo, pokazuje zakres
 
-# for i in range(ord("A"), ord("Z") + 1):
-#     print(chr(i), end="")
+for i in range(ord("A"), ord("Z") + 1):
+    print(chr(i), end="")
 
 print()
 
 for i in range(ord("A") + delta, ord("Z") + 1 + delta):
     if i > ord("Z"):
         i -= ord("Z") - ord("A") + 1
-    # print(chr(i), end="")
+    print(chr(i), end="")
 
 
 # funkcja odkodowania szyfr cezara
@@ -37,7 +37,7 @@ def decode(string, delta):
 
 print(decode("VCBIU", delta))
 
-# print()
-# print(decode_letter("J", delta) == "G")
-# print(decode_letter("J", delta))
+print()
+print(decode_letter("J", delta) == "G")
+print(decode_letter("J", delta))
 

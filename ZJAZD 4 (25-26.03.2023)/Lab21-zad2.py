@@ -67,30 +67,3 @@ for i in range (100):
     print(s3.pop(), end=" ")
 
 
-
-# # ----
-# obj = StackSum()
-# obj2 = StackSum()
-# #
-# #
-# obj.push(3)
-# obj.push(2)
-# obj.push(1)
-# #
-# obj2.push(4)
-# obj2.push(4)
-# obj2.push(4)
-# #
-# print ("stos 1", obj.get_sum())
-# print ("stos 1", obj2.get_sum())
-# #
-# print(obj2.pop())
-# print(obj2.pop())
-# print(obj2.pop())
-# #
-# print(obj.pop())
-# print(obj.pop())
-# print(obj.pop())
-# #
-# print ("stos 1", obj.get_sum())
-# print ("stos 1", obj2.get_sum())

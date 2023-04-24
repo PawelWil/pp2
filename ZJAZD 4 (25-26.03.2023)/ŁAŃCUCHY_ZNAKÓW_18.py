@@ -1,5 +1,11 @@
 # ŁAŃCUCHY ZNAKÓW
 
+# lista l = [1, 2, 3] - list -- lista charaktyryzuje się, że do elementów odwujemy sie za pomocą indeksów, jest mutowalna
+# krotka t = (1,2,3) (ang. tuple) - tuple -- także charaktyryzuje się, że do elementów odwujemy sie za pomocą indeksów, ale nie jest mutowalna
+# słownik d = {"a":1, "b":2} - dictionary -- słownik nie jest sekwencją, czyli nie możemy po nim przejść pętlą. Elementy są uporządkowane.
+# ciąg znaków s = "asas" - string -- trochę podobny do krotki, mozna po nim iterować, ale jest niemutowalny
+
+
 # txt = "Ala ma kota" # mmozna dac cudzysłów ", ale też może byc też apostrof '
 #
 # print(txt)
