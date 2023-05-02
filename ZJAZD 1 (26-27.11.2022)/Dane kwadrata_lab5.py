@@ -5,7 +5,7 @@
 
 # KWADRAT o długości boku 2
    #Pole powierzchni kwadratu, dla boku o długości 2
-a = 2.
+a = 2
 p = a ** 2
 print ("Pole powierzchni wynosi:", p )
 
@@ -14,6 +14,8 @@ obwod = 4 * a
 print ("Obwód kwadratu wynosi:", obwod)
 
    #Długość przekątnej kwadratu, dla boku o długości 2
+przekatna = a * 2 ** .5
+print ("Przekątna kwadratu wynosi: ", przekatna)
 
 
 
