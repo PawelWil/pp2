@@ -1,3 +1,4 @@
+#test
 # Pole powierzchni kwadratu: P=a**2
 # Obwód kwadratu: Obwód = 4 * a
 # Długość przekątnej, z twierdzenie Pitagorasa: d = a ** 2 + a ** 2
