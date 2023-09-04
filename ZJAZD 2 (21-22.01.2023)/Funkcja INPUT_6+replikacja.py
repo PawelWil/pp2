@@ -2,7 +2,8 @@
 
 # FUNKCJA INPUT
 
-#   1.KONKATENACJA  - łaczymy tylko string ze stringiem, nie da się mieszać tyów , np string z intiger. Jak jest int to trza dać przed nim string
+#   1.KONKATENACJA  - łaczymy tylko string ze stringiem, nie da się mieszać tyów , np string z intiger.
+#   Jak jest int to trza dać przed nim string
 # print ("2" + "2") # tu łączę dwa stringi
 # print ("2" + str(3)) # tu łącze string z int, ale przed int musze dać 'str(..)'
 
@@ -23,7 +24,8 @@
 # number = "2"
 # print (number * 5) # tu 2 jako string, to nie jest mnożony, ale ze string to * je powiela
 
-# temp = float ("36.6") # tu poprzez float przed string, konwertuje to na liczbę float i jak widać konwersja sioę odbyła bo mamy 36.6
+# temp = float ("36.6") # tu poprzez float przed string, konwertuje to na liczbę float i jak widać konwersja sioę odbyła
+# bo mamy 36.6
 # temp = float ("36.6") #ale juz tej liczby zmiennoprzecinkowej, typu float nie moge zmienić na string, bo ma przecinek
 # print (temp)
 

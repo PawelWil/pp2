@@ -32,7 +32,7 @@
 
 # 5.Modulo
 # print(4 % 3) # tu 3 w 4 mieści się raz i mamy resztę 1, dlatego wynik to jededn-  modula to wynik reszty
-#print(14 % 3) # 14 / 3 = 4.., 3*4 = 12, 14-12=2
+# print(14 % 3) # 14 / 3 = 4.., 3*4 = 12, 14-12=2
 #print(14 -(3*4)) # to jest rozpisanie operacji modulo
 #print (1 % 2) # tu mamy 1--> ile da się dwójek zmiesic w 1, no 0 dwójek, czyli zostaje nam 1, który jest brany jako wynik. Rozpisujemy: 0*2 =0 -> 1-0 = 1
 #print(7 % 2) # ile dwójek zmieścimy 7, no zmiescimy 3, i zostaje nam 1, bo 3*2=6, czyli wynik jest 1
@@ -69,7 +69,7 @@
 
 # A. system osemkowy: 0,1,2,3,4,5,6,7 -- print(0o1237)
 #print(0o47)
-#print (7 * 8 ** 0 + 4 * 8 ** 1 )    # wytłumaczenie dlaczego to 39 -- print (7 * 8 ** 0 + 4 * 8 ** 1 )
+# print (7 * 8 ** 0 + 4 * 8 ** 1 )    # wytłumaczenie dlaczego to 39 -- print (7 * 8 ** 0 + 4 * 8 ** 1 )
 
 # liczba dziesiętnba dla systemu osemkowego,  47 --> 47 = 7 jedności i 4 dziesiątki
 #                               7 * 10 ** 0 (bo 10 do potegi 0 to 1) + 4 * 10 ** 1(to są dziesiątki, dlatego do pot ęgi pierwszej, gdy potem są setki, to będziemy miec do potegi 2, potem 1000, czyli potega 3 itd.)
@@ -77,18 +77,18 @@
 
 # B. system szesnastkowy: 0,1,2,3,4,5,6,7,8,9, A=10, B=11, C=12, D=13, E=14, F=15 -- print(0xFF) -
 #print(0x2F)
-#print(15 * 16 ** 0 + 2 * 16 ** 1) # print(15 * 16 ** 0 + 2 * 16 ** 1) -- bo mamy 15 jedności i 2 szesnastki
+# print(15 * 16 ** 0 + 2 * 16 ** 1) # print(15 * 16 ** 0 + 2 * 16 ** 1) -- bo mamy 15 jedności i 2 szesnastki
 
 
 # C. system binarny(dwójkowy): 0,1  -- print(0b101)
 #print(0b101) # 1 jedność(2**0) + 0 dwójek (2**1) + 1 podwójna dwójka, czyli 1 czwórka (2**2) , potem są czwórki, potem
-#print(1 * 2 ** 0 + 0 * 2 ** 1 +  1 * 2 ** 2)
+# print(1 * 2 ** 0 + 0 * 2 ** 1 +  1 * 2 ** 2)
 
 # ZADAnIE z Laboratorium 4 zapisu liczb w różnych systemach
 
 # liczba 777 zapisana ósemkowo
 #print(0o777)
-#print(7 * 8 **0 + 7 * 8 ** 1 + 7 * 8 ** 2, "\n")
+# print(7 * 8 **0 + 7 * 8 ** 1 + 7 * 8 ** 2, "\n")
 
 # liczba 1011 zapisana binarnie
 #print(0b1011)

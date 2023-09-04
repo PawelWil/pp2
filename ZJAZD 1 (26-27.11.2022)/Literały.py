@@ -10,11 +10,11 @@
 # print(type("asd")) # to mowi nam jakiego typu jest ten znak - tu string
 
 
-# SYSTEMY LICZBOWE (ZAWSZE idziemy od lewej do Prawej!!)
+# SYSTEMY LICZBOWE (ZAWSZE idziemy od Prawej do lewej!!)
   # System dziesiętny -- 123 = 1 * 10 ^ 2 + 2 * 10 ^ 1 + 3 * 10 ^ 0
-#print (1 * 10 ^ 2 + 2 * 10 ^ 1 + 3 * 10 ^ 0)
+# print (1 * 10 ^ 2 + 2 * 10 ^ 1 + 3 * 10 ^ 0)
 
-#print(0b101) #101 = 1 * 2 ^ 2 + 0 * 2 ^ 1 + 1 * 2 ^0 = 4 + 1 = 5 -- #system dwójokw - tu biorą udział liczby: 0,1,
+# print(0b101) #101 = 1 * 2 ^ 2 + 0 * 2 ^ 1 + 1 * 2 ^0 = 4 + 1 = 5 -- #system dwójokw - tu biorą udział liczby: 0,1,
 #print(0o1237) #system ósemkowy - tu biorą udział liczby: 0,1,2,3,4,5,6,7 (8 już nie bierze udziału)
 #print(0xFF) # #system szesnastkowy - tu biorą udział liczby: 0,1,2,3,4,5,6,7,8,9, A=10, B=11, C=12, D=13, E=14, F=15
 #print(0xFF) # F * 16 ^ 1 + F * 16 ^ 0 = 15*16 + 15*1  (ta 16 to podstawa, że mówimy o systemie szesnastkowym, heksagonalnym, stąd zawsze litery, cyfry mnożymy przez 16)
@@ -26,7 +26,7 @@
 
 # liczba 777 zapisana ósemkowo
 #print(0o777)
-#print(7 * 8 **0 + 7 * 8 ** 1 + 7 * 8 ** 2, "\n")
+# print(7 * 8 **0 + 7 * 8 ** 1 + 7 * 8 ** 2, "\n")
 
 # liczba 1011 zapisana binarnie
 #print(0b1011)
@@ -42,7 +42,7 @@
 
 
 # Zadanie 1 z Laboratorium 3
-#print(0x1F)
+# print(0x1F)
 #print(0b11101)
 #print(0o777)
 #print(134)
@@ -56,7 +56,7 @@
 # LICZBY ZMIEnnoprzecinkowe (tu mamy część ułąmkową równą zero) - liczba FLOAT
 # print(2.0)
 # lub
-#print(.123)
+# print(.123)
 # lub
 #print(99.)
 
