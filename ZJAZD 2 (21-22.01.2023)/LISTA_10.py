@@ -51,7 +51,8 @@
 # del (fruits[-1]) # może być z okrągłymi nawiasami po del -> jest bardziej czytelne, ale nie musi
 # print (fruits)
 #
-# # 3. Rozróżnienie między funkcją - LEN - pokazuje ile elementów jest schowanych w danej liście - w tym przypadku mowa o liście 'fruits'
+# # 3. Rozróżnienie między funkcją - LEN - pokazuje ile elementów jest schowanych w danej liście - w tym przypadku mowa o liście
+# 'fruits'
 # l = len(fruits)
 # print(l) # albo tak
 # print(len(fruits)) #albo tak
@@ -61,7 +62,9 @@
 # fruits.append("jabłko") # metoda Append dodaje element, zawsze na koniec listy
 # print(fruits)
 
-# fruits.insert(0, "gruszka")# mozemy tez dodawać za pomocą INSERT - w tej metodzie trza podać, na które miejsce _pod jaki indeks ma być wrzucony dodatkowy element - w naszym przypdaku to jest indeks 0, czyli peirwszy, na którym będzie dodany element 'gruszka'
+# fruits.insert(0, "gruszka")# mozemy tez dodawać za pomocą INSERT - w tej metodzie trza podać,
+# na które miejsce _pod jaki indeks ma być wrzucony dodatkowy element -
+# w naszym przypdaku to jest indeks 0, czyli peirwszy, na którym będzie dodany element 'gruszka'
 # print(fruits)
 
 
