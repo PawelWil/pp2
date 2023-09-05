@@ -11,12 +11,12 @@ if (a+b > c and b+c > a and c+ a > b):
 
 # teraz oceniamy jaki jest trójkąt, czy: równoboczny, równoramienny, różnoboczny
     # teraz robimy na równoboczność:
-    if a== b and a==c and c ==b:
-        print("równoboczny", end=" ")
-    elif a == b or b == c or c ==a: #dajemy elif, bo nie mamy dwóch przypadków(czyli else), tylko trzy
-        print("Trojkat rownoramienny", end = " ")
-    else:
-        print("Trojkat rożnoramienny", end = " ")
+    # if a== b and a==c and c ==b:
+    #     print("równoboczny", end=" ")
+    # elif a == b or b == c or c ==a: #dajemy elif, bo nie mamy dwóch przypadków(czyli else), tylko trzy
+    #     print("Trojkat rownoramienny", end = " ")
+    # else:
+    #     print("Trojkat rożnoramienny", end = " ")
 
 # teraz oceniamy jaki jest trójkąt, ze względu na katy, czy: prostokatny, rozwartokatny, ostrokatny
     # teraz robimy czy jest prostokatny:

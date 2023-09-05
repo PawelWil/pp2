@@ -1,6 +1,11 @@
 # -- FUNKCJE--------------
 # DEBUGGER (czyli ten robak u góry) to jest opcja sledzenia krok po kroku programu, pokazuje jakie wartosci są przypisawene itd.
 
+
+
+
+
+
 #--- Funkcje były stosowane gdy chcieliśmu pobrac dane od uzytownika - tworzyliśmy zmienną
 # + za pomocą funkcji input, któr mogła być uruchomiona z tym argumentem, podanym przez użytkownika.
 # Print, to też jest funkcja, która przekazuje argumenty, które są w nią wpisane.
