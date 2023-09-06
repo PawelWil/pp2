@@ -31,14 +31,3 @@
 # Operator += jest operatorem, który modyfikuje zmienną stojącą po lewej stronie,
 # dodając do jej dotychczasowej wartości wartość stojącą po prawej stronie. Analogicznie mamy operatory -=, *=, /=, %=.
 
-
-# def czesc():
-#     print("Czesc!")
-# czesc()
-
-def czesc(imie, miasto, komunikat="Czesc"):
-    print(komunikat, imie + "!")
-    print("Widze, ze jestes z miasta", miasto)
-
-czesc("Janusz", "Wroclaw")
-czesc("Alicja", "Wroclaw", "Milego dnia")

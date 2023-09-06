@@ -2,10 +2,6 @@
 # DEBUGGER (czyli ten robak u góry) to jest opcja sledzenia krok po kroku programu, pokazuje jakie wartosci są przypisawene itd.
 
 
-
-
-
-
 #--- Funkcje były stosowane gdy chcieliśmu pobrac dane od uzytownika - tworzyliśmy zmienną
 # + za pomocą funkcji input, któr mogła być uruchomiona z tym argumentem, podanym przez użytkownika.
 # Print, to też jest funkcja, która przekazuje argumenty, które są w nią wpisane.
@@ -32,14 +28,14 @@
 
 
 #2 - tu to samo co powyzej, ale juz za pomocą fuckji 'def'
-# def show_message():  # tu definiujemy nową funkcję, do której wrzucimy funkcję print
+# def show_message():  # tu definiujemy nową funkcję 'show_message', do której wrzucimy funkcję print
 #     print("Podaj liczbę: ", end=" ")
 
 # pobieramy od uzytkownika 3 liczby
 # show_message()
 # a = int (input()) # Prosimy o podanie za pomocą zmiennej 'a' i funkcji 'input' liczby,
-# która to będzie powiązana z poleceniem pochodzącym z funkcji 'show message'="Podaj liczbę" - za nią się wyświetli wartość zmiennej 'a'
-# + tą liczbe za pomoca int rzutujemy do liczby calkowitej!
+# która to będzie powiązana z poleceniem pochodzącym z funkcji 'show message'="Podaj liczbę" - za nią się wyświetli
+# wartość zmiennej 'a' + tą liczbe za pomoca int rzutujemy do liczby calkowitej!
 
 # show_message()
 # b = int (input())
@@ -49,16 +45,15 @@
 
 # print ("Pobrano liczby: ", a, b, c)
 
-
 #--- jakie atrybuty funkcji, np. chcemy dodać w funkcji słowo "proszę", to teraz wystarczy że w funkcji print dopisuje to słowo
-# i ono się już wyświetla, we wszystkich zapytaniach, nie trzeba z osobna tego słowa 'proszę' wprowadzać. Oczywiście można również
-# dodawać inne znaki, które już będą widoczne w pozostalych zapytaniach
+# i ono się już wyświetla, we wszystkich zapytaniach, nie trzeba z osobna tego słowa 'proszę' wprowadzać.
+# Oczywiście można również dodawać inne znaki, które już będą widoczne w pozostalych zapytaniach
 
 
 # --- PARAMETRYZOWAnIE FUnKCJI - wyświetlanie za pomocą funkcji danego znaku ileś razy, z użyciem wartości funkcji:
 # def show_asteriks(how_many): # to jest parametryzowanie funkcji - nasz parametr = how_many + podajemy wartość tego parametru
-                                # podczas wywołania funkcji(poniżej),czyli np. (10), (1212) itd. i dzięki temu parametrowi wyświetlamy *
-                                # tą zadaną ilość razy
+                                # podczas wywołania funkcji(poniżej),czyli np. (10), (1212) itd. i dzięki temu parametrowi
+                                # wyświetlamy * tą zadaną ilość razy
     # print("*" * how_many)
 
 # show_asteriks(10)
@@ -67,7 +62,8 @@
 
 # --- ulepszenie programu 1
 # def show_message():
-#     print("Proszę podaj liczbę: ", end=" ") # tu dodajemy to słowo 'proszę' i jak widzimy na już mamy zapytanie ze słowem 'proszę'
+#     print("Proszę podaj liczbę: ", end=" ") # tu dodajemy to słowo 'proszę' i jak widzimy na już mamy zapytanie
+#     ze słowem 'proszę'
 
 # pobieramy od uzytkownika 3 liczby
 # show_message()
@@ -105,8 +101,8 @@
 # def get_number(number_no):  # tu definiujemy funkcję, która będzie pobierała od razu ten numer
 #     print("Podaj ", number_no, "liczbę", end=" ")
 #     return int(input())
-# a = get_number(1) # funkcja 'get_number' realizuje dwie rzeczy: 1)wyswietla etykiete korzystajac z argumentów które przekazujemy ,
-# 2)pobiera ją od uzytkowina i zwraca za pomoca funckji return
+# a = get_number(1) # funkcja 'get_number' realizuje dwie rzeczy: 1)wyswietla etykiete korzystajac z argumentów
+# które przekazujemy + 2)pobiera ją od uzytkowina i zwraca za pomoca funckji return
 # b = get_number(2)
 # c = get_number(3)
 # print ("Pobrano liczby: ", a, b, c)
@@ -178,7 +174,6 @@
 # Kolejne zadanie
 # def show_message(number_no):
 #     print("Proszę podaj", number_no, "lizbe:", end= " ")
-
 # show_message (10)
 
 
@@ -226,14 +221,16 @@
 
 
 #KOLEJNE ----- ZWRACAnIE WARTOŚCI przez funkcję: "return"
-# def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą, wtedy gdy nie podamy wartości w introduce
-    # print("czesc jestem", first_name, last_name)
-    # return 12
+# def introduce (first_name="Jan", last_name="Kowalski"): # to są wartości domyślne, ale tylko się wyswietlą,
+# wtedy gdy nie podamy wartości w introduce
+#     print("czesc jestem", first_name, last_name)
+#     return 12
     # lub
     # return  None
-    # poprzez funkcję zwracania 'return', która w naszym przypadku jest przypisana do funcji'introduce', nasz faunkcja 'introduce'
-    # poprzez funkcje 'return' będzie zwracała '12' lub "NONE', ale będzie zwracała dopiero, jak się wywoła funkcję drukującą,
-    # czyli funkcję 'print', która wydrukuje oczywiście: ("czesc jestem", first_name, last_name) + wartość z funkcji return
+# poprzez funkcję zwracania 'return', która w naszym przypadku jest przypisana do funcji'introduce',
+# nasza faunkcja 'introduce' poprzez funkcje 'return' będzie zwracała '12' lub "NONE',
+# ale będzie zwracała dopiero, jak się wywoła funkcję drukującą,
+# czyli funkcję 'print', która wydrukuje oczywiście: ("czesc jestem", first_name, last_name) + wartość z funkcji return
 # print(introduce()) # introduce to jest ta funkcja, żeby była jasność!!!!!!!!!!!!
 
 
@@ -243,10 +240,10 @@
 #     print("Dwa...")
 #     print("Jeden...")
 #
-#     if not wishes:# jesli nie chcemy poniższych życzeń='Szczesliwego Nowego Roku', to dajemy if not
-#         return
+    # if not wishes:# jesli nie chcemy poniższych życzeń='Szczesliwego Nowego Roku', to dajemy if not
+    #     return
 #
-    # print ("Szczesliwego nowergo roku:")
+    # print ("Szczesliwego Nowego Roku")
 
 # count_down(wishes=True) # 1 sposób wyswietlenia, gdy wartośc argumemtu jest true: tu dostajemy wiadomo odliczanie,
 # z życzeniami 'szczesliwego nowego roku'wszystko z szcesl wboweg roku --> czyli spełniony jest argument funkcji
@@ -264,7 +261,6 @@
 #     return a + b # poprzez funkcję 'return' będzie nam zwracana wartość a+b, bezposrednio za pomocą zmiennej 'result'
 # result = sum (1, 6) # do zmiennj result podtsawimy to co zwrói funkcja sum - czyli sumujemy 2 liczby, a=1 i b=6
 # i na koncu wyswietlimy co wyswietlilismy jako suma, w zmiennej result
-
 # print (result)
 
 # --KOlejne - powiązane z powyższym - mowa, że musimy podać wszystkie argumety, jak nie podamy nic albo nawet braknie jednego,

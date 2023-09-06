@@ -5,10 +5,10 @@
 
 #wyswietlanie znaków
   # wyświetlamy znak c
-# print("c") # najprostze wyswietlenie jakiegos znaku
+print("c") # najprostze wyswietlenie jakiegos znaku
 #
-# print(ord("c")) # ta funkcja ma wartosc w tabeli ASCii (tu jest 99) i ta funkcja ORD nam o tym mowi
-# print(bin(ord("c"))) # rozpisanie jak to wygląda binarnie
+print(ord("c")) # ta funkcja ma wartosc w tabeli ASCii (tu jest 99) i ta funkcja ORD nam o tym mowi
+print(bin(ord("c"))) # rozpisanie jak to wygląda binarnie
 #
 # print(chr(99)) # tu dostajemy co pod tym kodem ASCII się kryje - robimy to za pomocą funkcji CHR
 
